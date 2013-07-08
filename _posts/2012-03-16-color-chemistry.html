@@ -1,0 +1,72 @@
+---
+layout: post
+categories: notes
+title_meta: Color Management in Adobe InDesign and Illustrator
+description: A researched article about Adobe CS, Pantone colors and using Lab values.
+
+title: Color Chemistry&#58; Getting the Colors to Match
+disqus_id: color-chemistry.html
+excerpt: I recently had a struggle with setting up a color section for a style guide that I am collaborating on. It was a bit of an issue because I could not seem to get the Pantone colors to agree between Photoshop, Illustrator, and InDesign. Having enough experience working in print and using computers, I knew not to invest too much stock in how the colors were being read on the screen, but when I sent the files to print, the colors were STILL not matching. And I still had CMYK and HEX conversions to do.
+---
+
+<p>
+  I recently had a struggle with setting up a color section for a style guide that I am collaborating on. It was a bit of an issue because I could not seem to get the Pantone colors to agree between Photoshop, Illustrator, and InDesign. Having enough experience working in print and using computers, I knew not to invest too much stock in how the colors were being read on the screen, but when I sent the files to print, the colors were STILL not matching. And I still had CMYK and HEX conversions to do.
+</p>
+
+<p>
+  Well, after digging around and spending ever-so-valubale time searching for a solution, I found it on the <a href="http://www.adobe.com/support/">Adobe Help</a> page. I thought I might share it and save someone else the hassle.
+</p>
+
+<p>
+  The solution lies withing setting up <a href="http://help.adobe.com/en_US/photoshop/cs/using/WSfd1234e1c4b69f30ea53e41001031ab64-73eea.html#WSfd1234e1c4b69f30ea53e41001031ab64-73eaa">Lab values</a> to define spot colors in InDesign and Illustrator (Photoshop uses Lab values by default... Who woulda thunk it!).
+</p>
+
+<h4>
+  For InDesign:
+</h4>
+
+<ol>
+  <li>Open InDesign.</li>
+  <li>Locate/Open the "Swatches" panel in your workspace.</li>
+  <li>In the upper right hand corner of the "Swatches" panel, click on the drop-down menu indicated by an icon of a downward arrow with three horizontal lines to its right.</li>
+  <li>Click on "Ink Manager..." from the list of options.</li>
+  <li>The "Ink Manager" window will appear. At the bottom of the window, check "Use Standard Lab Values for Spots" and click the "OK" button.</li>
+</ol>
+
+<figure>
+  <img src="/img/notes/ink-manager-screenshot.png" alt="Ink Manager" class="scale" />
+  <figcaption>
+    Screenshot of the Ink Manager window.
+  </figcaption>
+</figure>
+
+<h4>
+  For Illustrator:
+</h4>
+
+<ol>
+  <li>Open Illustrator.</li>
+  <li>Locate/Open the "Swatches" panel in your workspace.</li>
+  <li>In the upper right hand corner of the "Swatches" panel, click on the drop-down menu indicated by an icon of a downward arrow with three horizontal lines to its right.</li>
+  <li>Click on "Spot Colors..." from the list of options.</li>
+  <li>The "Spot Color Options" window will appear. Select the radio button that reads "Use Lab values specified by the book manufacturer" and click the "OK" button.</li>
+</ol>
+
+<figure>
+  <img src="/img/notes/spot-color-screenshot.png" alt="Spot Color Options" class="scale" />
+  <figcaption>
+    Screenshot of the Spot Color Options window.
+  </figcaption>
+</figure>
+
+<p>
+  Presto change-o! You are now set up for set up with Lab defined values for your spot colors. <a href="http://en.wikipedia.org/wiki/Johannes_Itten">Johannes Itten</a> would be proud.
+</p>
+
+<p>
+  <strong>Things you should know:</strong> In the Adobe Help article, it suggests to do the above while in a no-document mode. That works just fine in InDesign, but not so much in Illustrator (the "Spot Colors..." option is greyed out in the drop-down menu). Also, you may notice that the color conversions from CMYK, RGB, and HEX may still not agree across the board, but it is much better than not having Lab values defined. I haven't figured out how to set these as the permanent default, so you may have to select the Lab values options every time you open a new doc. These options are only available for CS2+ products.
+</p>
+
+<p>
+  I hope this helps. <a href="mailto:leban@alchemyindesign.com">Email me</a> if you find something different! 
+</p>

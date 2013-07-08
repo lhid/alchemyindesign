@@ -1,0 +1,229 @@
+/*! state.css for massimo.css v1.0.0 | MIT License */
+
+/* ==========================================================================
+   State Classes
+   ========================================================================== */
+
+.is-hidden {
+  display: none;
+}
+
+
+/* ==========================================================================
+   Pseudo-Classes
+   ========================================================================== */
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* §Bold (larger desktop displays) | For 1287+ screen size
+   ========================================================================== */
+
+@media only screen and (min-width: 1286px) {}
+
+
+
+/* §Roman (9" portrait) | For 768 screen size 
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1009px) {
+
+  .hero {
+    padding-bottom: 6rem;
+  }
+
+}
+
+
+
+/* §Light | For 480 screen size 
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  /*
+   * Same as padding-right for .l-bound
+   */
+
+  .menu {
+    right: 1.25rem;
+  }
+
+  .hero {
+    padding-bottom: 6rem;
+  }
+
+}
+
+
+
+/* §Extra-Light | For 320 screen size 
+   ========================================================================== */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+  /*
+   * Same as padding-right for .l-bound
+   */
+
+  .menu {
+    right: 1rem;
+  }
+
+  .hero {
+    padding-bottom: 3rem;
+  }
+
+}
+
+
+
+/* §Condensed | For 240 screen size 
+   ========================================================================== */
+
+@media only screen and (max-width: 319px) {
+
+  /*
+   * Same as padding-right for .l-bound
+   */
+
+  .menu {
+    right: .75rem;
+  }
+
+  .hero {
+    padding-bottom: 3rem;
+  }
+
+}
+
+
+
+/* §Light, §Extra-Light, §Condensed | For 768- screen size 
+   ========================================================================== */
+
+@media only screen and (max-width: 767px) {
+
+  .dsp-1,
+  .txt-1 {
+    font-size: 3rem; /* 3x body */
+    line-height: 3rem;
+    letter-spacing: -.1rem;
+  }
+
+  .dsp-2,
+  .txt-2 {
+    font-size: 2rem; /* 2x body */
+    letter-spacing: normal,
+  }
+
+  /*
+   * Mobile Navigation.
+   * Uses Aaron Gustafson's Method.
+   * http://www.netmagazine.com/tutorials/build-smart-mobile-navigation-without-hacks
+   * Selectors refactored for Modular.
+   */
+
+  [id=nav] {
+    display: none;
+  }
+    [id=nav]:target {
+      display: block;
+    }
+
+  .menu {
+    display: block;
+    position: absolute;
+    top: .8rem;
+    right: 1.25rem;
+    padding: .75rem 1rem;
+    padding-right: 0;
+
+    /* make sure the menu button is on top */
+    z-index: 1001;
+  }
+
+  .nav\+main {
+    margin-top: .5rem;
+    margin-left: 0;
+  }
+    .nav\+main > li {
+      border-top-width: .1rem;
+      border-top-style: solid;
+      border-top-color: #666666;
+    }
+    .nav\+main > li:first-child {
+      border-top-width: .4rem;
+    }
+      .nav\+main > li > a {
+        padding: .75rem 1rem;
+      }
+
+  a[title="Home"]:hover,
+  .menu:hover {
+    text-decoration: none;
+    color: #F4AA00;
+  }
+
+  body:not(:target) [id=nav] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-top: 3rem;
+    z-index: 1000;
+  }
+    body:not(:target) [id=nav]:target {
+      z-index: 1001;
+    }
+      body:not(:target) [id=nav]:target a {
+        position: relative;
+        z-index: 1;
+      }
+      body:not(:target) [id=nav]:target .back {
+        display: block;
+        position: relative;
+      }
+        body:not(:target) [id=nav]:target .back a {
+          display: block;
+          height: auto;
+          position: absolute;
+          top: -101rem;
+          bottom: -101rem;
+          left: 0;
+          right: 0;
+          text-indent: -999rem;
+          z-index: 0;
+        }
+
+  /* END Mobile Navigation */
+
+
+  .nav\+ftr {
+    margin-top: 1.5rem;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .hero-entry {
+    padding-bottom: 3rem;
+  }
+
+  .gallery > li {
+    width: 48%;
+    margin-left: 4%;
+  }
+
+  .gallery > li:nth-child(odd) {
+    margin-left: 0;
+  }
+
+}
+
+

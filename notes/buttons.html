@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Buttons</title>
+
+
+    <style>
+
+      body {
+        background-color: #45a641;
+        background-color: #003f5f;
+      }
+
+      /* Base Module */
+      .button {
+        border-radius: 2px;
+        border-width: 1px;
+        border-style: solid;
+        padding: 10px 20px;
+
+        /* Typography */
+        font-family: 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
+        color: #d5d5d5;
+        font-size: 14px;
+        text-transform: uppercase;
+       }
+
+      /*Submodule 1 */
+      .button-blue {
+        background-color: #004f77;
+        border-color: #296c8f;
+        box-shadow: 0 0 1px 1px #003c59;
+      }
+
+      /* Submodule 2 */
+      .button-green {
+        background-color: #45a641;
+        border-color: #64b660;
+        box-shadow: 0 0 1px 1px #347d30;
+      }
+
+    </style>
+
+    <!-- This fix for alternate rendering modes. http://www.sitepoint.com/html5-shim-ie-emulation-mode/ -->
+    <!--[if IE]>  
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <button class="button button-blue">Join</button>
+
+    <button class="button button-green">Login</button>
+
+  </body>
+
+</html>

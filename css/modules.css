@@ -1,0 +1,423 @@
+/*! modules.css for massimo.css v1.0.0 | MIT License */
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/*
+ * Display type classes are .dsp-(n) includes font-weight, font-size, and line-height without margin rules.
+ * Text type classes .txt-(n) incudes font-size and line-height without margin and font-weight rules.
+ */
+
+.dsp-1,
+.dsp-2,
+.dsp-3,
+.dsp-4,
+.dsp-5,
+.dsp-6 { 
+  font-family: 'OswaldBook', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.txt-1,
+.txt-2,
+.txt-3,
+.txt-4,
+.txt-5,
+.txt-6 {
+  font-family: 'LiberationSerifRegular';
+  font-weight: normal;
+}
+
+.dsp-1,
+.txt-1 {
+  /*IE*/font-size: 100px;
+  /*IE*/line-height: 90px;
+  /*IE*/letter-spacing: -2px;
+
+  font-size: 5rem; /* 3 lines of text, aligns optically from baseline to cap height */
+  line-height: 4.5rem; /* 3x line-height set on <body> */
+  letter-spacing: -.1rem;
+}
+
+.dsp-2,
+.txt-2 { 
+  /*IE*/font-size: 60px;
+  /*IE*/line-height: 60px;
+  /*IE*/letter-spacing: -2px;
+
+  font-size: 3rem; /* 2 lines of text, aligns optically from baseline to cap height */
+  line-height: 3rem; /* 2x of line-height set on <body> */
+  letter-spacing: -.1rem;
+}
+
+.dsp-3,
+.txt-3 { 
+  /*IE*/font-size: 20px;
+  /*IE*/line-height: 30px;
+
+  font-size: 1rem; /* Same as <body> */
+  line-height: 1.5rem;
+  letter-spacing: 0;
+}
+
+.dsp-4,
+.txt-4 {
+  /*IE*/font-size: 18px;
+  font-size: .9rem;
+}
+
+.dsp-5,
+.txt-5 {
+  /*IE*/font-size: 16px;
+  font-size: .8rem;
+}
+
+.dsp-6,
+.txt-6 {
+  /*IE*/font-size: 14px;
+  font-size: .7rem;
+}
+
+.txt-l { text-align: left; }
+.txt-r { text-align: right; }
+.txt-c { text-align: center; }
+.txt-j { text-align: justify; }
+
+.txt-tight { margin-bottom: 0; }
+
+.txt-break {
+  -ms-word-break: break-all;
+  word-break: break-all;
+
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+
+
+/* ==========================================================================
+   Rulers
+   ========================================================================== */
+
+/*
+ * Rulers are used to separate content and are padded with respect to the baseline grid.
+ * Presentational names are used for clarity, but semantic names are welcome; e.g., .sep, .sub.
+ * Only three weights are used to prevent visual clutter.
+ * .hr = horizontal rule
+ * .hrt = horizontal rule top
+ * .hrb = horizontal rule bottom
+ */
+
+.hr {
+  border-top-style: solid;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  margin-top: 0;
+}
+  .hr\+1 {
+    /*IE*/border-top-width: 15px;
+    /*IE*/margin-bottom: 45px;
+
+    border-top-width: .75rem;
+    margin-bottom: 2.25rem; /* (body line-height - border-top-width) + body line-height */
+  }
+  .hr\+2 {
+    /*IE*/border-top-width: 8px;
+    /*IE*/margin-bottom: 22px;
+
+    border-top-width: .4rem;
+    margin-bottom: 1.1rem; /* body line-height - border-top-width */
+  }
+  .hr\+3 {
+    /*IE*/border-top-width: 2px;
+    /*IE*/margin-bottom: 28px;
+
+    border-top-width: .1rem;
+    margin-bottom: 1.4rem; /* body line-height - border-top-width */
+  }
+
+.hrt {
+  /*IE*/padding-bottom: 30px;
+
+  border-top-style: solid;
+  padding-bottom: 1.5rem;
+}
+  .hrt\+1 {
+    /*IE*/border-top-width: 15px;
+    /*IE*/padding-top: 45px;
+
+    border-top-width: .75rem;
+    padding-top: 2.25rem; /* (body line-height - border-top-width) + body line-height */
+  }
+  .hrt\+2 {
+    /*IE*/border-top-width: 8px;
+    /*IE*/padding-top: 22px;
+
+    border-top-width: .4rem;
+    padding-top: 1.1rem; /* body line-height - border-top-width */
+  }
+  .hrt\+3 {
+    /*IE*/border-top-width: 2px;
+    /*IE*/padding-top: 28px;
+
+    border-top-width: .1rem;
+    padding-top: 1.4rem; /* body line-height - border-top-width */
+  }
+
+.hrb { border-bottom-style: solid; }
+  .hrb\+1 {
+    /*IE*/border-bottom-width: 15px;
+    /*IE*/margin-bottom: 15px;
+
+    border-bottom-width: .75rem;
+    margin-bottom: .75rem; /* border-width + margin-bottom = body line-height */
+  }
+  .hrb\+2 {
+    /*IE*/border-bottom-width: 8px;
+    /*IE*/margin-bottom: 22px;
+
+    border-bottom-width: .4rem;
+    margin-bottom: 1.1rem; /* border-width + margin-bottom = body line-height */
+  }
+  .hrb\+3 {
+    /*IE*/border-bottom-width: 2px;
+    /*IE*/margin-bottom: 28px;
+
+    border-bottom-width: .1rem;
+    margin-bottom: 1.4rem; /* body line-height - border-top-width */
+  }
+
+
+
+
+/* ==========================================================================
+   Branding
+   ========================================================================== */
+
+.logo {
+  /*IE*/height: 40px;
+  /*IE*/margin-top: 20px;
+
+  height: 2rem;
+  margin-top: 1rem;
+  display: block;
+}
+
+.logo-ftr {
+  margin-bottom: 0;
+}
+
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.nav {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+  .nav > li {}
+    .nav > li > a {
+      display: block;
+    }
+
+.nav\+main {
+  /*IE*/margin-top: 30px;
+  margin-top: 1.5rem;
+}
+
+.nav\+ftr {
+  /*IE*/margin-bottom: 30px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+  .nav\+ftr a {
+    font-weight: bold;
+  }
+
+.menu,
+.back {
+  display: none;
+}
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.list\+row {}
+  .list\+row > li {
+    display: inline-block;
+  }
+
+.list\+util {}
+  .list\+util > li {
+    /*IE*/margin-left: 10px;
+    margin-left: .5rem;
+  }
+
+.gallery {}
+  .gallery > li {
+    /*IE*/margin-bottom: 30px;
+    /*IE*/border-width: 2px;
+
+    margin-bottom: 1.5rem;
+    border-width: .1rem;
+    border-style: solid;
+    overflow: hidden;
+  }
+  .gallery > li > a {
+    /*IE*/height: 150px;
+    height: 7.5rem;
+    display: block;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+/* ==========================================================================
+   Containers
+   ========================================================================== */
+
+.hero {
+  /*IE*/padding-top: 90px;
+  /*IE*/padding-bottom: 180px;
+
+  padding-top: 4.5rem;
+  padding-bottom: 9rem;
+  background-repeat: no-repeat;
+
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+
+.hero-entry {
+  /*IE*/padding-bottom: 90px;
+  padding-bottom: 4.5rem;
+}
+
+.intro {
+  /*IE*/padding-bottom: 90px;
+  padding-bottom: 4.5rem;
+ }
+
+ .box {
+  /*IE*/padding-right: 30px;
+  /*IE*/padding-left: 30px;
+
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+  .box-example {
+    /*IE*/border-top-width: 2px;
+    /*IE*/padding-top: 28px;
+    /*IE*/border-bottom-width: 2px;
+    /*IE*/margin-bottom: 28px;
+
+    border-top-width: .1rem;
+    border-top-style: solid;
+    padding-top: 1.4rem; /* padding value based on border-top-width */
+    border-bottom-width: .1rem;
+    border-bottom-style: solid;
+    margin-bottom: 1.4rem;
+  }
+  .box-aside {
+    /*IE*/border-left-width: 2px;
+    /*IE*/padding-left: 30px;
+
+    border-left-width: .1rem;
+    border-left-style: solid;
+    padding-left: 1.5rem;
+  }
+
+.section-std {
+  /*IE*/padding-bottom: 30px;
+  padding-bottom: 1.5rem;
+}
+
+.section-wd {
+  /*IE*/padding-bottom: 120px;
+  padding-bottom: 6rem;
+}
+
+
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ * The Kellum Method
+ * http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+ */
+
+.ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+
+.scale {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* ==========================================================================
+   Micro Clearfix
+   ========================================================================== */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

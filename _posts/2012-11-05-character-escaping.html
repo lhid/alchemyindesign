@@ -1,0 +1,105 @@
+---
+layout: post
+categories: notes
+title_meta: Character Escaping in CSS
+description: A quick 'n dirty article about character escaping to possible improve naming conventions in modular CSS.
+
+title: Character Escaping and Class Naming
+disqus_id: character-escaping.html
+excerpt: This is a fun little item that I found over the weekend. I work in SMACSS/OOCSS-style and have been racking my brains trying to figure out a way to separate base classes from extender classes from related-but-independent classes in CSS. Many are making the move towards BEM-style class naming and Harry Roberts offers a very justified argument as to why he uses it. I think it works, but I wanted to see if we could improve it a bit.
+---
+
+<p>
+  This is a fun little item that I found over the weekend. I work in SMACSS/OOCSS-style and have been racking my brains trying to figure out a way to separate base classes from extender classes from related-but-independent classes in CSS. Many are making the move towards BEM-style class naming and <a href="https://twitter.com/csswizardry/">Harry Roberts</a> offers a <a href="https://github.com/csswizardry/CSS-Guidelines#naming-conventions">very justified argument</a> as to why he uses it. I think it works, but I wanted to see if we could improve it a bit.
+</p>
+
+<p>
+  So, I poked around a bit on the internets this weekend and, remembering a talk that <a href="https://twitter.com/paul_irish">Paul Irish</a> gave on the use of UTF-8 characters in HTML and CSS, I began to think about applying special characters more systematically to modular class names. Here's what I found&#8230;
+</p>
+
+<ul>
+
+  <li>
+    <a href="http://mathiasbynens.be/notes/css-escapes">
+      <cite>CSS character escape sequences </cite>
+      | Mathias Bynens
+    </a>
+  </li>
+
+  <li>
+    <a href="http://www.w3.org/International/questions/qa-escapes#cssescapes">
+      <cite>Using character escapes in markup and CSS - CSS escapes </cite>
+      | W3.org
+    </a>
+  </li>
+
+  <li>
+    <a href="http://www.w3.org/TR/CSS2/syndata.html#escaped-characters">
+      <cite>4.1.3 Characters and case </cite>
+      |  W3.org
+    </a>
+  </li>
+
+  <li>
+    <a href="http://www.w3.org/TR/CSS21/grammar.html#scanner">
+      <cite>G.1 Grammar </cite>
+      |  W3.org
+    </a>
+  </li>
+
+</ul>
+
+<p>
+  Okay, I don't really expect you to read all of those just to get through this brief article, so here is the part that I was particularly excited about&#8230;
+</p>
+
+<blockquote>
+  <p>
+    &ldquo;The following characters have a special meaning in CSS: <br />
+    <code>!</code> <code>"</code> <code>#</code> <code>$</code> <code>%</code> <code>&amp;</code> <code>'</code> <code>(</code> <code>)</code> <code>*</code> <code>+</code> <code></code> <code>-</code> <code>.</code> <code>/</code> <code>:</code> <code>;</code> <code>&lt;</code> <code>=</code> <code>&gt;</code> <code>?</code> <code>@</code> <code>[</code> <code>\</code> <code>]</code> <code>^</code> <code>`</code> <code>{</code> <code>|</code> <code>}</code> <code>~</code>.&rdquo;
+  </p>
+</blockquote>
+
+<p>
+  The above characters can be escaped with a leading backslash (\). So, if say, you want to use &ldquo;+&rdquo; within a class name, you would escape it as (\+). In the HTML, you would just call that class using the unescaped character &ldquo;+&rdquo;.
+</p>
+
+<hr class="hr hr+3" />
+
+<h3>CSS</h3>
+
+<p>
+  <code>base\+ext { property: value; }</code>
+</p>
+
+<h3>HTML</h3>
+
+<p>
+  <code>&lt;element class="base+ext"&gt;&lt;/element&gt;</code>
+</p>
+
+<hr class="hr hr+3" />
+
+<p>
+  <q><strong>Yeah? So what.</strong></q> It may sound gimmicky, but lets put it into the perspective of modular class naming. If you use the pattern of base class/sub-class, you probably include the name of your base class in the name of your sub-class. With character escaping, we have a vocabulary of characters to extend this &ldquo;syntax&rdquo;.
+</p>
+
+<p>
+  <q><strong>Why not use BEM-style? Harry's already done the work in explaining its use.</strong></q> Yes, he has. And it is very well-explained. I'll call &ldquo;personal preference&rdquo; on this one. At my current job, we have updated the CSS to move away from underscores to using hyphens. Mixing both in a newer convention would be confusing and make any legacy styles even more difficult to update.
+</p>
+
+<p>
+  <q><strong>What about doing a search to find class names in the CSS?</strong></q> Yes, it is true that, if you adopt this, you will have to be constantly aware of the class names not being exactly the same in the CSS as they appear in the HTML. But I think the payoff of reading the style in the mark-up with a more robust character set will override the differences in CSS.
+</p>
+
+<p>
+  <q><strong>What&rsquo;s the browser support?</strong></q> You might be surprised. I tested in Chrome, Firefox, Safari, Opera, and IE9-IE7 on both Mac and Windows. No were issues found. Pretty neat, huh?
+</p>
+
+<p>
+  Anyways, this is just a quick &lsquo;n dirty on the subject. I have a test page <a href="http://cdpn.io/lfisp">here</a>. Please share your thoughts in the Comments below.
+</p>
+
+<p>
+  Cheers!
+</p>

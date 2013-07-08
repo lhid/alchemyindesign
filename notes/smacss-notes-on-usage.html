@@ -1,0 +1,512 @@
+<!doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Using SMACSS</title>
+
+    <meta name="description" content="A review of SMACSS and notes on its usage. This article will go over a brief refresher of its integral talking points and expand on it wherever possible." />
+    <meta name="author" content="Leban Hyde. Visual Alchemist | Codesmith | Brandologist" />
+    <meta name="contact" content="leban@alchemyindesign.com" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../css/massimo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/modules.css" />
+    <link rel="stylesheet" type="text/css" href="../css/state.css" />
+
+    <!-- This fix for alternate rendering modes. http://www.sitepoint.com/html5-shim-ie-emulation-mode/ -->
+    <!--[if IE]>  
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+    <![endif]-->
+
+  </head>
+
+  <body id="body">
+
+    <div class="l-wrap" id="top">
+
+      <header class="l-header">
+
+        <div class="l-bound">
+
+          <div class="l-col l-col+7">
+            <h3>
+              <a href="../index.html" title="Home" class="logo ir">
+                Leban Hyde. Visual Alchemist | Codesmith | Brandologist
+              </a>
+            </h3>
+            <a class="menu dsp-3" href="#nav" aria-hidden="true">Menu</a>
+          </div>
+
+          <nav id="nav" class="l-col l-col+5" role="navigation">
+            <h3 class="is-hidden">Site Navigation</h3>
+            <ol class="l-row nav nav+main">
+              <li class="l-col l-col+1"><a href="../work.html">Work</a></li>
+              <li class="l-col l-col+1"><a href="../notes.html">Notes</a></li>
+              <li class="l-col l-col+1"><a href="../about.html">About</a></li>
+              <li class="l-col l-col+2"><a href="../contact.html">Contact</a></li>
+              <li class="back"><a href="#body">Close</a></li>
+            </ol>
+          </nav>
+
+        </div><!-- /.l-bound -->
+
+      </header><!-- /.l-header -->
+
+      <div class="l-content" role="main">
+
+        <div class="l-bound">
+
+          <article>
+
+            <div class="hero hero-entry">
+              <h1>
+                SMACSS: Notes On Usage
+              </h1>
+            </div>
+
+            <hr class="hr hr+1" />
+
+            <div class="l-row section-std">
+
+              <div class="l-col l-col+4">
+                <p>
+                  <time datetime="2012-07-30">30 Jul 2012</time><br />
+                  <em>Updated</em> <time datetime="2012-10-03">03 Oct 2012</time>
+                </p>
+              </div>
+
+              <div class="l-col l-col+8">
+
+                <p>
+                  This article is a review of <a href="http://snook.ca/about/">Jonathan Snook's</a> book <cite><a href="http://smacss.com/">&ldquo;SMACSS: Scalable and Modular Architecture for CSS&rdquo;</a></cite> with additional notes based on my experience with the approach. I will go over a brief refresher of its integral talking points and expand on it where I can.
+                </p>
+
+                <hr class="hr hr+2" />
+
+                <aside class="section-std">
+
+                  <h2 class="is-hidden">Definition of Terms</h2>
+
+                  <dl>
+                    <dt>
+                      <dfn>
+                        Scalability
+                      </dfn>
+                    </dt>
+                    <dd>
+                      &ldquo;In electronics (including hardware, communication and software) scalability is the ability of a system, network, or process, to handle a growing amount of work in a capable manner or its ability to be enlarged to accommodate that growth.&rdquo;
+                    </dd>
+                  </dl>
+
+                  <p class="txt-r">
+                    <cite class="txt-r">
+                      <a href="http://en.wikipedia.org/wiki/Scalability">&mdash;Wikipedia</a>
+                    </cite>
+                  </p>
+
+                  <hr class="hr hr+3" />
+
+                  <dl>
+                    <dt>
+                      <dfn>
+                        Modularity
+                      </dfn>
+                    </dt>
+                    <dd>
+                      &ldquo;Modular design, or 'modularity in design' is an approach that subdivides a system into smaller parts (modules) that can be independently created and then used in different systems to drive multiple functionalities. A modular system can be characterized by the following:
+                    </dd>
+                    <dd>
+                      <ol>
+                        <li>
+                          Functional partitioning into discrete scalable, reusable modules consisting of isolated, self-contained functional elements
+                        </li>
+                        <li>
+                          Rigorous use of well-defined modular interfaces, including object-oriented descriptions of module functionality
+                        </li>
+                        <li>
+                          Ease of change to achieve technology transparency and, to the extent possible, make use of industry standards for key interfaces.&rdquo;
+                        </li>
+                      </ol>
+                    </dd>
+                  </dl>
+
+                  <p class="txt-r">
+                    <cite>
+                      <a href="http://en.wikipedia.org/wiki/Modular_design">&mdash;Wikipedia</a>
+                    </cite>
+                  </p>
+
+                </aside>
+
+                <section class="section-std">
+
+                  <h2 class="hrb hrb+2">Intro</h2>
+
+                  <p>
+                    SMACSS is an acronym for Scalable and Modular Architecture for Cascading Style Sheets. It is not a framework, but an approach to authoring style sheets. In it, I found the primary points that define it are: Categorizing CSS Rules, Naming Conventions, and Depth of Applicability. Once you have these three points down, it is relatively smooth sailing.
+                  </p>
+
+                </section>
+
+                <section class="section-std">
+
+                  <h2 class="hrb hrb+2">Goals of Implementation</h2>
+
+                  <p>
+                    Before we go any further, let's establish the core goals of SMACSS so we can best evaluate the practice.
+                  </p>
+
+                  <h3>Core Goals:</h3>
+
+                  <ol>
+                    <li>Increase the semantic value of a section of HTML and content</li>
+                    <li>Decrease the expectation of a specific HTML structure</li>
+                  </ol>
+
+                </section>
+
+                <section class="section-std">
+
+                  <h2 class="hrb hrb+2">Categorizing CSS Rules</h2>
+
+                  <p>
+                    A lot of what SMACSS does is aid in better organization of rules so that the workflow is smoother and the styles are repeated less. It places CSS rules into five main categories:
+                  </p>
+
+                  <ol>
+                    <li>Base Rules: The default styles.</li>
+                    <li>Layout Rules: Dictate major layout components.</li>
+                    <li>Modules: Dictate minor layout components.</li>
+                    <li>State: Describe the appearance of a module in various states.</li>
+                    <li>Theme: Describe the appearance of a module in various contexts.</li>
+                  </ol>
+
+                  <p>
+                    <strong>Base Rules</strong> are where you will put any global element declarations or CSS resets. You may find that as you move along the process of a site build that you are moving repeated styles to the Base Rules. That's good! Doing so will minimize the amount of classes needed in your style sheet. The caveat is to treat those styles gingerly and to avoid using far reaching selectors and overly specific rules (we'll get into that in Depth of Applicability).
+                  </p>
+
+                  <p>
+                    <strong>Layout Rules</strong> divide the page into sections and hold one or more modules together. Wrappers, rows, columns and any grid-based styles can go here. Also major semantic areas as well, such as header, content and footer.
+                  </p>
+
+                  <p>
+                    <strong>Module Rules</strong> make up the smaller, groupable areas of the site. Some examples are callouts, calls-to-action (cta), sidebars, and so on. They should be named in a way that is independent of the page context, making them reusable throughout the site. This is the point of modularity.
+                  </p>
+
+                  <p>
+                    <strong>State Rules.</strong> Declarations for the appearance of a module in its various states. Simply put, these states may change in three ways:     
+                  </p>
+
+                  <ol>
+                    <li>Class name</li>
+                    <li>Pseudo-class</li>
+                    <li>Media query</li>
+                  </ol>
+
+                  <p>
+                    <strong>Theme Rules</strong> describe the appearance of modules, i.e., colors, images, etc, by way of visual themes. Not every project has the requirement of themes, but some context examples might be: user-selected skin for an applicaton, client branding for a hosted site, holiday or seasonal themes.
+                  </p>
+
+                </section>
+
+                <section class="section-std">
+
+                  <h2 class="hrb hrb+2">Naming Conventions</h2>
+
+                  <p>
+                    In his book, Jonathan Snook covers naming conventions as a section under the Categorizing CSS Rules chapter. I found this to be such an integral part of SMACSS, that I wanted to cover it on it's own. It has much to do with the scalability and modularity of the styles and needs careful consideration. As a rule of thumb, the name should be independent of page context, yet increase the semantic value of the content it addresses (whenever possible).
+                  </p>
+
+                  <p>
+                    In the base rules, because we are dealing with element selectors, there are no names to author. The caution, again, is to be mindful of the selectors and the rules associated with them.
+                  </p>
+
+                  <p>
+                    Layout rules are prefixed with &ldquo;l-&rdquo;, for &ldquo;layout&rdquo;, followed by a base name to describe the major components they are styling or sections they are dividing. Class names like <code>.l-header</code>, <code>.l-content</code>, <code>.l-footer</code> are all examples of naming by major section. If you are implementing a grid framework, names like <code>.grid-1</code> or <code>.col-1</code> work just fine. So long as their function is easily understood.
+                  </p>
+
+                  <p>
+                    In a current build that I am working on, I am using <code>.l-row-(extender)</code>, <code>.l-col-(extender)</code>, and <code>.l-box-(extender)</code> as helper classes. The <code>(extender)</code> in this case describes the padding value, but in an indirect manner. I stairstep the extenders with <code>-cls</code> (close), <code>-std</code> (standard), <code>-wd</code> (wide), <code>-xtr</code> (extra), and <code>-spr</code> (super). If I were to add on one more, it might be <code>-ult</code> (ultra).
+                  </p>
+
+                  <p>
+                    These classes are based on repeated patterns I saw in padding rules. Breaking them out into their own classes practices <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY (Don't Repeat Yourself)</a> and creates greater flexibility of code. Notice that the exact padding value is not addressed within the namespace. The extender <code>-cls</code> could have a padding value of 5px, 10px, whatever. At any time you can go in and change the values within the CSS file without touching the markup. As long as the team you are working with understands the convention, you are golden!
+                  </p>
+
+                  <p>
+                    Modules... Because they will be many, no prefix is used for naming them&mdash;the name of the base module itself will do. We can extend the appearance of a module by creating a submodule, using the same base name with an extender name, separated with hyphens.
+                  </p>
+
+                  <p>
+                    A great example of this would be the <code>.btn</code> module. When a button or button-like object is used in a project, the look should probably be the same site-wide. Rounded corners, gradient, drop shadow, border are common characteristics that will want to be shared. These rules can be standardized by declaring a base module of <code>.btn</code>. From there, if we need to extend the appearance according to a more specific context, we can create the submodule <code>.btn-cta</code> (call-to-action), and apply both of these classes to the element being styled.
+                  </p>
+
+                  <p>
+                    Think about the function or purpose of the module and how the user will interact with it. Again, the key is to keep the name independent of the page context. Assume that you will use this module several times throughout the site. Are there cases where the module is simply a one-off? Yes, I believe in most projects they are unavoidable, but don't let that prevent you from naming them with modularity in mind.
+                  </p>
+
+                  <p>
+                    Name the classes as if you were coding for someone else. Is it clear what is being described without further explanation? If not, you may need to reconsider the name that you have chosen. Yes, you can always include a &ldquo;readme&rdquo;, but I would also make the assumption that the next person to touch the styles may be too busy to read the file. 
+                  </p>
+
+                  <p>
+                    With the use of modules and submodules, classes and subclasses, it is easy to imagine that we could quickly become inflicted with &ldquo;classitis&rdquo; if we are not careful. For this, I apply the Rule of Three to limit classes on a single element. If I need to use more than three classes to style an element, I take that as a sign that I may need to author a new class or subclass in order to accomplish the look that I am trying to achieve. This is not something that you have to stick to, I just found it works best for me.
+                  </p>
+
+                  <p>
+                    State rules are prefixed with &ldquo;is-&rdquo;, followed by a name to describe its state of being. Some example names would be &ldquo;active&rdquo;, &ldquo;collapsed&rdquo;, or &ldquo;hidden&rdquo;. So, the namespace makes a statement as if to say, &ldquo;This <code>&lt;element&gt;</code>&lsquo;is-active&rsquo;.&rdquo;
+                  </p>
+
+                  <p>
+                    Even though chaining is generally discouraged in SMACSS, I have found it more practical to chain state classes to the element or module they are meant to modify. By chaining the state rule to the modified element, we can recycle namespaces while isolating the appropriate rules to their respective element. For example:
+                  </p>
+
+                  <figure>
+                    <code>
+<pre>
+a.is-disabled { 
+color: gray;
+}
+
+.btn.is-disabled { 
+background: gray;
+}</pre>
+                    </code>
+                  </figure>
+
+                  <p>
+                    Two different elements with different CSS needs, but both share the state of &ldquo;disabled*&rdquo;.
+                  </p>
+
+                  <p>
+                    <small>
+                      *Note that <code>:disabled</code> is actually a pseudo-class selector, but has <a href="http://www.w3.org/TR/2001/CR-css3-selectors-20011113/#UIstates">limited capability</a>.
+                    </small>
+                  </p>
+
+                  <p>
+                    Theme rules will share the same name as the modules whose appearance, or skin, they describe. No new class names needed. But, for easier maintenance, they will live in a separate section or file of CSS. The idea is that rules for color or background-images can be changed out with minimal effort while keeping the core rules, like padding and margins, untouched.
+                  </p>
+
+                </section>
+
+                <section class="section-std">
+
+                  <h2 class="hrb hrb+2">Depth of Applicability</h2>
+
+                  <p>
+                    Depth of applicability refers to how deep into the document tree a CSS selector has the ability to style an HTML element. We can minimize this by only styling the element that we need in the most direct manner possible. One of the ways to achieve this is by using child selectors. For example:
+                  </p>
+
+                  <figure>
+                    <code>
+<pre>
+.list > li { 
+margin-bottom: 0;
+}</pre>
+                    </code>
+                  </figure>
+
+                  <p>
+                    ...would only apply a bottom margin of 0 to the list-items that are the direct children of the parent element with a class of <code>.list</code>. That means we have a combined applicability depth of 2: 1 for the parent <code>.list</code> + 1 for the child <code>&lt;li&gt;</code>. We could also say:
+                  </p>
+
+                  <figure>
+                    <code>
+<pre>
+.list > li > a {
+display: block;
+}</pre>
+                    </code>
+                  </figure>
+
+                  <p>
+                    This would only add a block display to an anchor that is the direct child of a list-item that is ALSO a direct child of the parent element with a class of <code>.list</code>. That takes us one level deeper than the previous example, but allows us to move that code around to any place in the site and only be applied to the direct children within that module. You know exactly what to expect when that class is applied and, in the case of nesting another ordered/unordered list within a list-item, its list-items will not be affected by the styles. That's minimizing the depth of applicability!
+                  </p>
+
+                </section>
+
+                <section class="section-std">
+
+                  <h2 class="hrb hrb+2">Caveats and Difficulties</h2>
+
+                  <p>
+                    As mentioned, there are some things to be aware of when applying the SMACSS approach to your next project. There will be the undoubted tendency to fall into classitis. I would hold firm to a predetermined &ldquo;number of class&rdquo; rule for any given element. For more practical reasons, it has more to do with readability of code than a &ldquo;keep the markup clean&ldquo; ideology. If there are multiple classes thrown onto a single element, it becomes unclear where the offending style is coming from.
+                  </p>
+
+                  <p>
+                    Naming conventions are a bit of a bear to wrestle with. I found it contradictory at times to give a module a non-specific class name abstracting it from its context while maintaining some semblance of semantic value. It was helpful for me to think more about the function of the module itself. Much like a <code>&lt;p&gt;</code> or <code>&lt;h1&gt;</code> describes the content as paragraph or level-1 header, <code>.callout</code> or <code>.hero</code> describe the content as special information or a primary banner image.
+                  </p>
+
+                  <p>
+                    Deciding which is module and which is layout was also a challenge at times. I have even adjusted my coding style to include a module class and a layout [helper] class on the same element. This could easily be the subject of argument and the implementation of compilers/preprocessors can help eliminate the layout helper class from the mark-up, but I personally found that it gave the modules more flexibility for varying contexts, e.g., main content area vs. sidebar.
+                  </p>
+
+                </section>
+
+                <section class="section-std">
+
+                  <h2 class="hrb hrb+2">Further Reading</h2>
+
+                  <p>
+                    I would highly recommend checking out <a href="http://www.stubbornella.org/">Nicole Sullivan's</a> <a href="https://github.com/stubbornella/oocss/">OOCSS</a>, <a href="http://bem.github.com/bem-method/pages/beginning/beginning.en.html">BEM</a> by <a href="http://company.yandex.com/">Yandex</a>, <a href="http://andyhume.net/about/">Andy Hume</a> at <a hrefhttp://schedule.sxsw.com/2012/events/event_IAP9410="">SXSW: 2012</a>, and Harry Roberts at <a href="http://csswizardry.com/">CSS Wizardry</a>.
+                  </p>
+
+                  <p>
+                    OOCSS is actually where my journey began with the whole concept of modular code. The documentation is available, but I found it didn't answer all of the questions I had. SMACSS helped me fill in the gaps.
+                  </p> 
+
+                  <p>
+                    BEM does a good job at visualizing blocks of information and the elements inside them. It also gives another perspective on the relationship between module and submodule, described in BEM language as Element and Modifier.
+                  </p>
+
+                  <p>
+                    Andy Hume's <a href="http://lanyrd.com/2012/sxsw-interactive/spmqc/">presentation</a> helped to clear up some idealize notions that I had in regards to CSS and HTML. Through the encouragement that he delivered, I was able to let go of former practices in order to embrace code modularity.
+                  </p>
+
+                  <p>
+                    Harry Roberts has embraced the Object Oriented approach and has written on <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">various</a> <a href="http://csswizardry.com/2012/06/the-open-closed-principle-applied-to-css/">principles</a> that can easily be applied to SMACSS.
+                  </p>
+
+                  <p>
+                    <a href="http://www.drewbarontini.com/">Drew Barontini</a> and <a href="http://nick-walsh.com/">Nick Walsh</a> from <a href="http://envylabs.com/">Envy Labs</a> have also created an <a href="http://mvcss.github.com/MVCSS/">MVC based on modular CSS</a>. If MVC's are your bag, check them out as well!
+                  </p>
+
+                </section>
+
+                <section class="section-std">
+
+                  <h2 class="hrb hrb+2">In Conclusion</h2>
+
+                  <p>
+                    SMACSS may not be for everybody. It may not be for every project. But it will at least give you a different perspective to the way you approach your site builds. As Jonathan Snook says,
+                  </p> 
+
+                  <blockquote>
+                    &ldquo;Feel free to take this in its entirety or use only the parts that work best for you. Or don’t use it at all. I understand that this won’t be everybody’s cup of tea. When it comes to web development, the answer to most questions is &lsquo;it depends&rsquo;.&rdquo;
+                  </blockquote>
+
+                  <p>Cheers!</p>
+
+
+                  <p>
+                    <a href="../notes.html">&#8592; Back to Notes</a>
+                  </p>
+
+                </section>
+
+                <hr class="hr hr+2" />
+
+                <h2 class="is-hidden">Comments</h2>
+
+                <div id="disqus_thread"></div>
+
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'alchemyindesign'; // required: replace example with your forum shortname
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+              </div><!-- /.l-col+9 -->
+
+            </div><!-- /.l-row -->
+
+          </article>
+
+        </div><!-- /.l-bound -->
+
+      </div><!-- /.l-content -->
+
+    </div><!-- /.l-wrap -->
+
+    <!-- Stickey Footer -->
+    <footer class="l-footer" role="contentinfo">
+
+      <div class="l-bound">
+
+          <div class="l-col l-col+3">
+
+            <h4 class="logo-ftr dsp-5">
+              <a href="../index.html" title="Home">Alchemy In Design.</a>
+            </h4>
+
+            <p>
+              <small>&copy;2013 Leban Hyde.</small>
+            </p>
+
+          </div>
+
+          
+          <div class="l-col l-col+4">
+
+            <h5 class="txt-tight">Email:</h5>
+
+            <p>
+              <a href="mailto:leban@alchemyindesign.com" class="txt-6">leban@alchemyindesign.com</a>
+            </p>
+
+          </div>
+
+          <div class="l-col l-col+4">
+
+            <h5 class="txt-tight">Social:</h5>
+
+            <ul class="list list+row txt-6">
+              <li>
+                <a href="https://twitter.com/lhid">Twitter</a>
+              </li>
+              <li>
+                <a href="http://pinterest.com/lebanh/">Pinterest</a>
+              </li>
+              <li>
+                <a href="http://www.behance.net/lhid">Behance</a>
+              </li>
+              <li>
+                <a href="https://github.com/lhid">GitHub</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="l-col l-col+1">
+            <nav class="nav nav+ftr">
+              <h5 class="is-hidden">Footer Navigation</h5>
+              <a href="#top" title="Back to Top" class="dsp-2">
+                <span role="presentation">&and;</span>
+              </a>
+            </nav>
+          </div>
+
+      </div><!-- /.l-bound -->
+
+    </footer>
+
+    <!-- Google Analytics -->
+    <script>
+      var _gaq=[['_setAccount','UA-34170107-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+
+  </body>
+
+</html>

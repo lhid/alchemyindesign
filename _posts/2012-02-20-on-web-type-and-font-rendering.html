@@ -1,0 +1,217 @@
+---
+layout: post
+categories: notes
+title_meta: Typography on the Web
+description: A researched article about the appearance of typography on the web and the way that fonts render in respect to the web browser, the operating system, and the font itself.
+
+title: On Web Type and Font Rendering
+disqus_id: on-web-type-and-font-rendering.html
+excerpt: This is an exciting time to be working in web design. HTML5 and CSS3 have gained momentum and the benefits they bring have opened doors for us that were not available even five years ago. For those of us who have transitioned over from print, the wide support of web fonts has been long awaited.
+---
+
+<div class="section-std">
+  <p>
+    <strong>This is an exciting time to be working in web design.</strong> HTML5 and CSS3 have gained momentum and the benefits they bring have opened doors for us that were not available even five years ago. For those of us who have transitioned over from print, the wide support of web fonts has been long awaited. Thanks to "@font-face", being able to serve up some tasty type without the use of graphics (or flash... yuck!) has been a relief on several levels, but there are still some drawbacks. 
+  </p>
+
+  <p>
+    One of those drawbacks is font rendering. If you are testing your work across various browsers and operating sytems (please, tell me you are), then you have undoubtedly ran into jagged fonts... especially in larger font sizes. I started this article unwittingly looking for a simple CSS solution to fix just that. But I regret to inform you, fellow web workers, that it is not that simple &#9785;
+  </p>
+
+  <p>
+    There are several factors involved with determining how a font renders in a browser. I have spent the past week or so researching this issue and have fallen down the rabbit hole. Dusting off the muck and the mire, I have answers and I will try to distill them into the essential info.
+  </p>
+
+  <p>
+    Web font rendering basically relies on three main ingredients:
+    <ol>
+      <li>The Web Browser</li>
+      <li>The OS</li>
+      <li>The Font</li>
+    </ol>
+  </p>
+
+  <p>
+    Understanding how these affect what you and your users see on the screen will help you make better informed decisions in the fonts you choose for a given project.
+  </p>
+
+</div>
+
+<section class="section-std">
+
+  <h2 class="hrb hrb+2">The Web Browser</h2>
+
+  <p>
+    Our good ole friend the Browser has been able to make and break many a design since the birth of the world wide web. Oftentimes, with a bit of research and cleverness, fixes/hacks have been able to remedy several common ailments. There is a CSS property designed for the issue of font smoothing and the existing code is such:
+  </p>
+
+  <figure>
+    <p>
+      <code>
+      font-smooth: auto | never | always | &lt;absolute-size&gt; | length
+      </code>
+      <sup>(1)</sup>
+    </p>
+  </figure>
+
+  <p>
+    Webkit, as you can imagine, has their version of this:
+  </p>
+
+  <figure>
+    <p>
+      <code>
+        -webkit-font-smoothing: none | subpixel-antialiased | antialiased
+      </code>
+      <sup>(2)(3)</sup>
+    </p>
+  </figure>
+
+  <p>
+    <small>
+      *NOTE: I've seen the subsequent '-o-' and '-moz-' prefixes used, but I have not found documentation to support them.
+    </small>
+  </p>
+
+  <p>
+    I did not find the 'font-smooth' property to have much of an affect (<a href="demo-font-smooth.html">demo</a>). The webkit version, on the other hand, has a significant affect in browsers that use it (<a href="demo-webkit-font-smoothing.html">demo</a>). However, before you go running off and plugging it into your current project, there are some things you should understand about OS rendering first.
+  </p>
+
+</section>
+
+<section class="section-std">
+
+  <h2 class="hrb hrb+2">The OS</h2>
+
+  <p>
+    Ah yes, the true master of our designs&mdash;<strong>The OS</strong>. This is where things get a lot trickier. Windows and Mac have different philosophies (as you may well know) on pretty much everything. Why should font rendering be the exception?
+  </p>
+
+  <p>
+    Historically, Windows has chosen to render the individual letterform by snapping it to the pixel grid, honoring utility over presentation. Fonts appear to be crisper and have a higher contrast. This has been reported to be friendlier to reading and working with screen text for long duration.
+  </p>
+
+  <p>
+    Mac OS X, on the other hand, has chosen to preserve the true appearance of the font according to what the type designer intended. This is achieved by a slight blurring of the edges on the <a href="http://en.wikipedia.org/wiki/Subpixel_rendering">subpixel</a> level, relying on optical mixture to create the illusion of a truer letterform. The result is smoother curves and angles with characters that slightly evade the pixel grid.
+  </p>
+
+  <p>
+    In most cases, the control of the system's rendering is in the user's hands, with both operating systems allowing you to go into the system prefereces and turn the font smoothing on or off. It is worth noting that Windows font rendering has gotten a bit better over the past few years, as it has opted for upgrading it's rendering technology (<a href="http://msdn.microsoft.com/en-us/library/ms749295.aspx">ClearType</a>). However, there is still a noticeable difference between the two systems and viewing fonts on both is highly recommended. But even the OS is not the end-all for quality control in rendering, which ultimately lies in the font file itself.
+  </p>
+
+</section>
+
+<section class="section-std">
+
+  <h2 class="hrb hrb+2">The Font</h2>
+
+  <p>
+    At the end of it all, the font file is the most important part of the rendering equation. Like in cooking, if the principal ingredient is of poor quality, the overall quality of the dish is limited. Likewise, if you are working with a font that has not been optimized for the screen or for certain font sizes, the web browser and the operating system may not have much influence in the total outcome.
+  </p>
+
+  <figure>
+    <img src="/img/notes/closeup-pixelgrid.png" alt="Close-Up Pixel Grid" class="scale" />
+    <figcaption>
+      Close-up of the letterform and the pixel grid in various antialias settings.
+    </figcaption>
+  </figure>
+
+  <p>
+    Since the printing press days, typographers have taken care in designing (and carving) letterforms with the context of its application in mind. Display type and text (body copy) are two distinct applications that not every typeface is designed to serve. This holds true to this day. Some fonts have been designed with the specific purpose of being set in a large point/pixel size, showing off nuance of form or boldness of weight and contrast. Other fonts may have been designed specifically for the duty of smaller sized text for body copy. Careful consideration has been taken to apply the letterform to the pixel grid without clogging the <a href="http://en.wikipedia.org/wiki/Counter_%28typography%29">counters</a>&mdash;the enclosed space of the "O", "P" or the lowercase "e".
+  </p>
+
+</section>
+
+<section class="section-std">
+
+  <h2 class="hrb hrb+2">Conclusion</h2>
+
+  <p>
+    I know that you may be sitting there reading this being completely bummed that there is no snippet of code that will serve as a magic pill to cure your jagged text woes. It would be nice if it were that simple. The most important thing to keep in mind is not that we cannot control the ultimate appearance of the font, but that, with the rise of mobile, we have no control over the appearance of our site as a whole. Embrace that idea and move forward. &#10006;
+  </p>
+
+</section>
+
+<hr class="hr hr+2" />
+
+<section class="section-std txt-5">
+
+  <h5>
+    Footnotes
+  </h5>
+
+  <ol>
+    <li id="footnote-1">
+      <a href="http://www.w3.org/TR/WD-font/#font-smooth-prop">"CSS3 module: Fonts 4.2 Font sSmoothing: the 'font-smooth' Property."</a> <i>w3c.org.</i> 2 August 2002. Web. 20 Feb. 2012. 
+    </li>
+
+    <li id="footnote-2">
+      Van Damme, Tim. <a href="http://maxvoltar.com/archive/-webkit-font-smoothing">"-webkit-font-smoothing".</a> <i>maxvoltar.com.</i> 19 May 2010. Web. 20 Feb. 2012. 
+    </li>
+
+    <li id="footnote-3">
+      Zillgens, Christoph. <a href="http://christophzillgens.com/en/articles/-webkit-font-smoothing-reloaded">"-webkit-font-smoothing Reloaded".</a><i>
+      christophzillgens.com.</i> 3 Aug 2010. Web. 20 Feb. 2012. 
+    </li>
+  </ol>
+
+</section>
+
+<hr class="hr hr+3" />
+
+<section class="section-std txt-5">
+
+  <h5>
+    Additional References
+  </h5>
+
+  <ol>
+    <li>
+      Bond, Dave. <a href="http://dave-bond.com/css/font-too-bold-on-a-mac/">"Font Too Bold on a Mac?".</a> <i> dave-bond.com.</i> 4 Oct 2011. Web. 20 Feb. 2012. 
+    </li>
+
+    <li>
+      <a href="http://msdn.microsoft.com/en-us/library/ms749295.aspx">"ClearType Overview".</a><i>
+      microsoft.com.</i> n.d. Web. 20 Feb. 2012. 
+    </li>
+
+    <li>
+      <a href="http://www.w3.org/TR/css3-fonts//">"CSS Fonts Module Level 3".</a><i>
+      w3.org.</i> 17 Nov 2009. Web. 20 Feb. 2012. 
+    </li>
+
+    <li>
+      Eden, Daniel. <a href="http://daneden.me/2010/12/css-font-smoothing/">"CSS Font Smoothing".</a><i> daneden.me.</i> 12 Jul 2010. Web. 20 Feb. 2012. 
+    </li>
+
+    <li>
+      <a href="http://www.usabilitypost.com/2010/08/26/font-smoothing/">"Font Smoothing".</a><i>
+      usabilitypost.com.</i> n.d. Web. 20 Feb. 2012. 
+    </li>
+
+    <li>
+      <a href="http://stackoverflow.com/questions/761778/forcing-anti-aliasing-using-css-is-this-a-myth">"Forcing Anti-Aliasing Using CSS: Is This a Myth?".</a><i> stackoverflow.org.</i> 17 Apr 2009. Web. 20 Feb. 2012. 
+    </li>
+
+    <li>
+      <a href="http://www.icondeposit.com/blog:how-to-properly-smooth-font-using-css3">"How To Properly Smooth Font Using CSS3".</a><i>
+      icondeposit.com.</i> 30 Jun 2011. Web. 20 Feb. 2012. 
+    </li>
+
+    <li>
+      <a href="http://typophile.com/node/74817">"If You thought Windows Rasterizing Was complicated...".</a><i>
+      typophile.com.</i> 2 Oct 2010. Web. 20 Feb. 2012. 
+    </li>
+
+    <li>
+      <a href="https://developer.mozilla.org/en/CSS/text-rendering">"Text-Rendering".</a><i>
+      mozilla.org.</i> n.d. Web. 20 Feb. 2012. 
+    </li>
+
+    <li>
+      <a href="http://blog.typekit.com/2010/10/05/type-rendering-on-the-web/">"Type Rendering on the Web".</a><i>
+      typekit.com.</i> 5 Oct 2010. Web. 20 Feb. 2012. 
+    </li>
+  </ol>
+
+</section>

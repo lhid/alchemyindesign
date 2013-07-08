@@ -1,0 +1,127 @@
+---
+layout: default
+title_meta: Notes by Leban Hyde.
+description: Some notes and articles written by Leban Hyde on design, code, and branding. Articles of discovery, thoughts on issues, and theories about the world around me. Very blog-like.
+---
+
+<div class="l-content" role="main">
+
+  <div class="l-bound">
+
+    <div class="hero hero+notes">
+      <h1>
+        Notes
+      </h1>
+    </div>
+
+    <hr class="hr hr+1" />
+
+    <section class="section-wd">
+
+      <h2 class="hrb hrb+2">Preface</h2>
+
+      <div class="l-row">
+
+        <div class="l-col l-col+4">
+          <p>
+            <strong>This is not a blog.</strong>
+          </p>
+        </div>
+
+        <div class="l-col l-col+8">
+          <p>
+            It may share many similar characteristics of a blog, but this is not a blog. This is more like&#8230; a journal. An online notepad of ramblings, snippets and articles of interest. Here you may find topics ranging from design to code to branding. But despite its appearances, this is <em>definitely</em> not a blog&#8230; I think.
+          </p>
+
+          <p>
+            <a href="http://feeds.feedburner.com/alchemyindesign">RSS Feed &#8594;</a>
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ============================ The Most Recent Section ============================ -->
+    <section class="section-wd">
+
+      <h2 class="hrb hrb+2">Most Recent</h2>
+
+      <ul class="list">
+        {% for post in site.posts limit:5 %}
+          <li>
+            <article class="l-row section-std">
+
+              <div class="l-col l-col+4">
+                <p>
+                  <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+                </p>
+              </div>
+
+              <div class="l-col l-col+8">
+
+                <h3>
+                  <a href="{{ post.url }}">
+                    {{ post.title }}
+                  </a>
+                </h3>
+
+                <p>
+                  {{ post.excerpt }}
+                </p>
+
+                <p>
+                  <a href="{{ post.url }}">Read More &#8594;</a>
+                </p>
+
+              </div>
+
+            </article>
+
+            <hr class="hr hr+3" />
+
+          </li>
+        {% endfor %}
+      </ul>
+
+    </section>
+
+    <!-- ============================== The Archives Section ============================= -->
+    <section class="section-wd">
+
+      <h2 class="hrb hrb+2">Archives</h2>
+
+      <ul class="list">
+        {% for post in site.posts offset:5 %}
+          <li>
+            <article class="l-row section-std">
+
+              <div class="l-col l-col+4">
+                <p>
+                  <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+                </p>
+              </div>
+
+              <div class="l-col l-col+8">
+
+                <h3>
+                  <a href="{{ post.url }}">
+                    {{ post.title }}
+                  </a>
+                </h3>
+
+              </div>
+
+            </article>
+
+            <hr class="hr hr+3" />
+
+          </li>
+        {% endfor %}
+      </ul>
+
+    </section>
+
+  </div><!-- /.l-bound -->
+
+</div><!-- /.l-content -->

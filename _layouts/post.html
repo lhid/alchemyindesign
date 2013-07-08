@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="l-content" role="main">
+
+  <div class="l-bound">
+
+    <article>
+
+      <div class="hero hero-entry">
+        <h1>
+          {{ page.title }}
+        </h1>
+      </div>
+
+      <hr class="hr hr+1" />
+
+      <div class="l-row section-std">
+
+        <div class="l-col l-col+4">
+          <p>
+            <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+          </p>
+        </div>
+
+        <div class="l-col l-col+8">
+
+          {{ content }}
+
+          <hr class="hr hr+3" />
+
+          <p>
+            <a href="/notes.html">&#8592; Back to Notes</a>
+          </p>
+
+          {% include comments.html %}
+
+        </div><!-- /.l-col+8 -->
+
+      </div><!-- /.l-row -->
+
+    </article>
+
+  </div><!-- /.l-bound -->
+
+</div><!-- /.l-content -->

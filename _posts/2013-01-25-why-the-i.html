@@ -1,0 +1,79 @@
+---
+layout: post
+categories: notes
+title_meta: Using The i Element For Icons
+description: A short article explaining why the i element holds semantic value.
+
+title: Why the &lt;i&gt;?
+disqus_id: why-the-i.html
+excerpt: I recently had a brief twittersation with @thedutchcoder and @csswizardry in regards to using the icon module in mark-up. The discussion, at least at the point where I joined in, specifically revolved around the use of &lt;span&gt; versus the use of &lt;i&gt;.
+---
+
+<p>
+  I recently had a brief twittersation with <a href="https://twitter.com/TheDutchCoder">@thedutchcoder</a> and <a href="https://twitter.com/csswizardry">@csswizardry</a> in regards to using the icon module in mark-up. The <a href="https://twitter.com/TheDutchCoder/status/293376609090686976">discussion</a>, at least at the point where I joined in, specifically revolved around the use of <code>&lt;span&gt;</code> versus the use of <code>&lt;i&gt;</code>. Being that I follow <a href="http://snook.ca/">Jonathan Snook’s</a> example of the icon module in <a href="http://smacss.com/">SMACSS</a>, naturally I use the <code>&lt;i&gt;</code>. However, I am not using it blindly. I read the HTML5 spec for the <code>&lt;i&gt;</code> and made my decision based on my interpretation of what was defined there.
+</p>
+
+<blockquote>
+
+  <hgroup>
+    <h3 class="txt-tight">HTML</h3>
+    <h4>Living Standard — Last Updated <time datetime="2013-01-19">19 January 2013</time></h4>
+  </hgroup>
+
+  <p>
+    The <code>i</code> element represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text, such as a taxonomic designation, a technical term, an idiomatic phrase from another language, transliteration, a thought, or a ship name in Western texts.
+  </p>
+
+  <p class="txt-r">
+    &mdash;<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-i-element">whatwg.org</a>
+  </p>
+
+</blockquote>
+
+<p>
+  The part that I am particularly interested in is <q>an alternate voice or mood, or otherwise offset from the normal prose</q>. If we look at how the information is displayed within the interface, we see the visual pattern of icon + text. The icon is the visual representation of the thing, where the text beside it is the textual or linguistic representation of the thing. However different, they are both representing the same thing, the same idea.
+</p>
+
+<p>
+  With that said, the <q>alternate voice or mood</q> start to come into focus (or at least in my mind). The icon, being the visual representation, is <q>offset from the normal prose</q> of the textual representation.
+</p>
+
+<p>
+  I may be over-analyzing this, but my intention here is to make peace with the use of the <code>&lt;i&gt;</code> element for icons. If you still prefer <code>&lt;span&gt;</code> over <code>&lt;i&gt;</code>, by all means use it. That’s what makes HTML so great&mdash;authors have the power to interpret the information differently. The point is that we <em>think</em> about what we are doing and how we are doing it.
+</p>
+
+<p>
+  At the end of the day, as the <code>&lt;i&gt;</code> is <q>an empty element</q>, the point of semantics just <a href="https://twitter.com/csswizardry/status/293379052092411904">may be moot</a>.
+</p>
+
+<p>
+  Cheers!
+</p>
+
+<hr class="hr hr+3" />
+
+<section class="section-std">
+
+  <h3>
+    Further Reading
+  </h3>
+
+  <ul>
+    <li>
+      <a href="http://html5doctor.com/i-b-em-strong-element/">
+        The i, b, em, &amp; strong elements
+      </a>
+    </li>
+    <li>
+      <a href="http://dev.w3.org/html5/markup/i.html">
+        HTML: The Markup Language (an HTML language reference)
+      </a>
+    </li>
+    <li>
+      <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-i-element">
+        HTML Living Standard: 4.6.17 The <code>i</code> element
+      </a>
+    </li>
+  </ul>
+
+</section>

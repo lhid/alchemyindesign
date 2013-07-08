@@ -1,0 +1,188 @@
+---
+layout: post
+categories: notes
+title_meta: CSS Modules&#58; Typography
+description: A memo about the bilingual future of this blog and things to come. Un memo sobre el futuro bilingüe de este blog y las cosas que vienen.
+
+title: Modular Typography
+disqus_id: modular-typography.html
+excerpt: A spin-off article from the Creating Modules series. Addresses typography rules in Modular CSS (SMACSS, OOCSS).
+---
+
+<div class="section-std">
+
+  <p>
+    When building a web site, one of the places I like to start is with the typography of the site. I use no more than six font-sizes. I would argue that even six is too many, but HTML allows for a total of six heading levels: <code>h1–h6</code>. Therefore, we’ll account for those headings but cap it off there. There are deeper design concerns outside of writing SMACSS or OOCSS, but I’ll address that at another time.
+  </p>
+
+  <aside class="box box-aside">
+    <h4>
+      Author’s Note
+    </h4>
+
+    <p class="txt-4">
+      While writing <a href="creating-mocules-part-ii.html">Creating Modules Part 2</a>, I had to do a lot of editing to help streamline the flow of the article. Typography is a topic that I originally touched on, but felt that it ultimately slowed down the article’s pace. So I removed it. But because I feel it is still a helpful subject, I am posting it as its own short post.
+    </p>
+  </aside>
+
+</div>
+
+<section class="section-std">
+
+  <h2 class="hrb hrb+2">
+    Headings
+  </h2>
+
+  <p>
+    Based off the sizes we established for the headings in our HTML document (<code>h1–h6</code>), we can turn these into sibling modules. Remember that sibling modules have no common base class, but share a common purpose. Using the sizes and hierarchy of <code>h1–h6</code>, I might write:
+  </p>
+
+  <figure class="box box-example">
+<pre>
+<code>
+.display-1 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: bold;
+}
+</code>
+</pre>
+  </figure>
+
+  <p>
+    I have written three property/value pairs for this sibling module: <code>font-size</code>, <code>line-height</code>, <code>font-weight</code>. This is the bare minimum of what we need to apply the appearance of a heading to another element.
+  </p>
+
+  <p>
+    Why would I do that? Situational context. You may find an instance where the semantically correct element in the markup is not the same as its visual requirement. You would use this class to remedy that. Also, per the <a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">HTML5 Spec</a>, you could use multiple instances of an <code>h1</code> on the same page by using it within sectioning elements. This class would help give control over the correct appearance.
+  </p>
+
+</section>
+
+<section class="section-std">
+
+  <h2 class="hrb hrb+2">
+    Body
+  </h2>
+
+  <p>
+    We would finish out the remaining heading siblings in this fashion from 1–6. We might also consider an additional set of classes intended for body text. The <code>font-size</code> and <code>line-height</code> would be the same as their <code>.display-(n)</code> counterparts, but the <code>font-weight</code> would be normal. Something like:
+  </p>
+
+  <figure class="box box-example">
+<pre>
+<code>
+.text-1 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: normal;
+}
+</code>
+</pre>
+  </figure>
+
+  <p>
+    This helps keep our body text hierarchy in congruence with our heading hierarchy and maintain a standard of type size throught the site or application.
+  </p>
+
+  <aside class="box box-aside">
+    <h4>
+      Typographic Hierarchy System
+    </h4>
+
+    <p class="txt-4">
+      I should probably add here that, if I am the lead designer on a project, I start my entire typographic system by establishing the <code>font-size</code> of my primary body text. All of the subsequent type decisions are based off of that <code>font-size</code>, creating a tight relationship between body text and headings.
+    </p>
+
+    <p class="txt-4">
+      Also note that, after extablishing the visual hierarchy, I would promptly convert the <code>px</code> to <code>em</code> or <code>rem</code> to better support these relationships.
+    </p>
+  </aside>
+
+</section>
+
+<section class="section-std">
+
+  <h2 class="hrb hrb+2">
+    Naming
+  </h2>
+
+  <p>
+    You maybe wondering why I chose those particular names. As I mentioned previously, the way we name modules is of high importance for their reusability. Naming can be difficult and requires heavy consideration. For these two examples, I deferred to the language of typography.
+  </p>
+
+  <p>
+    <a href="http://en.wikipedia.org/wiki/Typeface#Display_type">Display type</a> is the name given to type that stands apart from the body text. Headlines, section headings, subheads would all be examples of where you would use display type. For these same reasons, I chose the name <code>.display</code> for this set of sibling modules. It is not coupled to HTML semantics, but maintains typographical meaning.
+  </p>
+
+  <p>
+    Likewise, <a href="http://en.wikipedia.org/wiki/Body_text">text type</a> refers to type that is intended for long form reading, e.g., the body copy. With the same rationale as above, I chose <code>.text</code> for the name of this set of sibling modules.
+  </p>
+
+  <p>
+    Going one step further, I normally reduce the class names down for the sake of brevity. So, <code>.display-1</code> becomes <code>.dsp-1</code> and <code>.text-1</code> becomes <code>.txt-1</code> (I spend a lot of time researching word abbreviations for class names). Just make sure that the rest of the team can easily understand the class name without much thought. The benefit is faster development time in the long run. It also helps break the association of <code>.display</code> the class name from <code>display:</code> the CSS property.
+  </p>
+
+</section>
+
+<section class="section-std">
+
+  <h2 class="hrb hrb+2">
+    Utility
+  </h2>
+
+  <p>
+    After establishing the overall hierachy, we can also author some helper classes, or utility classes, that we can leverage from time to time when semantic considerations are neutral or unbeneficial.
+  </p>
+
+  <p>
+    For example, we may create another series of sibling modules that address text alignment:
+  </p>
+
+  <figure class="box box-example">
+<pre>
+<code>
+.text-l {
+  text-align: left;
+}
+
+.text-r {
+  text-align: right;
+}
+
+.text-c {
+  text-align: center;
+}
+
+.text-j {
+  text-align: justified;
+}
+</code>
+</pre>
+  </figure>
+
+  <p>
+    This may feel a bit like unitasking (and it is), but I have found it to be extremely helpful. If you start to see a visual pattern arise that you can anchor semantic value to, then you can always refactor and associate the style to a module or component.
+  </p>
+
+  <p>
+    The idea of utility classes is not uniquely my own. Nicolas Gallagher has created <a herf="https://github.com/necolas/suit-utils">SUIT utilities</a> which demonstrate <a href="https://github.com/necolas/suit-utils-text/blob/master/text.css">similar CSS considerations</a>. The same can be found <a href="https://github.com/stubbornella/oocss/blob/master/core/table/table.css">here</a> in the OOCSS framework.
+  </p>
+
+</section>
+
+<section class="section-std">
+
+  <h2 class="hrb hrb+2">
+    Conclusion
+  </h2>
+
+  <p>
+    This whole bit on typography doesn’t require much of the Rough, Refactor, Repeat pattern because many of the decisions have already been made in the Base Rules. What we are doing is extending the Base Rules into modules. It’s good as a warm up. Now, we’re ready to get our hands dirty with components and modules!
+  </p>
+
+  <p>
+    Cheers!
+  </p>
+
+</section>
