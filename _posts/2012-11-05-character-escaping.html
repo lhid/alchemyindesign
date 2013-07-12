@@ -64,21 +64,19 @@ excerpt: This is a fun little item that I found over the weekend. I work in SMAC
   The above characters can be escaped with a leading backslash (\). So, if say, you want to use &ldquo;+&rdquo; within a class name, you would escape it as (\+). In the HTML, you would just call that class using the unescaped character &ldquo;+&rdquo;.
 </p>
 
-<hr class="hr hr+3" />
+<figure class="box box-example">
+  <h4 class="txt-tight">CSS</h4>
 
-<h3>CSS</h3>
+<pre>
+<code>base\+ext { property: value; }</code>
+</pre>
 
-<p>
-  <code>base\+ext { property: value; }</code>
-</p>
+  <h4 class="txt-tight">HTML</h4>
 
-<h3>HTML</h3>
-
-<p>
-  <code>&lt;element class="base+ext"&gt;&lt;/element&gt;</code>
-</p>
-
-<hr class="hr hr+3" />
+<pre>
+<code>&lt;element class="base+ext"&gt;&lt;/element&gt;</code>
+</pre>
+</figure>
 
 <p>
   <q><strong>Yeah? So what.</strong></q> It may sound gimmicky, but lets put it into the perspective of modular class naming. If you use the pattern of base class/sub-class, you probably include the name of your base class in the name of your sub-class. With character escaping, we have a vocabulary of characters to extend this &ldquo;syntax&rdquo;.
