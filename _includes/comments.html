@@ -7,7 +7,15 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'alchemyindesign'; // required: replace example with your forum shortname
-    var disqus_identifier = '{{ page.disqus_id }}';
+
+    {% if page.disqus_id != null %}
+      var disqus_identifier = '{{ page.disqus_id }}';
+    {% elsif page.disqus_url != null %}
+      var disqus_url = '{{ page.disqus_url }}';
+    {% else %}
+      var disqus_url = '{{ page.url }}';
+    {% endif %}
+
     var disqus_title = '{{ page.title }}';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
