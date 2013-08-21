@@ -1,0 +1,1645 @@
+/* AlchemyInDesign.com 2013 | MIT License */
+/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Sets default font family to sans-serif. Changed to serif (LH)
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: 'LiberationSerifRegular', serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Removes default margin.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: underline; }
+
+/*
+ * Creates larger clickable/tappable area.
+ * Removes default underline for nav items.
+ */
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #464646; }
+
+nav a:active,
+nav a:hover,
+nav a:focus {
+  color: #F4AA00;
+  text-decoration: none; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+/* ! Moved h1 to massimo.css */
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Removes default italics of `address`
+ */
+address {
+  font-style: normal; }
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-family: 'LiberationSerifBold';
+  font-weight: normal; }
+
+blockquote {
+  margin: 0 1.5rem 1.5rem; }
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-family: 'LiberationSerifBold', serif;
+  font-style: normal; }
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ * Set slightly smaller than body to accommodate web fonts.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: 'M1mlight', monospace, serif;
+  font-size: .9em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * Sets consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: .7em;
+  /* Fallback */
+  font-size: .7rem;
+  /* Was originally 80% */ }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+  height: auto; }
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses baseline grid (margin-bottom).
+ * Addresses margin not present in IE 8/9 and Safari 5. (original)
+ */
+figure {
+  /*IE*/
+  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0; }
+
+figcaption {
+  /*IE*/
+  font-size: 16px;
+  font-size: .8rem; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+  min-height: 7.5rem; }
+
+/*
+ * Creates padding while maintaining a total width of 100%.
+ */
+textarea,
+[type='text'],
+[type='email'] {
+  /*IE*/
+  padding: 10px;
+  padding: .5rem;
+  width: 100%; }
+
+/*
+ * Height = 2 line-heights to maintain baseline grid.
+ * Defaults width to 100% of container.
+ */
+button,
+[type='submit'] {
+  /*IE*/
+  height: 60px;
+  height: 3rem;
+  width: 100%; }
+
+/*
+ * Maintains baseline grid.
+ */
+textarea,
+[type='text'],
+[type='email'],
+button,
+[type='submit'] {
+  /*IE*/
+  margin-bottom: 30px;
+  margin-bottom: 1.5rem; }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* massimo.css v1.0.0 | MIT License */
+/* ==========================================================================
+   Web Fonts 
+   ========================================================================== */
+/*
+ * Starts with web fonts to determine typographic expections.
+ * Nuances in font design can affect the overall layout.
+ * Adjust font-size to compensate for differences.
+ * Adhere to the overall line-height--this is the baseline grid.
+ */
+/* Text | For body copy
+   ========================================================================== */
+@font-face {
+  font-family: 'LiberationSerifRegular';
+  src: url("../fonts/LiberationSerif-Regular-webfont.eot");
+  src: url("../fonts/LiberationSerif-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LiberationSerif-Regular-webfont.woff") format("woff"), url("../fonts/LiberationSerif-Regular-webfont.ttf") format("truetype"), url("../fonts/LiberationSerif-Regular-webfont.svg#LiberationSerifRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'LiberationSerifItalic';
+  src: url("../fonts/LiberationSerif-Italic-webfont.eot");
+  src: url("../fonts/LiberationSerif-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LiberationSerif-Italic-webfont.woff") format("woff"), url("../fonts/LiberationSerif-Italic-webfont.ttf") format("truetype"), url("../fonts/LiberationSerif-Italic-webfont.svg#LiberationSerifItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'LiberationSerifBold';
+  src: url("../fonts/LiberationSerif-Bold-webfont.eot");
+  src: url("../fonts/LiberationSerif-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/LiberationSerif-Bold-webfont.woff") format("woff"), url("../fonts/LiberationSerif-Bold-webfont.ttf") format("truetype"), url("../fonts/LiberationSerif-Bold-webfont.svg#LiberationSerifBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Code
+   ========================================================================== */
+@font-face {
+  font-family: 'M1mlight';
+  src: url("../fonts/mplus-1m-light-webfont.eot");
+  src: url("../fonts/mplus-1m-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mplus-1m-light-webfont.woff") format("woff"), url("../fonts/mplus-1m-light-webfont.ttf") format("truetype"), url("../fonts/mplus-1m-light-webfont.svg#M1mlight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Display | For headings, callouts, and such.
+   ========================================================================== */
+/*
+ * Left OswaldLight to extend typography as needed.
+ * Currently using OswaldBook for all headings.
+ */
+/* @font-face {
+  font-family: 'OswaldLight';
+  src: url('../fonts/Oswald-Light-webfont.eot');
+  src: url('../fonts/Oswald-Light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Oswald-Light-webfont.woff') format('woff'),
+       url('../fonts/Oswald-Light-webfont.ttf') format('truetype'),
+       url('../fonts/Oswald-Light-webfont.svg#OswaldLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} */
+@font-face {
+  font-family: 'OswaldBook';
+  src: url("../fonts/Oswald-Regular-webfont.eot");
+  src: url("../fonts/Oswald-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Oswald-Regular-webfont.woff") format("woff"), url("../fonts/Oswald-Regular-webfont.ttf") format("truetype"), url("../fonts/Oswald-Regular-webfont.svg#OswaldBook") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* ==========================================================================
+   Base Layout (small desktop, laptop, 9" landscape) | For 1024 screen size
+   ========================================================================== */
+/*
+ * 1. Sets root font-size for sizing with rem units.
+ * 2. For sticky footer.
+ */
+html {
+  font-size: 20px;
+  height: 100%; }
+
+/*
+ * 1. For sticky footer.
+ * 2. Forces scrollbar to avoid jumpiness where content is light.
+ * 3. Fallback for IE.
+ * 4. Fallback for IE.
+ * 5. Sets default font-size. Cascades through document.
+ * 6. Sets default line-height. Cascades through document. Establishes baseline grid.
+ * 7. Kills unwanted margins from UA style sheet.
+ */
+body {
+  height: 100%;
+  /* 1 */
+  overflow-y: scroll;
+  /* 2 */
+  /*IE*/
+  font-size: 20px;
+  /* 3 */
+  /*IE*/
+  line-height: 30px;
+  /* 4 */
+  font-size: 1rem;
+  /* 5 */
+  line-height: 1.5rem;
+  /* 6 */
+  margin: 0;
+  /* 7 */ }
+
+dl,
+dd,
+dt,
+ol,
+p,
+ul,
+pre {
+  /*IE*/
+  margin-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 1.5rem; }
+
+/*
+ * Prevents a double margin-bottom.
+ */
+dl ol,
+dl ul {
+  margin-bottom: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'OswaldBook', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*IE*/
+  margin: 0 0 30px 0;
+  font-weight: normal;
+  margin: 0 0 1.5rem 0; }
+
+h1 {
+  /*IE*/
+  font-size: 100px;
+  /*IE*/
+  line-height: 90px;
+  /*IE*/
+  letter-spacing: -2px;
+  font-size: 5rem;
+  /* 3 lines of text, aligns optically from baseline to cap height */
+  line-height: 4.5rem;
+  /* 3x line-height set on <body> */
+  letter-spacing: -0.1rem; }
+
+h2 {
+  /*IE*/
+  font-size: 60px;
+  /*IE*/
+  line-height: 60px;
+  font-size: 3rem;
+  /* 2 lines of text, aligns optically from baseline to cap height */
+  line-height: 3rem;
+  /* 2x of line-height set on <body> */ }
+
+h3 {
+  /*IE*/
+  font-size: 20px;
+  font-size: 1rem;
+  /* Same as <body> */ }
+
+h4 {
+  /*IE*/
+  font-size: 18px;
+  font-size: .9rem; }
+
+h5 {
+  /*IE*/
+  font-size: 16px;
+  font-size: .8rem; }
+
+h6 {
+  /*IE*/
+  font-size: 14px;
+  font-size: .7rem; }
+
+/* Sticky Footer
+   ========================================================================== */
+.l-wrap {
+  min-height: 100%; }
+
+.l-content {
+  /*IE*/
+  padding-bottom: 120px;
+  padding-bottom: 6rem; }
+
+.l-footer {
+  /*IE*/
+  margin-top: -120px;
+  /*IE*/
+  padding-top: 30px;
+  /*IE*/
+  height: 120px;
+  margin-top: -6rem;
+  padding-top: 1.5rem;
+  height: 6rem; }
+
+/* Page Sections
+   ========================================================================== */
+.l-header {
+  /*IE*/
+  height: 75px;
+  height: 3.75rem;
+  padding-top: 0; }
+
+.l-header * {
+  margin-bottom: 0; }
+
+.l-header-int {
+  /*IE*/
+  padding-top: 60px;
+  /*IE*/
+  padding-bottom: 150px;
+  padding-top: 3rem;
+  padding-bottom: 7.5rem; }
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+.l-bound {
+  /*IE*/
+  width: 930px;
+  /*IE*/
+  padding-right: 40px;
+  /*IE*/
+  padding-left: 40px;
+  width: 46.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin: 0 auto; }
+
+/*
+ * For containers containing .l-col's
+ * Uses Micro Clearfix to clear floats
+ */
+/* 
+ * Uses Micro Clearfix by Nicolas Gallagher 
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.l-bound:before,
+.l-bound:after,
+.l-row:before,
+.l-row:after {
+  content: " ";
+  display: table; }
+
+.l-bound:after,
+.l-row:after {
+  clear: both; }
+
+.l-bound,
+.l-row {
+  *zoom: 1; }
+
+.l-col {
+  /*IE*/
+  margin-left: 30px;
+  float: left;
+  margin-left: 1.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* 
+ * A container will be needed for a new row
+ */
+.l-col:first-child {
+  margin-left: 0; }
+
+/* 
+ * Extender class to reverse the float
+ */
+.l-col\+r {
+  float: right; }
+
+/*
+ * col + margin-left, etc. = 4rem
+ */
+.l-col\+1 {
+  /*IE*/
+  width: 50px;
+  width: 2.5rem; }
+
+.l-col\+2 {
+  /*IE*/
+  width: 130px;
+  width: 6.5rem; }
+
+.l-col\+3 {
+  /*IE*/
+  width: 210px;
+  width: 10.5rem; }
+
+.l-col\+4 {
+  /*IE*/
+  width: 290px;
+  width: 14.5rem; }
+
+.l-col\+5 {
+  /*IE*/
+  width: 370px;
+  width: 18.5rem; }
+
+.l-col\+6 {
+  /*IE*/
+  width: 450px;
+  width: 22.5rem; }
+
+.l-col\+7 {
+  /*IE*/
+  width: 530px;
+  width: 26.5rem; }
+
+.l-col\+8 {
+  /*IE*/
+  width: 610px;
+  width: 30.5rem; }
+
+.l-col\+9 {
+  /*IE*/
+  width: 690px;
+  width: 34.5rem; }
+
+.l-col\+10 {
+  /*IE*/
+  width: 770px;
+  width: 38.5rem; }
+
+.l-col\+11 {
+  /*IE*/
+  width: 850px;
+  width: 42.5rem; }
+
+.l-col\+12 {
+  /*IE*/
+  width: 930px;
+  width: 46.5rem; }
+
+/* ==========================================================================
+   Remaining Media Queries
+   ========================================================================== */
+/* §Bold (larger desktop displays) | For 1287+ screen size
+   ========================================================================== */
+@media only screen and (min-width: 1286px) {
+  html {
+    font-size: 22px; }
+
+  .l-bound {
+    width: 52.5rem;
+    /* = 1155px */ }
+
+  /*
+   * col + margin-left, etc. = 4.5rem
+   */
+  .l-col\+1 {
+    width: 3rem; }
+
+  .l-col\+2 {
+    width: 7.5rem; }
+
+  .l-col\+3 {
+    width: 12rem; }
+
+  .l-col\+4 {
+    width: 16.5rem; }
+
+  .l-col\+5 {
+    width: 21rem; }
+
+  .l-col\+6 {
+    width: 25.5rem; }
+
+  .l-col\+7 {
+    width: 30rem; }
+
+  .l-col\+8 {
+    width: 34.5rem; }
+
+  .l-col\+9 {
+    width: 39rem; }
+
+  .l-col\+10 {
+    width: 43.5rem; }
+
+  .l-col\+11 {
+    width: 48rem; }
+
+  .l-col\+12 {
+    width: 52.5rem; } }
+/* §Roman (9" portrait) | For 768 screen size 
+   ========================================================================== */
+@media only screen and (min-width: 768px) and (max-width: 1009px) {
+  html {
+    font-size: 18px; }
+
+  .l-bound {
+    width: 39rem;
+    padding-right: 1.75rem;
+    padding-left: 1.75rem; }
+
+  /*
+   * col + margin-left, etc. = 3.375rem
+   */
+  .l-col\+1 {
+    width: 1.875rem; }
+
+  .l-col\+2 {
+    width: 5.25rem; }
+
+  .l-col\+3 {
+    width: 8.625rem; }
+
+  .l-col\+4 {
+    width: 12rem; }
+
+  .l-col\+5 {
+    width: 15.375rem; }
+
+  .l-col\+6 {
+    width: 18.75rem; }
+
+  .l-col\+7 {
+    width: 22.125rem; }
+
+  .l-col\+8 {
+    width: 25.5rem; }
+
+  .l-col\+9 {
+    width: 28.875rem; }
+
+  .l-col\+10 {
+    width: 32.25rem; }
+
+  .l-col\+11 {
+    width: 35.625rem; }
+
+  .l-col\+12 {
+    width: 39rem; } }
+/* §Light | For 480 screen size 
+   ========================================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* Back to 20px to optimize words/chararcters per line. Readability. */
+  html {
+    font-size: 20px; }
+
+  .l-bound {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem; }
+
+  /* Repeated styles are in last media query */ }
+/* §Extra-Light | For 320 screen size 
+   ========================================================================== */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  html {
+    font-size: 18px; }
+
+  .l-bound {
+    padding-right: 1rem;
+    padding-left: 1rem; }
+
+  /* Repeated styles are in last media query */ }
+/* §Condensed | For 240 screen size 
+   ========================================================================== */
+@media only screen and (max-width: 319px) {
+  html {
+    font-size: 16px; }
+
+  .l-bound {
+    padding-right: .75rem;
+    padding-left: .75rem; }
+
+  /* Repeated styles are in last media query */ }
+/* §Light, §Extra-Light, §Condensed | For 768- screen size 
+   ========================================================================== */
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 3rem;
+    /* 3x body */
+    line-height: 3rem;
+    letter-spacing: -0.1rem; }
+
+  h2 {
+    font-size: 2rem;
+    /* 2x body */
+    letter-spacing: normal; }
+
+  .l-header-int {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem; }
+
+  .l-bound {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  /* one-column fluid layout */
+  .l-col {
+    margin-left: 0; }
+
+  .l-col\+1,
+  .l-col\+2,
+  .l-col\+3,
+  .l-col\+4,
+  .l-col\+5,
+  .l-col\+6,
+  .l-col\+7,
+  .l-col\+8,
+  .l-col\+9,
+  .l-col\+10,
+  .l-col\+11,
+  .l-col\+12 {
+    width: 100%; } }
+/* modules.css for massimo.css v1.0.0 | MIT License */
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Display type classes are .dsp-(n) includes font-weight, font-size, and line-height without margin rules.
+ * Text type classes .txt-(n) incudes font-size and line-height without margin and font-weight rules.
+ */
+.dsp-1,
+.dsp-2,
+.dsp-3,
+.dsp-4,
+.dsp-5,
+.dsp-6 {
+  font-family: 'OswaldBook', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased; }
+
+.txt-1,
+.txt-2,
+.txt-3,
+.txt-4,
+.txt-5,
+.txt-6 {
+  font-family: 'LiberationSerifRegular';
+  font-weight: normal; }
+
+.dsp-1,
+.txt-1 {
+  /*IE*/
+  font-size: 100px;
+  /*IE*/
+  line-height: 90px;
+  /*IE*/
+  letter-spacing: -2px;
+  font-size: 5rem;
+  /* 3 lines of text, aligns optically from baseline to cap height */
+  line-height: 4.5rem;
+  /* 3x line-height set on <body> */
+  letter-spacing: -0.1rem; }
+
+.dsp-2,
+.txt-2 {
+  /*IE*/
+  font-size: 60px;
+  /*IE*/
+  line-height: 60px;
+  /*IE*/
+  letter-spacing: -2px;
+  font-size: 3rem;
+  /* 2 lines of text, aligns optically from baseline to cap height */
+  line-height: 3rem;
+  /* 2x of line-height set on <body> */
+  letter-spacing: -0.1rem; }
+
+.dsp-3,
+.txt-3 {
+  /*IE*/
+  font-size: 20px;
+  /*IE*/
+  line-height: 30px;
+  font-size: 1rem;
+  /* Same as <body> */
+  line-height: 1.5rem;
+  letter-spacing: 0; }
+
+.dsp-4,
+.txt-4 {
+  /*IE*/
+  font-size: 18px;
+  font-size: .9rem; }
+
+.dsp-5,
+.txt-5 {
+  /*IE*/
+  font-size: 16px;
+  font-size: .8rem; }
+
+.dsp-6,
+.txt-6 {
+  /*IE*/
+  font-size: 14px;
+  font-size: .7rem; }
+
+.txt-l {
+  text-align: left; }
+
+.txt-r {
+  text-align: right; }
+
+.txt-c {
+  text-align: center; }
+
+.txt-j {
+  text-align: justify; }
+
+.txt-tight {
+  margin-bottom: 0; }
+
+.txt-break {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+
+/* ==========================================================================
+   Rulers
+   ========================================================================== */
+/*
+ * Rulers are used to separate content and are padded with respect to the baseline grid.
+ * Presentational names are used for clarity, but semantic names are welcome; e.g., .sep, .sub.
+ * Only three weights are used to prevent visual clutter.
+ * .hr = horizontal rule
+ * .hrt = horizontal rule top
+ * .hrb = horizontal rule bottom
+ */
+.hr {
+  border-top-style: solid;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  margin-top: 0; }
+
+.hr\+1 {
+  /*IE*/
+  border-top-width: 15px;
+  /*IE*/
+  margin-bottom: 45px;
+  border-top-width: .75rem;
+  margin-bottom: 2.25rem;
+  /* (body line-height - border-top-width) + body line-height */ }
+
+.hr\+2 {
+  /*IE*/
+  border-top-width: 8px;
+  /*IE*/
+  margin-bottom: 22px;
+  border-top-width: .4rem;
+  margin-bottom: 1.1rem;
+  /* body line-height - border-top-width */ }
+
+.hr\+3 {
+  /*IE*/
+  border-top-width: 2px;
+  /*IE*/
+  margin-bottom: 28px;
+  border-top-width: .1rem;
+  margin-bottom: 1.4rem;
+  /* body line-height - border-top-width */ }
+
+.hrt {
+  /*IE*/
+  padding-bottom: 30px;
+  border-top-style: solid;
+  padding-bottom: 1.5rem; }
+
+.hrt\+1 {
+  /*IE*/
+  border-top-width: 15px;
+  /*IE*/
+  padding-top: 45px;
+  border-top-width: .75rem;
+  padding-top: 2.25rem;
+  /* (body line-height - border-top-width) + body line-height */ }
+
+.hrt\+2 {
+  /*IE*/
+  border-top-width: 8px;
+  /*IE*/
+  padding-top: 22px;
+  border-top-width: .4rem;
+  padding-top: 1.1rem;
+  /* body line-height - border-top-width */ }
+
+.hrt\+3 {
+  /*IE*/
+  border-top-width: 2px;
+  /*IE*/
+  padding-top: 28px;
+  border-top-width: .1rem;
+  padding-top: 1.4rem;
+  /* body line-height - border-top-width */ }
+
+.hrb {
+  border-bottom-style: solid; }
+
+.hrb\+1 {
+  /*IE*/
+  border-bottom-width: 15px;
+  /*IE*/
+  margin-bottom: 15px;
+  border-bottom-width: .75rem;
+  margin-bottom: .75rem;
+  /* border-width + margin-bottom = body line-height */ }
+
+.hrb\+2 {
+  /*IE*/
+  border-bottom-width: 8px;
+  /*IE*/
+  margin-bottom: 22px;
+  border-bottom-width: .4rem;
+  margin-bottom: 1.1rem;
+  /* border-width + margin-bottom = body line-height */ }
+
+.hrb\+3 {
+  /*IE*/
+  border-bottom-width: 2px;
+  /*IE*/
+  margin-bottom: 28px;
+  border-bottom-width: .1rem;
+  margin-bottom: 1.4rem;
+  /* body line-height - border-top-width */ }
+
+/* ==========================================================================
+   Branding
+   ========================================================================== */
+.logo {
+  /*IE*/
+  height: 40px;
+  /*IE*/
+  margin-top: 20px;
+  height: 2rem;
+  margin-top: 1rem;
+  display: block; }
+
+.logo-ftr {
+  margin-bottom: 0; }
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.nav {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+
+.nav > li > a {
+  display: block; }
+
+.nav\+main {
+  /*IE*/
+  margin-top: 30px;
+  margin-top: 1.5rem; }
+
+.nav\+ftr {
+  /*IE*/
+  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
+  text-align: center; }
+
+.nav\+ftr a {
+  font-weight: bold; }
+
+.menu,
+.back {
+  display: none; }
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+.list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+
+.list\+row > li {
+  display: inline-block; }
+
+.list\+util > li {
+  /*IE*/
+  margin-left: 10px;
+  margin-left: .5rem; }
+
+.gallery > li {
+  /*IE*/
+  margin-bottom: 30px;
+  /*IE*/
+  border-width: 2px;
+  margin-bottom: 1.5rem;
+  border-width: .1rem;
+  border-style: solid;
+  overflow: hidden; }
+
+.gallery > li > a {
+  /*IE*/
+  height: 150px;
+  height: 7.5rem;
+  display: block; }
+
+.gallery img {
+  width: 100%;
+  height: auto; }
+
+/* ==========================================================================
+   Containers
+   ========================================================================== */
+.hero {
+  /*IE*/
+  padding-top: 90px;
+  /*IE*/
+  padding-bottom: 180px;
+  padding-top: 4.5rem;
+  padding-bottom: 9rem;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain; }
+
+.hero-entry {
+  /*IE*/
+  padding-bottom: 90px;
+  padding-bottom: 4.5rem; }
+
+.intro {
+  /*IE*/
+  padding-bottom: 90px;
+  padding-bottom: 4.5rem; }
+
+.box {
+  /*IE*/
+  padding-right: 30px;
+  /*IE*/
+  padding-left: 30px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem; }
+
+.box-example {
+  /*IE*/
+  border-top-width: 2px;
+  /*IE*/
+  padding-top: 28px;
+  /*IE*/
+  border-bottom-width: 2px;
+  /*IE*/
+  margin-bottom: 28px;
+  border-top-width: .1rem;
+  border-top-style: solid;
+  padding-top: 1.4rem;
+  /* padding value based on border-top-width */
+  border-bottom-width: .1rem;
+  border-bottom-style: solid;
+  margin-bottom: 1.4rem; }
+
+.box-aside {
+  /*IE*/
+  border-left-width: 2px;
+  /*IE*/
+  padding-left: 30px;
+  border-left-width: .1rem;
+  border-left-style: solid;
+  padding-left: 1.5rem; }
+
+.section-std {
+  /*IE*/
+  padding-bottom: 30px;
+  padding-bottom: 1.5rem; }
+
+.section-wd {
+  /*IE*/
+  padding-bottom: 120px;
+  padding-bottom: 6rem; }
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+/*
+ * Image replacement
+ * The Kellum Method
+ * http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+ */
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+.scale {
+  max-width: 100%;
+  height: auto; }
+
+/* ==========================================================================
+   Micro Clearfix
+   ========================================================================== */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+/* state.css for massimo.css v1.0.0 | MIT License */
+/* ==========================================================================
+   State Classes
+   ========================================================================== */
+.is-hidden {
+  display: none; }
+
+/* ==========================================================================
+   Pseudo-Classes
+   ========================================================================== */
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* §Bold (larger desktop displays) | For 1287+ screen size
+   ========================================================================== */
+/* §Roman (9" portrait) | For 768 screen size 
+   ========================================================================== */
+@media only screen and (min-width: 768px) and (max-width: 1009px) {
+  .hero {
+    padding-bottom: 6rem; } }
+/* §Light | For 480 screen size 
+   ========================================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /*
+   * Same as padding-right for .l-bound
+   */
+  .menu {
+    right: 1.25rem; }
+
+  .hero {
+    padding-bottom: 6rem; } }
+/* §Extra-Light | For 320 screen size 
+   ========================================================================== */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  /*
+   * Same as padding-right for .l-bound
+   */
+  .menu {
+    right: 1rem; }
+
+  .hero {
+    padding-bottom: 3rem; } }
+/* §Condensed | For 240 screen size 
+   ========================================================================== */
+@media only screen and (max-width: 319px) {
+  /*
+   * Same as padding-right for .l-bound
+   */
+  .menu {
+    right: .75rem; }
+
+  .hero {
+    padding-bottom: 3rem; } }
+/* §Light, §Extra-Light, §Condensed | For 768- screen size 
+   ========================================================================== */
+@media only screen and (max-width: 767px) {
+  .dsp-1,
+  .txt-1 {
+    font-size: 3rem;
+    /* 3x body */
+    line-height: 3rem;
+    letter-spacing: -0.1rem; }
+
+  .dsp-2,
+  .txt-2 {
+    font-size: 2rem;
+    /* 2x body */
+    letter-spacing: normal; }
+
+  /*
+   * Mobile Navigation.
+   * Uses Aaron Gustafson's Method.
+   * http://www.netmagazine.com/tutorials/build-smart-mobile-navigation-without-hacks
+   * Selectors refactored for Modular.
+   */
+  [id=nav] {
+    display: none; }
+
+  [id=nav]:target {
+    display: block; }
+
+  .menu {
+    display: block;
+    position: absolute;
+    top: .8rem;
+    right: 1.25rem;
+    padding: .75rem 1rem;
+    padding-right: 0;
+    /* make sure the menu button is on top */
+    z-index: 1001; }
+
+  .nav\+main {
+    margin-top: .5rem;
+    margin-left: 0; }
+
+  .nav\+main > li {
+    border-top-width: .1rem;
+    border-top-style: solid;
+    border-top-color: #666666; }
+
+  .nav\+main > li:first-child {
+    border-top-width: .4rem; }
+
+  .nav\+main > li > a {
+    padding: .75rem 1rem; }
+
+  a[title="Home"]:hover,
+  .menu:hover {
+    text-decoration: none;
+    color: #F4AA00; }
+
+  body:not(:target) [id=nav] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-top: 3rem;
+    z-index: 1000; }
+
+  body:not(:target) [id=nav]:target {
+    z-index: 1001; }
+
+  body:not(:target) [id=nav]:target a {
+    position: relative;
+    z-index: 1; }
+
+  body:not(:target) [id=nav]:target .back {
+    display: block;
+    position: relative; }
+
+  body:not(:target) [id=nav]:target .back a {
+    display: block;
+    height: auto;
+    position: absolute;
+    top: -101rem;
+    bottom: -101rem;
+    left: 0;
+    right: 0;
+    text-indent: -999rem;
+    z-index: 0; }
+
+  /* END Mobile Navigation */
+  .nav\+ftr {
+    margin-top: 1.5rem; }
+
+  .hero {
+    padding-top: 3rem; }
+
+  .hero-entry {
+    padding-bottom: 3rem; }
+
+  .gallery > li {
+    width: 48%;
+    margin-left: 4%; }
+
+  .gallery > li:nth-child(odd) {
+    margin-left: 0; } }
+/* theme.css for alchemyindesign.com | Leban Hyde. 2012. | MIT License */
+body {
+  color: #464646;
+  background-image: url("../img/main-bg.jpg"); }
+
+a {
+  text-decoration: none;
+  color: #F4AA00; }
+
+/*
+ * Distinguishes nav from body copy.
+ */
+nav {
+  font-family: 'OswaldBook', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+i,
+cite,
+em,
+var,
+address,
+dfn,
+blockquote,
+q {
+  font-family: 'LiberationSerifItalic', serif;
+  font-style: normal; }
+
+textarea,
+[type='text'],
+[type='email'] {
+  border-width: .1rem;
+  border-style: solid;
+  border-color: #464646;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+button,
+[type='submit'] {
+  border: none;
+  background-color: #464646;
+  color: #ffffff; }
+
+textarea:focus,
+[type='text']:focus,
+[type='email']:focus {
+  outline: none;
+  border-color: #F4AA00; }
+
+button:hover,
+[type='submit']:hover,
+button:focus,
+[type='submit']:focus {
+  background-color: #F4AA00;
+  outline: none; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ */
+::-moz-selection {
+  background: #F4AA00;
+  color: #ffffff;
+  text-shadow: none; }
+
+::selection {
+  background: #F4AA00;
+  color: #ffffff;
+  text-shadow: none;
+  color: white; }
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+.l-footer {
+  border-top-style: solid;
+  /*IE*/
+  border-top-width: 15px;
+  border-top-width: .75rem; }
+
+.l-header {
+  background-color: #464646; }
+
+.l-header * {
+  color: #ffffff; }
+
+/* ==========================================================================
+   Modules
+   ========================================================================== */
+.logo {
+  /*IE*/
+  margin-top: 4px;
+  margin-top: .2rem;
+  background-image: none, url("../img/logo.svg"), url("../img/logo.png");
+  background-image: url("../img/logo.png") \9;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain; }
+
+.logo-ftr > a {
+  color: #464646; }
+
+.logo-ftr > a:hover {
+  text-decoration: none;
+  color: #F4AA00; }
+
+.nav\+ftr {
+  background-color: #464646; }
+
+.nav\+ftr a {
+  color: #ffffff; }
+
+.hero\+home {
+  background-image: url("../img/hero-home.png");
+  background-position: 100% 30%; }
+
+.hero\+about {
+  background-image: url("../img/hero-about.png");
+  background-position: 100% 0%; }
+
+.hero\+notes {
+  background-image: url("../img/hero-notes.png");
+  background-position: 100% 0%; }
+
+.hero\+contact {
+  background-image: url("../img/hero-contact.png");
+  background-position: 100% 0%; }
+
+.hero\+work {
+  background-image: url("../img/hero-work.png");
+  background-position: 100% 0%; }
+
+.hero\+404 {
+  background-image: url("../img/hero-404.png");
+  background-position: 100% 0%; }
+
+.gallery > li:hover,
+.gallery > li:active {
+  border-color: #F4AA00; }
+
+.hr,
+.hrt {
+  border-top-color: #464646; }
+
+.hrb {
+  border-bottom-color: #464646; }
+
+.box-example {
+  border-top-color: #c7c7c7;
+  border-bottom-color: #c7c7c7;
+  background-color: #f3f3f3; }
+
+.box-aside {
+  border-left-color: #c7c7c7;
+  color: #818181; }
+
+/* ==========================================================================
+   Media Queries | §Light, §Extra-Light, §Condensed | For 768- screen size 
+   ========================================================================== */
+@media only screen and (max-width: 767px) {
+  .hero {
+    background-position: 100% 40%; }
+
+  .nav\+main {
+    background-color: #464646; }
+
+  .nav\+main a {
+    color: #ffffff; } }
