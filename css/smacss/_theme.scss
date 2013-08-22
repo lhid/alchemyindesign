@@ -111,9 +111,6 @@ button:focus,
    ========================================================================== */
 
 .logo {
-  /*IE*/margin-top: 4px;
-
-  margin-top: .2rem;
   background-image: none,url('../img/logo.svg'), url('../img/logo.png');
   background-image: url('../img/logo.png')\9;
   background-repeat: no-repeat;
