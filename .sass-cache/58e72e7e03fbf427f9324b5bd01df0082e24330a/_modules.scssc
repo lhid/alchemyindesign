@@ -1,673 +1,0 @@
-3.1.19 (Brainy Betty)
-dcb52eac7ad49064e2e908e2efc186b757ba7ea2
-o:Sass::Tree::RootNode
-:@has_childrenT:
-@linei:@template"‚"/*! modules.css for massimo.css v1.0.0 | MIT License */
-
-
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-
-/*
- * Display type classes are .dsp-(n) includes font-weight, font-size, and line-height without margin rules.
- * Text type classes .txt-(n) incudes font-size and line-height without margin and font-weight rules.
- */
-
-.dsp-1,
-.dsp-2,
-.dsp-3,
-.dsp-4,
-.dsp-5,
-.dsp-6 { 
-  font-family: 'OswaldBook', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-}
-
-.txt-1,
-.txt-2,
-.txt-3,
-.txt-4,
-.txt-5,
-.txt-6 {
-  font-family: 'LiberationSerifRegular';
-  font-weight: normal;
-}
-
-.dsp-1,
-.txt-1 {
-  /*IE*/font-size: 100px;
-  /*IE*/line-height: 90px;
-  /*IE*/letter-spacing: -2px;
-
-  font-size: 5rem; /* 3 lines of text, aligns optically from baseline to cap height */
-  line-height: 4.5rem; /* 3x line-height set on <body> */
-  letter-spacing: -.1rem;
-}
-
-.dsp-2,
-.txt-2 { 
-  /*IE*/font-size: 60px;
-  /*IE*/line-height: 60px;
-  /*IE*/letter-spacing: -2px;
-
-  font-size: 3rem; /* 2 lines of text, aligns optically from baseline to cap height */
-  line-height: 3rem; /* 2x of line-height set on <body> */
-  letter-spacing: -.1rem;
-}
-
-.dsp-3,
-.txt-3 { 
-  /*IE*/font-size: 20px;
-  /*IE*/line-height: 30px;
-
-  font-size: 1rem; /* Same as <body> */
-  line-height: 1.5rem;
-  letter-spacing: 0;
-}
-
-.dsp-4,
-.txt-4 {
-  /*IE*/font-size: 18px;
-  font-size: .9rem;
-}
-
-.dsp-5,
-.txt-5 {
-  /*IE*/font-size: 16px;
-  font-size: .8rem;
-}
-
-.dsp-6,
-.txt-6 {
-  /*IE*/font-size: 14px;
-  font-size: .7rem;
-}
-
-.txt-l { text-align: left; }
-.txt-r { text-align: right; }
-.txt-c { text-align: center; }
-.txt-j { text-align: justify; }
-
-.txt-tight { margin-bottom: 0; }
-
-.txt-break {
-  -ms-word-break: break-all;
-  word-break: break-all;
-
-  word-break: break-word;
-
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-}
-
-
-
-/* ==========================================================================
-   Rulers
-   ========================================================================== */
-
-/*
- * Rulers are used to separate content and are padded with respect to the baseline grid.
- * Presentational names are used for clarity, but semantic names are welcome; e.g., .sep, .sub.
- * Only three weights are used to prevent visual clutter.
- * .hr = horizontal rule
- * .hrt = horizontal rule top
- * .hrb = horizontal rule bottom
- */
-
-.hr {
-  border-top-style: solid;
-  border-right: none;
-  border-bottom: none;
-  border-left: none;
-  margin-top: 0;
-}
-  .hr\+1 {
-    /*IE*/border-top-width: 15px;
-    /*IE*/margin-bottom: 45px;
-
-    border-top-width: .75rem;
-    margin-bottom: 2.25rem; /* (body line-height - border-top-width) + body line-height */
-  }
-  .hr\+2 {
-    /*IE*/border-top-width: 8px;
-    /*IE*/margin-bottom: 22px;
-
-    border-top-width: .4rem;
-    margin-bottom: 1.1rem; /* body line-height - border-top-width */
-  }
-  .hr\+3 {
-    /*IE*/border-top-width: 2px;
-    /*IE*/margin-bottom: 28px;
-
-    border-top-width: .1rem;
-    margin-bottom: 1.4rem; /* body line-height - border-top-width */
-  }
-
-.hrt {
-  /*IE*/padding-bottom: 30px;
-
-  border-top-style: solid;
-  padding-bottom: 1.5rem;
-}
-  .hrt\+1 {
-    /*IE*/border-top-width: 15px;
-    /*IE*/padding-top: 45px;
-
-    border-top-width: .75rem;
-    padding-top: 2.25rem; /* (body line-height - border-top-width) + body line-height */
-  }
-  .hrt\+2 {
-    /*IE*/border-top-width: 8px;
-    /*IE*/padding-top: 22px;
-
-    border-top-width: .4rem;
-    padding-top: 1.1rem; /* body line-height - border-top-width */
-  }
-  .hrt\+3 {
-    /*IE*/border-top-width: 2px;
-    /*IE*/padding-top: 28px;
-
-    border-top-width: .1rem;
-    padding-top: 1.4rem; /* body line-height - border-top-width */
-  }
-
-.hrb { border-bottom-style: solid; }
-  .hrb\+1 {
-    /*IE*/border-bottom-width: 15px;
-    /*IE*/margin-bottom: 15px;
-
-    border-bottom-width: .75rem;
-    margin-bottom: .75rem; /* border-width + margin-bottom = body line-height */
-  }
-  .hrb\+2 {
-    /*IE*/border-bottom-width: 8px;
-    /*IE*/margin-bottom: 22px;
-
-    border-bottom-width: .4rem;
-    margin-bottom: 1.1rem; /* border-width + margin-bottom = body line-height */
-  }
-  .hrb\+3 {
-    /*IE*/border-bottom-width: 2px;
-    /*IE*/margin-bottom: 28px;
-
-    border-bottom-width: .1rem;
-    margin-bottom: 1.4rem; /* body line-height - border-top-width */
-  }
-
-
-
-
-/* ==========================================================================
-   Branding
-   ========================================================================== */
-
-.logo {
-  /*IE*/height: 40px;
-  /*IE*/margin-top: 20px;
-
-  height: 2rem;
-  margin-top: 1rem;
-  display: block;
-}
-
-.logo-ftr {
-  margin-bottom: 0;
-}
-
-
-
-/* ==========================================================================
-   Navigation
-   ========================================================================== */
-
-.nav {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-  .nav > li {}
-    .nav > li > a {
-      display: block;
-    }
-
-.nav\+main {
-  /*IE*/margin-top: 30px;
-  margin-top: 1.5rem;
-}
-
-.nav\+ftr {
-  /*IE*/margin-bottom: 30px;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-  .nav\+ftr a {
-    font-weight: bold;
-  }
-
-.menu,
-.back {
-  display: none;
-}
-
-
-
-/* ==========================================================================
-   Content
-   ========================================================================== */
-
-.list {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.list\+row {}
-  .list\+row > li {
-    display: inline-block;
-  }
-
-.list\+util {}
-  .list\+util > li {
-    /*IE*/margin-left: 10px;
-    margin-left: .5rem;
-  }
-
-.gallery {}
-  .gallery > li {
-    /*IE*/margin-bottom: 30px;
-    /*IE*/border-width: 2px;
-
-    margin-bottom: 1.5rem;
-    border-width: .1rem;
-    border-style: solid;
-    overflow: hidden;
-  }
-  .gallery > li > a {
-    /*IE*/height: 150px;
-    height: 7.5rem;
-    display: block;
-  }
-  .gallery img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-/* ==========================================================================
-   Containers
-   ========================================================================== */
-
-.hero {
-  /*IE*/padding-top: 90px;
-  /*IE*/padding-bottom: 180px;
-
-  padding-top: 4.5rem;
-  padding-bottom: 9rem;
-  background-repeat: no-repeat;
-
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
-}
-
-.hero-entry {
-  /*IE*/padding-bottom: 90px;
-  padding-bottom: 4.5rem;
-}
-
-.intro {
-  /*IE*/padding-bottom: 90px;
-  padding-bottom: 4.5rem;
- }
-
- .box {
-  /*IE*/padding-right: 30px;
-  /*IE*/padding-left: 30px;
-
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-}
-  .box-example {
-    /*IE*/border-top-width: 2px;
-    /*IE*/padding-top: 28px;
-    /*IE*/border-bottom-width: 2px;
-    /*IE*/margin-bottom: 28px;
-
-    border-top-width: .1rem;
-    border-top-style: solid;
-    padding-top: 1.4rem; /* padding value based on border-top-width */
-    border-bottom-width: .1rem;
-    border-bottom-style: solid;
-    margin-bottom: 1.4rem;
-  }
-  .box-aside {
-    /*IE*/border-left-width: 2px;
-    /*IE*/padding-left: 30px;
-
-    border-left-width: .1rem;
-    border-left-style: solid;
-    padding-left: 1.5rem;
-  }
-
-.section-std {
-  /*IE*/padding-bottom: 30px;
-  padding-bottom: 1.5rem;
-}
-
-.section-wd {
-  /*IE*/padding-bottom: 120px;
-  padding-bottom: 6rem;
-}
-
-
-
-/* ==========================================================================
-   Utility Classes
-   ========================================================================== */
-
-/*
- * Image replacement
- * The Kellum Method
- * http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
- */
-
-.ir {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-
-
-/* ==========================================================================
-   Images
-   ========================================================================== */
-
-.scale {
-  max-width: 100%;
-  height: auto;
-}
-
-
-
-/* ==========================================================================
-   Micro Clearfix
-   ========================================================================== */
-
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-    *zoom: 1;
-}:@children[Mo:Sass::Tree::CommentNode:@silent0:@value[";/* modules.css for massimo.css v1.0.0 | MIT License */;i:
-@loudi ;	[ :@options{ o;
-;0;["¬/* ==========================================================================
-   Typography
-   ========================================================================== */;i	;0;	[ ;@o;
-;0;["Ø/*
- * Display type classes are .dsp-(n) includes font-weight, font-size, and line-height without margin rules.
- * Text type classes .txt-(n) incudes font-size and line-height without margin and font-weight rules.
- */;i;0;	[ ;@o:Sass::Tree::RuleNode;T:
-@tabsi ;i:
-@rule["3.dsp-1,
-.dsp-2,
-.dsp-3,
-.dsp-4,
-.dsp-5,
-.dsp-6:@parsed_ruleso:"Sass::Selector::CommaSequence:@filename" ;i:@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence;@;i;[o:Sass::Selector::Class:
-@name["
-dsp-1;@;io;;["
-o;;@;i;[o;;["
-dsp-2;@;io;;["
-o;;@;i;[o;;["
-dsp-3;@;io;;["
-o;;@;i;[o;;["
-dsp-4;@;io;;["
-o;;@;i;[o;;["
-dsp-5;@;io;;["
-o;;@;i;[o;;["
-dsp-6;@;i;	[o:Sass::Tree::PropNode;["font-family;i :@prop_syntax:new;o:Sass::Script::String;"A'OswaldBook', "Helvetica Neue", Helvetica, Arial, sans-serif:
-@type:identifier;@;i;	[ ;@o;;["font-weight;i ;;;o;;"normal;;;@;i;	[ ;@o;;["-webkit-font-smoothing;i ;;;o;;"antialiased;;;@;i;	[ ;@;@o;;T;i ;i";["3.txt-1,
-.txt-2,
-.txt-3,
-.txt-4,
-.txt-5,
-.txt-6;o;;" ;i";[o;;[o;;@a;i";[o;;["
-txt-1;@a;i"o;;["
-o;;@a;i";[o;;["
-txt-2;@a;i"o;;["
-o;;@a;i";[o;;["
-txt-3;@a;i"o;;["
-o;;@a;i";[o;;["
-txt-4;@a;i"o;;["
-o;;@a;i";[o;;["
-txt-5;@a;i"o;;["
-o;;@a;i";[o;;["
-txt-6;@a;i";	[o;;["font-family;i ;;;o;;"'LiberationSerifRegular';;;@;i#;	[ ;@o;;["font-weight;i ;;;o;;"normal;;;@;i$;	[ ;@;@o;;T;i ;i(;[".dsp-1,
-.txt-1;o;;" ;i(;[o;;[o;;@ž;i(;[o;;["
-dsp-1;@ž;i(o;;["
-o;;@ž;i(;[o;;["
-txt-1;@ž;i(;	[o;
-;0;["/*IE*/;i);0;	[ ;@o;;["font-size;i ;;;o;;"
-100px;;;@;i);	[ ;@o;
-;0;["/*IE*/;i*;0;	[ ;@o;;["line-height;i ;;;o;;"	90px;;;@;i*;	[ ;@o;
-;0;["/*IE*/;i+;0;	[ ;@o;;["letter-spacing;i ;;;o:Sass::Script::Number:@original"	-2px;iù;i+:@denominator_units[ :@numerator_units["px;@;i+;	[ ;@o;;["font-size;i ;;;o;;"	5rem;;;@;i-;	[ ;@o;
-;0;["H/* 3 lines of text, aligns optically from baseline to cap height */;i-;0;	[ ;@o;;["line-height;i ;;;o;;"4.5rem;;;@;i.;	[ ;@o;
-;0;["'/* 3x line-height set on <body> */;i.;0;	[ ;@o;;["letter-spacing;i ;;;o; ;!"-0.1rem;f-0.10000000000000001 ™š;i/;"[ ;#["rem;@;i/;	[ ;@;@o;;T;i ;i3;[".dsp-2,
-.txt-2;o;;" ;i3;[o;;[o;;@ó;i3;[o;;["
-dsp-2;@ó;i3o;;["
-o;;@ó;i3;[o;;["
-txt-2;@ó;i3;	[o;
-;0;["/*IE*/;i4;0;	[ ;@o;;["font-size;i ;;;o;;"	60px;;;@;i4;	[ ;@o;
-;0;["/*IE*/;i5;0;	[ ;@o;;["line-height;i ;;;o;;"	60px;;;@;i5;	[ ;@o;
-;0;["/*IE*/;i6;0;	[ ;@o;;["letter-spacing;i ;;;o; ;!"	-2px;iù;i6;"[ ;#["px;@;i6;	[ ;@o;;["font-size;i ;;;o;;"	3rem;;;@;i8;	[ ;@o;
-;0;["H/* 2 lines of text, aligns optically from baseline to cap height */;i8;0;	[ ;@o;;["line-height;i ;;;o;;"	3rem;;;@;i9;	[ ;@o;
-;0;["*/* 2x of line-height set on <body> */;i9;0;	[ ;@o;;["letter-spacing;i ;;;o; ;!"-0.1rem;f-0.10000000000000001 ™š;i:;"[ ;#["rem;@;i:;	[ ;@;@o;;T;i ;i>;[".dsp-3,
-.txt-3;o;;" ;i>;[o;;[o;;@H;i>;[o;;["
-dsp-3;@H;i>o;;["
-o;;@H;i>;[o;;["
-txt-3;@H;i>;	[o;
-;0;["/*IE*/;i?;0;	[ ;@o;;["font-size;i ;;;o;;"	20px;;;@;i?;	[ ;@o;
-;0;["/*IE*/;i@;0;	[ ;@o;;["line-height;i ;;;o;;"	30px;;;@;i@;	[ ;@o;;["font-size;i ;;;o;;"	1rem;;;@;iB;	[ ;@o;
-;0;["/* Same as <body> */;iB;0;	[ ;@o;;["line-height;i ;;;o;;"1.5rem;;;@;iC;	[ ;@o;;["letter-spacing;i ;;;o;;"0;;;@;iD;	[ ;@;@o;;T;i ;iH;[".dsp-4,
-.txt-4;o;;" ;iH;[o;;[o;;@ˆ;iH;[o;;["
-dsp-4;@ˆ;iHo;;["
-o;;@ˆ;iH;[o;;["
-txt-4;@ˆ;iH;	[o;
-;0;["/*IE*/;iI;0;	[ ;@o;;["font-size;i ;;;o;;"	18px;;;@;iI;	[ ;@o;;["font-size;i ;;;o;;"
-.9rem;;;@;iJ;	[ ;@;@o;;T;i ;iN;[".dsp-5,
-.txt-5;o;;" ;iN;[o;;[o;;@®;iN;[o;;["
-dsp-5;@®;iNo;;["
-o;;@®;iN;[o;;["
-txt-5;@®;iN;	[o;
-;0;["/*IE*/;iO;0;	[ ;@o;;["font-size;i ;;;o;;"	16px;;;@;iO;	[ ;@o;;["font-size;i ;;;o;;"
-.8rem;;;@;iP;	[ ;@;@o;;T;i ;iT;[".dsp-6,
-.txt-6;o;;" ;iT;[o;;[o;;@Ô;iT;[o;;["
-dsp-6;@Ô;iTo;;["
-o;;@Ô;iT;[o;;["
-txt-6;@Ô;iT;	[o;
-;0;["/*IE*/;iU;0;	[ ;@o;;["font-size;i ;;;o;;"	14px;;;@;iU;	[ ;@o;;["font-size;i ;;;o;;"
-.7rem;;;@;iV;	[ ;@;@o;;T;i ;iY;[".txt-l;o;;" ;iY;[o;;[o;;@ú;iY;[o;;["
-txt-l;@ú;iY;	[o;;["text-align;i ;;;o;;"	left;;;@;iY;	[ ;@;@o;;T;i ;iZ;[".txt-r;o;;" ;iZ;[o;;[o;;@;iZ;[o;;["
-txt-r;@;iZ;	[o;;["text-align;i ;;;o;;"
-right;;;@;iZ;	[ ;@;@o;;T;i ;i[;[".txt-c;o;;" ;i[;[o;;[o;;@";i[;[o;;["
-txt-c;@";i[;	[o;;["text-align;i ;;;o;;"center;;;@;i[;	[ ;@;@o;;T;i ;i\;[".txt-j;o;;" ;i\;[o;;[o;;@6;i\;[o;;["
-txt-j;@6;i\;	[o;;["text-align;i ;;;o;;"justify;;;@;i\;	[ ;@;@o;;T;i ;i^;[".txt-tight;o;;" ;i^;[o;;[o;;@J;i^;[o;;["txt-tight;@J;i^;	[o;;["margin-bottom;i ;;;o;;"0;;;@;i^;	[ ;@;@o;;T;i ;i`;[".txt-break;o;;" ;i`;[o;;[o;;@^;i`;[o;;["txt-break;@^;i`;	[o;;["-ms-word-break;i ;;;o;;"break-all;;;@;ia;	[ ;@o;;["word-break;i ;;;o;;"break-all;;;@;ib;	[ ;@o;;["word-break;i ;;;o;;"break-word;;;@;id;	[ ;@o;;["-webkit-hyphens;i ;;;o;;"	auto;;;@;if;	[ ;@o;;["-moz-hyphens;i ;;;o;;"	auto;;;@;ig;	[ ;@o;;["hyphens;i ;;;o;;"	auto;;;@;ih;	[ ;@;@o;
-;0;["¨/* ==========================================================================
-   Rulers
-   ========================================================================== */;im;0;	[ ;@o;
-;0;["Q/*
- * Rulers are used to separate content and are padded with respect to the baseline grid.
- * Presentational names are used for clarity, but semantic names are welcome; e.g., .sep, .sub.
- * Only three weights are used to prevent visual clutter.
- * .hr = horizontal rule
- * .hrt = horizontal rule top
- * .hrb = horizontal rule bottom
- */;iq;0;	[ ;@o;;T;i ;iz;[".hr;o;;" ;iz;[o;;[o;;@˜;iz;[o;;["hr;@˜;iz;	[
-o;;["border-top-style;i ;;;o;;"
-solid;;;@;i{;	[ ;@o;;["border-right;i ;;;o;;"	none;;;@;i|;	[ ;@o;;["border-bottom;i ;;;o;;"	none;;;@;i};	[ ;@o;;["border-left;i ;;;o;;"	none;;;@;i~;	[ ;@o;;["margin-top;i ;;;o;;"0;;;@;i;	[ ;@;@o;;T;i ;i|;[".hr\+1;o;;" ;i|;[o;;[o;;@Ä;i|;[o;;["
-hr\+1;@Ä;i|;	[o;
-;0;["/*IE*/;i};0;	[ ;@o;;["border-top-width;i ;;;o;;"	15px;;;@;i};	[ ;@o;
-;0;["/*IE*/;i~;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	45px;;;@;i~;	[ ;@o;;["border-top-width;i ;;;o;;".75rem;;;@;i€;	[ ;@o;;["margin-bottom;i ;;;o;;"2.25rem;;;@;i;	[ ;@o;
-;0;["C/* (body line-height - border-top-width) + body line-height */;i;0;	[ ;@;@o;;T;i ;iƒ;[".hr\+2;o;;" ;iƒ;[o;;[o;;@ö;iƒ;[o;;["
-hr\+2;@ö;iƒ;	[o;
-;0;["/*IE*/;i„;0;	[ ;@o;;["border-top-width;i ;;;o;;"8px;;;@;i„;	[ ;@o;
-;0;["/*IE*/;i…;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	22px;;;@;i…;	[ ;@o;;["border-top-width;i ;;;o;;"
-.4rem;;;@;i‡;	[ ;@o;;["margin-bottom;i ;;;o;;"1.1rem;;;@;iˆ;	[ ;@o;
-;0;["./* body line-height - border-top-width */;iˆ;0;	[ ;@;@o;;T;i ;iŠ;[".hr\+3;o;;" ;iŠ;[o;;[o;;@(;iŠ;[o;;["
-hr\+3;@(;iŠ;	[o;
-;0;["/*IE*/;i‹;0;	[ ;@o;;["border-top-width;i ;;;o;;"2px;;;@;i‹;	[ ;@o;
-;0;["/*IE*/;iŒ;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	28px;;;@;iŒ;	[ ;@o;;["border-top-width;i ;;;o;;"
-.1rem;;;@;iŽ;	[ ;@o;;["margin-bottom;i ;;;o;;"1.4rem;;;@;i;	[ ;@o;
-;0;["./* body line-height - border-top-width */;i;0;	[ ;@;@o;;T;i ;i’;["	.hrt;o;;" ;i’;[o;;[o;;@Z;i’;[o;;["hrt;@Z;i’;	[	o;
-;0;["/*IE*/;i“;0;	[ ;@o;;["padding-bottom;i ;;;o;;"	30px;;;@;i“;	[ ;@o;;["border-top-style;i ;;;o;;"
-solid;;;@;i•;	[ ;@o;;["padding-bottom;i ;;;o;;"1.5rem;;;@;i–;	[ ;@;@o;;T;i ;i˜;[".hrt\+1;o;;" ;i˜;[o;;[o;;@~;i˜;[o;;["hrt\+1;@~;i˜;	[o;
-;0;["/*IE*/;i™;0;	[ ;@o;;["border-top-width;i ;;;o;;"	15px;;;@;i™;	[ ;@o;
-;0;["/*IE*/;iš;0;	[ ;@o;;["padding-top;i ;;;o;;"	45px;;;@;iš;	[ ;@o;;["border-top-width;i ;;;o;;".75rem;;;@;iœ;	[ ;@o;;["padding-top;i ;;;o;;"2.25rem;;;@;i;	[ ;@o;
-;0;["C/* (body line-height - border-top-width) + body line-height */;i;0;	[ ;@;@o;;T;i ;iŸ;[".hrt\+2;o;;" ;iŸ;[o;;[o;;@°;iŸ;[o;;["hrt\+2;@°;iŸ;	[o;
-;0;["/*IE*/;i ;0;	[ ;@o;;["border-top-width;i ;;;o;;"8px;;;@;i ;	[ ;@o;
-;0;["/*IE*/;i¡;0;	[ ;@o;;["padding-top;i ;;;o;;"	22px;;;@;i¡;	[ ;@o;;["border-top-width;i ;;;o;;"
-.4rem;;;@;i£;	[ ;@o;;["padding-top;i ;;;o;;"1.1rem;;;@;i¤;	[ ;@o;
-;0;["./* body line-height - border-top-width */;i¤;0;	[ ;@;@o;;T;i ;i¦;[".hrt\+3;o;;" ;i¦;[o;;[o;;@â;i¦;[o;;["hrt\+3;@â;i¦;	[o;
-;0;["/*IE*/;i§;0;	[ ;@o;;["border-top-width;i ;;;o;;"2px;;;@;i§;	[ ;@o;
-;0;["/*IE*/;i¨;0;	[ ;@o;;["padding-top;i ;;;o;;"	28px;;;@;i¨;	[ ;@o;;["border-top-width;i ;;;o;;"
-.1rem;;;@;iª;	[ ;@o;;["padding-top;i ;;;o;;"1.4rem;;;@;i«;	[ ;@o;
-;0;["./* body line-height - border-top-width */;i«;0;	[ ;@;@o;;T;i ;i®;["	.hrb;o;;" ;i®;[o;;[o;;@;i®;[o;;["hrb;@;i®;	[o;;["border-bottom-style;i ;;;o;;"
-solid;;;@;i®;	[ ;@;@o;;T;i ;i¯;[".hrb\+1;o;;" ;i¯;[o;;[o;;@(;i¯;[o;;["hrb\+1;@(;i¯;	[o;
-;0;["/*IE*/;i°;0;	[ ;@o;;["border-bottom-width;i ;;;o;;"	15px;;;@;i°;	[ ;@o;
-;0;["/*IE*/;i±;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	15px;;;@;i±;	[ ;@o;;["border-bottom-width;i ;;;o;;".75rem;;;@;i³;	[ ;@o;;["margin-bottom;i ;;;o;;".75rem;;;@;i´;	[ ;@o;
-;0;[":/* border-width + margin-bottom = body line-height */;i´;0;	[ ;@;@o;;T;i ;i¶;[".hrb\+2;o;;" ;i¶;[o;;[o;;@Z;i¶;[o;;["hrb\+2;@Z;i¶;	[o;
-;0;["/*IE*/;i·;0;	[ ;@o;;["border-bottom-width;i ;;;o;;"8px;;;@;i·;	[ ;@o;
-;0;["/*IE*/;i¸;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	22px;;;@;i¸;	[ ;@o;;["border-bottom-width;i ;;;o;;"
-.4rem;;;@;iº;	[ ;@o;;["margin-bottom;i ;;;o;;"1.1rem;;;@;i»;	[ ;@o;
-;0;[":/* border-width + margin-bottom = body line-height */;i»;0;	[ ;@;@o;;T;i ;i½;[".hrb\+3;o;;" ;i½;[o;;[o;;@Œ;i½;[o;;["hrb\+3;@Œ;i½;	[o;
-;0;["/*IE*/;i¾;0;	[ ;@o;;["border-bottom-width;i ;;;o;;"2px;;;@;i¾;	[ ;@o;
-;0;["/*IE*/;i¿;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	28px;;;@;i¿;	[ ;@o;;["border-bottom-width;i ;;;o;;"
-.1rem;;;@;iÁ;	[ ;@o;;["margin-bottom;i ;;;o;;"1.4rem;;;@;iÂ;	[ ;@o;
-;0;["./* body line-height - border-top-width */;iÂ;0;	[ ;@;@o;
-;0;["ª/* ==========================================================================
-   Branding
-   ========================================================================== */;iÈ;0;	[ ;@o;;T;i ;iÌ;["
-.logo;o;;" ;iÌ;[o;;[o;;@Â;iÌ;[o;;["	logo;@Â;iÌ;	[o;
-;0;["/*IE*/;iÍ;0;	[ ;@o;;["height;i ;;;o;;"	40px;;;@;iÍ;	[ ;@o;
-;0;["/*IE*/;iÎ;0;	[ ;@o;;["margin-top;i ;;;o;;"	20px;;;@;iÎ;	[ ;@o;;["height;i ;;;o;;"	2rem;;;@;iÐ;	[ ;@o;;["margin-top;i ;;;o;;"	1rem;;;@;iÑ;	[ ;@o;;["display;i ;;;o;;"
-block;;;@;iÒ;	[ ;@;@o;;T;i ;iÕ;[".logo-ftr;o;;" ;iÕ;[o;;[o;;@ö;iÕ;[o;;["logo-ftr;@ö;iÕ;	[o;;["margin-bottom;i ;;;o;;"0;;;@;iÖ;	[ ;@;@o;
-;0;["¬/* ==========================================================================
-   Navigation
-   ========================================================================== */;iÛ;0;	[ ;@o;;T;i ;iß;["	.nav;o;;" ;iß;[o;;[o;;@;iß;[o;;["nav;@;iß;	[o;;["list-style;i ;;;o;;"	none;;;@;ià;	[ ;@o;;["margin-left;i ;;;o;;"0;;;@;iá;	[ ;@o;;["padding-left;i ;;;o;;"0;;;@;iâ;	[ ;@;@o;;T;i ;iä;[".nav > li;o;;" ;iä;[o;;[o;;@.;iä;[o;;["nav;@.;iä">o;;@.;iä;[o:Sass::Selector::Element	;["li;@.;iä:@namespace0;	[ ;@o;;T;i ;iå;[".nav > li > a;o;;" ;iå;[o;;[
-o;;@B;iå;[o;;["nav;@B;iå">o;;@B;iå;[o;$	;["li;@B;iå;%0">o;;@B;iå;[o;$	;["a;@B;iå;%0;	[o;;["display;i ;;;o;;"
-block;;;@;iæ;	[ ;@;@o;;T;i ;ié;[".nav\+main;o;;" ;ié;[o;;[o;;@b;ié;[o;;["nav\+main;@b;ié;	[o;
-;0;["/*IE*/;iê;0;	[ ;@o;;["margin-top;i ;;;o;;"	30px;;;@;iê;	[ ;@o;;["margin-top;i ;;;o;;"1.5rem;;;@;ië;	[ ;@;@o;;T;i ;iî;[".nav\+ftr;o;;" ;iî;[o;;[o;;@€;iî;[o;;["nav\+ftr;@€;iî;	[	o;
-;0;["/*IE*/;iï;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	30px;;;@;iï;	[ ;@o;;["margin-bottom;i ;;;o;;"1.5rem;;;@;ið;	[ ;@o;;["text-align;i ;;;o;;"center;;;@;iñ;	[ ;@;@o;;T;i ;ió;[".nav\+ftr a;o;;" ;ió;[o;;[o;;@¤;ió;[o;;["nav\+ftr;@¤;ióo;;@¤;ió;[o;$	;["a;@¤;ió;%0;	[o;;["font-weight;i ;;;o;;"	bold;;;@;iô;	[ ;@;@o;;T;i ;iø;[".menu,
-.back;o;;" ;iø;[o;;[o;;@½;iø;[o;;["	menu;@½;iøo;;["
-o;;@½;iø;[o;;["	back;@½;iø;	[o;;["display;i ;;;o;;"	none;;;@;iù;	[ ;@;@o;
-;0;["©/* ==========================================================================
-   Content
-   ========================================================================== */;iþ;0;	[ ;@o;;T;i ;i;["
-.list;o;;" ;i;[o;;[o;;@Ý;i;[o;;["	list;@Ý;i;	[o;;["margin-left;i ;;;o;;"0;;;@;i;	[ ;@o;;["padding-left;i ;;;o;;"0;;;@;i;	[ ;@o;;["list-style;i ;;;o;;"	none;;;@;i;	[ ;@;@o;;T;i ;i;[".list\+row;o;;" ;i;[o;;[o;;@ý;i;[o;;["list\+row;@ý;i;	[ ;@o;;T;i ;i	;[".list\+row > li;o;;" ;i	;[o;;[o;;@;i	;[o;;["list\+row;@;i	">o;;@;i	;[o;$	;["li;@;i	;%0;	[o;;["display;i ;;;o;;"inline-block;;;@;i
-;	[ ;@;@o;;T;i ;i;[".list\+util;o;;" ;i;[o;;[o;;@%;i;[o;;["list\+util;@%;i;	[ ;@o;;T;i ;i;[".list\+util > li;o;;" ;i;[o;;[o;;@3;i;[o;;["list\+util;@3;i">o;;@3;i;[o;$	;["li;@3;i;%0;	[o;
-;0;["/*IE*/;i;0;	[ ;@o;;["margin-left;i ;;;o;;"	10px;;;@;i;	[ ;@o;;["margin-left;i ;;;o;;"
-.5rem;;;@;i;	[ ;@;@o;;T;i ;i;[".gallery;o;;" ;i;[o;;[o;;@W;i;[o;;["gallery;@W;i;	[ ;@o;;T;i ;i;[".gallery > li;o;;" ;i;[o;;[o;;@e;i;[o;;["gallery;@e;i">o;;@e;i;[o;$	;["li;@e;i;%0;	[o;
-;0;["/*IE*/;i;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	30px;;;@;i;	[ ;@o;
-;0;["/*IE*/;i;0;	[ ;@o;;["border-width;i ;;;o;;"2px;;;@;i;	[ ;@o;;["margin-bottom;i ;;;o;;"1.5rem;;;@;i;	[ ;@o;;["border-width;i ;;;o;;"
-.1rem;;;@;i;	[ ;@o;;["border-style;i ;;;o;;"
-solid;;;@;i;	[ ;@o;;["overflow;i ;;;o;;"hidden;;;@;i;	[ ;@;@o;;T;i ;i;[".gallery > li > a;o;;" ;i;[o;;[
-o;;@¥;i;[o;;["gallery;@¥;i">o;;@¥;i;[o;$	;["li;@¥;i;%0">o;;@¥;i;[o;$	;["a;@¥;i;%0;	[	o;
-;0;["/*IE*/;i;0;	[ ;@o;;["height;i ;;;o;;"
-150px;;;@;i;	[ ;@o;;["height;i ;;;o;;"7.5rem;;;@;i;	[ ;@o;;["display;i ;;;o;;"
-block;;;@;i ;	[ ;@;@o;;T;i ;i";[".gallery img;o;;" ;i";[o;;[o;;@Õ;i";[o;;["gallery;@Õ;i"o;;@Õ;i";[o;$	;["img;@Õ;i";%0;	[o;;["
-width;i ;;;o;;"	100%;;;@;i#;	[ ;@o;;["height;i ;;;o;;"	auto;;;@;i$;	[ ;@;@o;
-;0;["¬/* ==========================================================================
-   Containers
-   ========================================================================== */;i);0;	[ ;@o;;T;i ;i-;["
-.hero;o;;" ;i-;[o;;[o;;@ø;i-;[o;;["	hero;@ø;i-;	[o;
-;0;["/*IE*/;i.;0;	[ ;@o;;["padding-top;i ;;;o;;"	90px;;;@;i.;	[ ;@o;
-;0;["/*IE*/;i/;0;	[ ;@o;;["padding-bottom;i ;;;o;;"
-180px;;;@;i/;	[ ;@o;;["padding-top;i ;;;o;;"4.5rem;;;@;i1;	[ ;@o;;["padding-bottom;i ;;;o;;"	9rem;;;@;i2;	[ ;@o;;["background-repeat;i ;;;o;;"no-repeat;;;@;i3;	[ ;@o;;["-webkit-background-size;i ;;;o;;"contain;;;@;i5;	[ ;@o;;["-moz-background-size;i ;;;o;;"contain;;;@;i6;	[ ;@o;;["background-size;i ;;;o;;"contain;;;@;i7;	[ ;@;@o;;T;i ;i:;[".hero-entry;o;;" ;i:;[o;;[o;;@>;i:;[o;;["hero-entry;@>;i:;	[o;
-;0;["/*IE*/;i;;0;	[ ;@o;;["padding-bottom;i ;;;o;;"	90px;;;@;i;;	[ ;@o;;["padding-bottom;i ;;;o;;"4.5rem;;;@;i<;	[ ;@;@o;;T;i ;i?;[".intro;o;;" ;i?;[o;;[o;;@\;i?;[o;;["
-intro;@\;i?;	[o;
-;0;["/*IE*/;i@;0;	[ ;@o;;["padding-bottom;i ;;;o;;"	90px;;;@;i@;	[ ;@o;;["padding-bottom;i ;;;o;;"4.5rem;;;@;iA;	[ ;@;@o;;T;i ;iD;["	.box;o;;" ;iD;[o;;[o;;@z;iD;[o;;["box;@z;iD;	[o;
-;0;["/*IE*/;iE;0;	[ ;@o;;["padding-right;i ;;;o;;"	30px;;;@;iE;	[ ;@o;
-;0;["/*IE*/;iF;0;	[ ;@o;;["padding-left;i ;;;o;;"	30px;;;@;iF;	[ ;@o;;["padding-right;i ;;;o;;"1.5rem;;;@;iH;	[ ;@o;;["padding-left;i ;;;o;;"1.5rem;;;@;iI;	[ ;@;@o;;T;i ;iK;[".box-example;o;;" ;iK;[o;;[o;;@¨;iK;[o;;["box-example;@¨;iK;	[o;
-;0;["/*IE*/;iL;0;	[ ;@o;;["border-top-width;i ;;;o;;"2px;;;@;iL;	[ ;@o;
-;0;["/*IE*/;iM;0;	[ ;@o;;["padding-top;i ;;;o;;"	28px;;;@;iM;	[ ;@o;
-;0;["/*IE*/;iN;0;	[ ;@o;;["border-bottom-width;i ;;;o;;"2px;;;@;iN;	[ ;@o;
-;0;["/*IE*/;iO;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	28px;;;@;iO;	[ ;@o;;["border-top-width;i ;;;o;;"
-.1rem;;;@;iQ;	[ ;@o;;["border-top-style;i ;;;o;;"
-solid;;;@;iR;	[ ;@o;;["padding-top;i ;;;o;;"1.4rem;;;@;iS;	[ ;@o;
-;0;["2/* padding value based on border-top-width */;iS;0;	[ ;@o;;["border-bottom-width;i ;;;o;;"
-.1rem;;;@;iT;	[ ;@o;;["border-bottom-style;i ;;;o;;"
-solid;;;@;iU;	[ ;@o;;["margin-bottom;i ;;;o;;"1.4rem;;;@;iV;	[ ;@;@o;;T;i ;iX;[".box-aside;o;;" ;iX;[o;;[o;;@;iX;[o;;["box-aside;@;iX;	[o;
-;0;["/*IE*/;iY;0;	[ ;@o;;["border-left-width;i ;;;o;;"2px;;;@;iY;	[ ;@o;
-;0;["/*IE*/;iZ;0;	[ ;@o;;["padding-left;i ;;;o;;"	30px;;;@;iZ;	[ ;@o;;["border-left-width;i ;;;o;;"
-.1rem;;;@;i\;	[ ;@o;;["border-left-style;i ;;;o;;"
-solid;;;@;i];	[ ;@o;;["padding-left;i ;;;o;;"1.5rem;;;@;i^;	[ ;@;@o;;T;i ;ia;[".section-std;o;;" ;ia;[o;;[o;;@:;ia;[o;;["section-std;@:;ia;	[o;
-;0;["/*IE*/;ib;0;	[ ;@o;;["padding-bottom;i ;;;o;;"	30px;;;@;ib;	[ ;@o;;["padding-bottom;i ;;;o;;"1.5rem;;;@;ic;	[ ;@;@o;;T;i ;if;[".section-wd;o;;" ;if;[o;;[o;;@X;if;[o;;["section-wd;@X;if;	[o;
-;0;["/*IE*/;ig;0;	[ ;@o;;["padding-bottom;i ;;;o;;"
-120px;;;@;ig;	[ ;@o;;["padding-bottom;i ;;;o;;"	6rem;;;@;ih;	[ ;@;@o;
-;0;["±/* ==========================================================================
-   Utility Classes
-   ========================================================================== */;im;0;	[ ;@o;
-;0;["†/*
- * Image replacement
- * The Kellum Method
- * http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
- */;iq;0;	[ ;@o;;T;i ;iw;[".ir;o;;" ;iw;[o;;[o;;@~;iw;[o;;["ir;@~;iw;	[o;;["text-indent;i ;;;o;;"	100%;;;@;ix;	[ ;@o;;["white-space;i ;;;o;;"nowrap;;;@;iy;	[ ;@o;;["overflow;i ;;;o;;"hidden;;;@;iz;	[ ;@;@o;
-;0;["¨/* ==========================================================================
-   Images
-   ========================================================================== */;i;0;	[ ;@o;;T;i ;iƒ;[".scale;o;;" ;iƒ;[o;;[o;;@¢;iƒ;[o;;["
-scale;@¢;iƒ;	[o;;["max-width;i ;;;o;;"	100%;;;@;i„;	[ ;@o;;["height;i ;;;o;;"	auto;;;@;i…;	[ ;@;@o;
-;0;["°/* ==========================================================================
-   Micro Clearfix
-   ========================================================================== */;iŠ;0;	[ ;@o;
-;0;["˜/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */;iŽ;0;	[ ;@o;;T;i ;i˜;[".cf:before,
-.cf:after;o;;" ;i˜;[o;;[o;;@Ä;i˜;[o;;["cf;@Ä;i˜o:Sass::Selector::Pseudo
-;["before:	@arg0;@Ä;i˜;:
-classo;;["
-o;;@Ä;i˜;[o;;["cf;@Ä;i˜o;&
-;["
-after;'0;@Ä;i˜;;(;	[	o;;["content;i ;;;o;;"" ";;;@;i™;	[ ;@o;
-;0;["/* 1 */;i™;0;	[ ;@o;;["display;i ;;;o;;"
-table;;;@;iš;	[ ;@o;
-;0;["/* 2 */;iš;0;	[ ;@;@o;;T;i ;i;[".cf:after;o;;" ;i;[o;;[o;;@ô;i;[o;;["cf;@ô;io;&
-;["
-after;'0;@ô;i;;(;	[o;;["
-clear;i ;;;o;;"	both;;;@;iž;	[ ;@;@o;
-;0;["]/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */;i¡;0;	[ ;@o;;T;i ;i¥;[".cf;o;;" ;i¥;[o;;[o;;@	;i¥;[o;;["cf;@	;i¥;	[o;;["
-*zoom;i ;;;o;;"1;;;@;i¦;	[ ;@;@;@
