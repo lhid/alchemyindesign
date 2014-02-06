@@ -1,910 +1,0 @@
-3.1.19 (Brainy Betty)
-371744e4c6c70630713c45529a6a39e4001357b2
-o:Sass::Tree::RootNode
-:@has_childrenT:
-@linei:@template"ø-/*! massimo.css v1.0.0 | MIT License */
-
-/* ==========================================================================
-   Web Fonts 
-   ========================================================================== */
-
-/*
- * Starts with web fonts to determine typographic expections.
- * Nuances in font design can affect the overall layout.
- * Adjust font-size to compensate for differences.
- * Adhere to the overall line-height--this is the baseline grid.
- */
-
-/* Text | For body copy
-   ========================================================================== */
-
-@font-face {
-  font-family: 'LiberationSerifRegular';
-  src: url('../fonts/LiberationSerif-Regular-webfont.eot');
-  src: url('../fonts/LiberationSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/LiberationSerif-Regular-webfont.woff') format('woff'),
-       url('../fonts/LiberationSerif-Regular-webfont.ttf') format('truetype'),
-       url('../fonts/LiberationSerif-Regular-webfont.svg#LiberationSerifRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'LiberationSerifItalic';
-  src: url('../fonts/LiberationSerif-Italic-webfont.eot');
-  src: url('../fonts/LiberationSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/LiberationSerif-Italic-webfont.woff') format('woff'),
-       url('../fonts/LiberationSerif-Italic-webfont.ttf') format('truetype'),
-       url('../fonts/LiberationSerif-Italic-webfont.svg#LiberationSerifItalic') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'LiberationSerifBold';
-  src: url('../fonts/LiberationSerif-Bold-webfont.eot');
-  src: url('../fonts/LiberationSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/LiberationSerif-Bold-webfont.woff') format('woff'),
-       url('../fonts/LiberationSerif-Bold-webfont.ttf') format('truetype'),
-       url('../fonts/LiberationSerif-Bold-webfont.svg#LiberationSerifBold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Code
-   ========================================================================== */
-
-@font-face {
-  font-family: 'M1mlight';
-  src: url('../fonts/mplus-1m-light-webfont.eot');
-  src: url('../fonts/mplus-1m-light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/mplus-1m-light-webfont.woff') format('woff'),
-       url('../fonts/mplus-1m-light-webfont.ttf') format('truetype'),
-       url('../fonts/mplus-1m-light-webfont.svg#M1mlight') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Display | For headings, callouts, and such.
-   ========================================================================== */
-
-/*
- * Left OswaldLight to extend typography as needed.
- * Currently using OswaldBook for all headings.
- */
-
-/* @font-face {
-  font-family: 'OswaldLight';
-  src: url('../fonts/Oswald-Light-webfont.eot');
-  src: url('../fonts/Oswald-Light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Oswald-Light-webfont.woff') format('woff'),
-       url('../fonts/Oswald-Light-webfont.ttf') format('truetype'),
-       url('../fonts/Oswald-Light-webfont.svg#OswaldLight') format('svg');
-  font-weight: normal;
-  font-style: normal;
-} */
-@font-face {
-  font-family: 'OswaldBook';
-  src: url('../fonts/Oswald-Regular-webfont.eot');
-  src: url('../fonts/Oswald-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Oswald-Regular-webfont.woff') format('woff'),
-       url('../fonts/Oswald-Regular-webfont.ttf') format('truetype'),
-       url('../fonts/Oswald-Regular-webfont.svg#OswaldBook') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
-/* ==========================================================================
-   Base Layout (small desktop, laptop, 9" landscape) | For 1024 screen size
-   ========================================================================== */
-
-/*
- * 1. Sets root font-size for sizing with rem units.
- * 2. For sticky footer.
- */
-
-html {
-  font-size: 20px;
-  height: 100%;
-}
-
-/*
- * 1. For sticky footer.
- * 2. Forces scrollbar to avoid jumpiness where content is light.
- * 3. Fallback for IE.
- * 4. Fallback for IE.
- * 5. Sets default font-size. Cascades through document.
- * 6. Sets default line-height. Cascades through document. Establishes baseline grid.
- * 7. Kills unwanted margins from UA style sheet.
- */
-
-body {
-  height: 100%; /* 1 */
-  overflow-y: scroll; /* 2 */
-
-  /*IE*/font-size: 20px; /* 3 */
-  /*IE*/line-height: 30px; /* 4 */
-
-  font-size: 1rem; /* 5 */
-  line-height: 1.5rem; /* 6 */
-  margin: 0; /* 7 */
-}
-
-dl,
-dd,
-dt,
-ol,
-p,
-ul,
-pre {
-  /*IE*/margin-bottom: 30px;
-
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-
-/*
- * Prevents a double margin-bottom.
- */
-
-dl ol,
-dl ul {
-  margin-bottom: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'OswaldBook', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /*IE*/margin: 0 0 30px 0;
-
-  font-weight: normal;
-  margin: 0 0 1.5rem 0;
-}
-h1 {
-  /*IE*/font-size: 100px;
-  /*IE*/line-height: 90px;
-  /*IE*/letter-spacing: -2px;
-
-  font-size: 5rem; /* 3 lines of text, aligns optically from baseline to cap height */
-  line-height: 4.5rem; /* 3x line-height set on <body> */
-  letter-spacing: -.1rem;
-}
-h2 { 
-  /*IE*/font-size: 60px;
-  /*IE*/line-height: 60px;
-
-  font-size: 3rem; /* 2 lines of text, aligns optically from baseline to cap height */
-  line-height: 3rem; /* 2x of line-height set on <body> */
-}
-h3 {
-  /*IE*/font-size: 20px;
-  font-size: 1rem; /* Same as <body> */
-}
-h4 {
-  /*IE*/font-size: 18px;
-  font-size: .9rem;
-}
-h5 {
-  /*IE*/font-size: 16px;
-  font-size: .8rem;
-}
-h6 {
-  /*IE*/font-size: 14px;
-  font-size: .7rem;
-}
-
-
-
-/* Sticky Footer
-   ========================================================================== */
-
-.l-wrap {
-  min-height: 100%;
-}
-
-.l-content {
-  /*IE*/padding-bottom: 120px;
-
-  padding-bottom: 6rem;
-}
-
-.l-footer {
-  /*IE*/margin-top: -120px;
-  /*IE*/padding-top: 30px;
-  /*IE*/height: 120px;
-
-  margin-top: -6rem;
-  padding-top: 1.5rem;
-  height: 6rem;
-}
-
-
-
-/* Page Sections
-   ========================================================================== */
-
-.l-header {
-  /*IE*/height: 75px;
-  height: 3.75rem;
-  padding-top: 0;
-}
-  .l-header * {
-    margin-bottom: 0;
-  }
-
-.l-header-int {
-  /*IE*/padding-top: 60px;
-  /*IE*/padding-bottom: 150px;
-
-  padding-top: 3rem;
-  padding-bottom: 7.5rem;
-}
-
-
-
-/* ==========================================================================
-   Grid
-   ========================================================================== */
-
-.l-bound {
-  /*IE*/width: 930px;
-  /*IE*/padding-right: 40px;
-  /*IE*/padding-left: 40px;
-
-  width: 46.5rem; 
-  padding-right: 2rem;
-  padding-left: 2rem;
-  margin: 0 auto;
-}
-
-/*
- * For containers containing .l-col's
- * Uses Micro Clearfix to clear floats
- */
-
-.l-row {}
-
-/* 
- * Uses Micro Clearfix by Nicolas Gallagher 
- * http://nicolasgallagher.com/micro-clearfix-hack/
- */
-
-  .l-bound:before,
-  .l-bound:after,
-  .l-row:before,
-  .l-row:after {
-    content: " ";
-    display: table;
-  }
-  .l-bound:after,
-  .l-row:after {
-    clear: both;
-  }
-  .l-bound,
-  .l-row {
-    *zoom: 1;
-  }
-
-.l-col {
-  /*IE*/margin-left: 30px;
-
-  float: left;
-  margin-left: 1.5rem;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* 
- * A container will be needed for a new row
- */
-
-.l-col:first-child {
-  margin-left: 0;
-}
-
-/* 
- * Extender class to reverse the float
- */
-
-.l-col\+r {
-  float: right;
-}
-
-/*
- * col + margin-left, etc. = 4rem
- */
-
-.l-col\+1  { /*IE*/width: 50px; width: 2.5rem; }
-.l-col\+2  { /*IE*/width: 130px; width: 6.5rem; }
-.l-col\+3  { /*IE*/width: 210px; width: 10.5rem; }
-.l-col\+4  { /*IE*/width: 290px; width: 14.5rem; }
-.l-col\+5  { /*IE*/width: 370px; width: 18.5rem; }
-.l-col\+6  { /*IE*/width: 450px; width: 22.5rem; }
-.l-col\+7  { /*IE*/width: 530px; width: 26.5rem; }
-.l-col\+8  { /*IE*/width: 610px; width: 30.5rem; }
-.l-col\+9  { /*IE*/width: 690px; width: 34.5rem; }
-.l-col\+10 { /*IE*/width: 770px; width: 38.5rem; }
-.l-col\+11 { /*IE*/width: 850px; width: 42.5rem; }
-.l-col\+12 { /*IE*/width: 930px; width: 46.5rem; }
-
-
-
-/* ==========================================================================
-   Remaining Media Queries
-   ========================================================================== */
-
-/* ¬ßBold (larger desktop displays) | For 1287+ screen size
-   ========================================================================== */
-
-@media only screen and (min-width: 1286px) {
-
-  html {
-    font-size: 22px;
-  }
-
-  .l-bound {
-    width: 52.5rem; /* = 1155px */
-  }
-
-  /*
-   * col + margin-left, etc. = 4.5rem
-   */
-
-  .l-col\+1  { width: 3rem; }
-  .l-col\+2  { width: 7.5rem; }
-  .l-col\+3  { width: 12rem; }
-  .l-col\+4  { width: 16.5rem; }
-  .l-col\+5  { width: 21rem; }
-  .l-col\+6  { width: 25.5rem; }
-  .l-col\+7  { width: 30rem; }
-  .l-col\+8  { width: 34.5rem; }
-  .l-col\+9  { width: 39rem; }
-  .l-col\+10 { width: 43.5rem; }
-  .l-col\+11 { width: 48rem; }
-  .l-col\+12 { width: 52.5rem; }
-
-}
-
-
-
-/* ¬ßRoman (9" portrait) | For 768 screen size 
-   ========================================================================== */
-
-@media only screen and (min-width: 768px) and (max-width: 1009px) {
-
-  html { font-size: 18px; }
-
-  .l-bound {
-    width: 39rem;
-    padding-right: 1.75rem;
-    padding-left: 1.75rem;
-  }
-
-  /*
-   * col + margin-left, etc. = 3.375rem
-   */
-
-  .l-col\+1  { width: 1.875rem; }
-  .l-col\+2  { width: 5.25rem; }
-  .l-col\+3  { width: 8.625rem; }
-  .l-col\+4  { width: 12rem; }
-  .l-col\+5  { width: 15.375rem; }
-  .l-col\+6  { width: 18.75rem; }
-  .l-col\+7  { width: 22.125rem; }
-  .l-col\+8  { width: 25.5rem; }
-  .l-col\+9  { width: 28.875rem; }
-  .l-col\+10 { width: 32.25rem; }
-  .l-col\+11 { width: 35.625rem; }
-  .l-col\+12 { width: 39rem; }
-
-}
-
-
-
-/* ¬ßLight | For 480 screen size 
-   ========================================================================== */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-  /* Back to 20px to optimize words/chararcters per line. Readability. */
-  html { font-size: 20px; }
-
-  .l-bound {
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-  }
-
-  /* Repeated styles are in last media query */
-
-}
-
-
-
-/* ¬ßExtra-Light | For 320 screen size 
-   ========================================================================== */
-
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-
-  html { font-size: 18px; }
-
-  .l-bound {
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-
-  /* Repeated styles are in last media query */
-
-}
-
-
-
-/* ¬ßCondensed | For 240 screen size 
-   ========================================================================== */
-
-@media only screen and (max-width: 319px) {
-
-  html { font-size: 16px; }
-
-  .l-bound {
-    padding-right: .75rem;
-    padding-left: .75rem;
-  }
-
-  /* Repeated styles are in last media query */
-
-}
-
-
-
-/* ¬ßLight, ¬ßExtra-Light, ¬ßCondensed | For 768- screen size 
-   ========================================================================== */
-
-@media only screen and (max-width: 767px) {
-
-  h1 {
-    font-size: 3rem; /* 3x body */
-    line-height: 3rem;
-    letter-spacing: -.1rem;
-  }
-
-  h2 {
-    font-size: 2rem; /* 2x body */
-    letter-spacing: normal;
-  }
-
-  .l-header-int {
-    padding-top: 1.5rem;
-    padding-bottom: 3rem;
-  }
-
-  .l-bound {
-    width: 100%;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  /* one-column fluid layout */
-  .l-col { margin-left: 0; }
-
-  .l-col\+1,
-  .l-col\+2,
-  .l-col\+3,
-  .l-col\+4,
-  .l-col\+5,
-  .l-col\+6,
-  .l-col\+7,
-  .l-col\+8,
-  .l-col\+9,
-  .l-col\+10,
-  .l-col\+11,
-  .l-col\+12 { width: 100%; }
-
-}
-
-
-:@children[Po:Sass::Tree::CommentNode:@silent0:@value["+/* massimo.css v1.0.0 | MIT License */;i:
-@loudi ;	[ :@options{ o;
-;0;["¨/* ==========================================================================
-   Web Fonts 
-   ========================================================================== */;i;0;	[ ;@o;
-;0;["Ò/*
- * Starts with web fonts to determine typographic expections.
- * Nuances in font design can affect the overall layout.
- * Adjust font-size to compensate for differences.
- * Adhere to the overall line-height--this is the baseline grid.
- */;i;0;	[ ;@o;
-;0;["m/* Text | For body copy
-   ========================================================================== */;i;0;	[ ;@o:Sass::Tree::DirectiveNode
-;T;"@font-face;i;	[
-o:Sass::Tree::PropNode:
-@name["font-family:
-@tabsi :@prop_syntax:new;o:Sass::Script::String;"'LiberationSerifRegular':
-@type:identifier;@;i;	[ ;@o;;["src;i ;;;o:Sass::Script::Funcall
-;"url;i:@keywords{ ;@:
-@args[o;	;"1../fonts/LiberationSerif-Regular-webfont.eot;i;:string;@;i;	[ ;@o;;["src;i ;;;o:Sass::Script::List	;[	o;	;[o;
-;"url;i;{ ;@;[o;	;"8../fonts/LiberationSerif-Regular-webfont.eot?#iefix;i;;;@o;
-;"format;i;{ ;@;[o;	;"embedded-opentype;i;;;@;i:@separator:
-space;@o;	;[o;
-;"url;i;{ ;@;[o;	;"2../fonts/LiberationSerif-Regular-webfont.woff;i;;;@o;
-;"format;i;{ ;@;[o;	;"	woff;i;;;@;i;;;@o;	;[o;
-;"url;i;{ ;@;[o;	;"1../fonts/LiberationSerif-Regular-webfont.ttf;i;;;@o;
-;"format;i;{ ;@;[o;	;"truetype;i;;;@;i;;;@o;	;[o;
-;"url;i;{ ;@;[o;	;"H../fonts/LiberationSerif-Regular-webfont.svg#LiberationSerifRegular;i;;;@o;
-;"format;i;{ ;@;[o;	;"svg;i;;;@;i;;;@;i;:
-comma;@;i;	[ ;@o;;["font-weight;i ;;;o;;"normal;;;@;i;	[ ;@o;;["font-style;i ;;;o;;"normal;;;@;i;	[ ;@;@o;
-;T;"@font-face;i ;	[
-o;;["font-family;i ;;;o;;"'LiberationSerifItalic';;;@;i!;	[ ;@o;;["src;i ;;;o;
-;"url;i";{ ;@;[o;	;"0../fonts/LiberationSerif-Italic-webfont.eot;i";;;@;i";	[ ;@o;;["src;i ;;;o;	;[	o;	;[o;
-;"url;i#;{ ;@;[o;	;"7../fonts/LiberationSerif-Italic-webfont.eot?#iefix;i#;;;@o;
-;"format;i#;{ ;@;[o;	;"embedded-opentype;i#;;;@;i#;;;@o;	;[o;
-;"url;i$;{ ;@;[o;	;"1../fonts/LiberationSerif-Italic-webfont.woff;i$;;;@o;
-;"format;i$;{ ;@;[o;	;"	woff;i$;;;@;i$;;;@o;	;[o;
-;"url;i%;{ ;@;[o;	;"0../fonts/LiberationSerif-Italic-webfont.ttf;i%;;;@o;
-;"format;i%;{ ;@;[o;	;"truetype;i%;;;@;i%;;;@o;	;[o;
-;"url;i&;{ ;@;[o;	;"F../fonts/LiberationSerif-Italic-webfont.svg#LiberationSerifItalic;i&;;;@o;
-;"format;i&;{ ;@;[o;	;"svg;i&;;;@;i&;;;@;i#;;;@;i&;	[ ;@o;;["font-weight;i ;;;o;;"normal;;;@;i';	[ ;@o;;["font-style;i ;;;o;;"normal;;;@;i(;	[ ;@;@o;
-;T;"@font-face;i*;	[
-o;;["font-family;i ;;;o;;"'LiberationSerifBold';;;@;i+;	[ ;@o;;["src;i ;;;o;
-;"url;i,;{ ;@;[o;	;".../fonts/LiberationSerif-Bold-webfont.eot;i,;;;@;i,;	[ ;@o;;["src;i ;;;o;	;[	o;	;[o;
-;"url;i-;{ ;@;[o;	;"5../fonts/LiberationSerif-Bold-webfont.eot?#iefix;i-;;;@o;
-;"format;i-;{ ;@;[o;	;"embedded-opentype;i-;;;@;i-;;;@o;	;[o;
-;"url;i.;{ ;@;[o;	;"/../fonts/LiberationSerif-Bold-webfont.woff;i.;;;@o;
-;"format;i.;{ ;@;[o;	;"	woff;i.;;;@;i.;;;@o;	;[o;
-;"url;i/;{ ;@;[o;	;".../fonts/LiberationSerif-Bold-webfont.ttf;i/;;;@o;
-;"format;i/;{ ;@;[o;	;"truetype;i/;;;@;i/;;;@o;	;[o;
-;"url;i0;{ ;@;[o;	;"B../fonts/LiberationSerif-Bold-webfont.svg#LiberationSerifBold;i0;;;@o;
-;"format;i0;{ ;@;[o;	;"svg;i0;;;@;i0;;;@;i-;;;@;i0;	[ ;@o;;["font-weight;i ;;;o;;"normal;;;@;i1;	[ ;@o;;["font-style;i ;;;o;;"normal;;;@;i2;	[ ;@;@o;
-;0;["]/* Code
-   ========================================================================== */;i5;0;	[ ;@o;
-;T;"@font-face;i8;	[
-o;;["font-family;i ;;;o;;"'M1mlight';;;@;i9;	[ ;@o;;["src;i ;;;o;
-;"url;i:;{ ;@;[o;	;"(../fonts/mplus-1m-light-webfont.eot;i:;;;@;i:;	[ ;@o;;["src;i ;;;o;	;[	o;	;[o;
-;"url;i;;{ ;@;[o;	;"/../fonts/mplus-1m-light-webfont.eot?#iefix;i;;;;@o;
-;"format;i;;{ ;@;[o;	;"embedded-opentype;i;;;;@;i;;;;@o;	;[o;
-;"url;i<;{ ;@;[o;	;")../fonts/mplus-1m-light-webfont.woff;i<;;;@o;
-;"format;i<;{ ;@;[o;	;"	woff;i<;;;@;i<;;;@o;	;[o;
-;"url;i=;{ ;@;[o;	;"(../fonts/mplus-1m-light-webfont.ttf;i=;;;@o;
-;"format;i=;{ ;@;[o;	;"truetype;i=;;;@;i=;;;@o;	;[o;
-;"url;i>;{ ;@;[o;	;"1../fonts/mplus-1m-light-webfont.svg#M1mlight;i>;;;@o;
-;"format;i>;{ ;@;[o;	;"svg;i>;;;@;i>;;;@;i;;;;@;i>;	[ ;@o;;["font-weight;i ;;;o;;"normal;;;@;i?;	[ ;@o;;["font-style;i ;;;o;;"normal;;;@;i@;	[ ;@;@o;
-;0;["/* Display | For headings, callouts, and such.
-   ========================================================================== */;iC;0;	[ ;@o;
-;0;["o/*
- * Left OswaldLight to extend typography as needed.
- * Currently using OswaldBook for all headings.
- */;iF;0;	[ ;@o;
-;0;["¥/* @font-face {
-  font-family: 'OswaldLight';
-  src: url('../fonts/Oswald-Light-webfont.eot');
-  src: url('../fonts/Oswald-Light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Oswald-Light-webfont.woff') format('woff'),
-       url('../fonts/Oswald-Light-webfont.ttf') format('truetype'),
-       url('../fonts/Oswald-Light-webfont.svg#OswaldLight') format('svg');
-  font-weight: normal;
-  font-style: normal;
-} */;iK;0;	[ ;@o;
-;T;"@font-face;iU;	[
-o;;["font-family;i ;;;o;;"'OswaldBook';;;@;iV;	[ ;@o;;["src;i ;;;o;
-;"url;iW;{ ;@;[o;	;"(../fonts/Oswald-Regular-webfont.eot;iW;;;@;iW;	[ ;@o;;["src;i ;;;o;	;[	o;	;[o;
-;"url;iX;{ ;@;[o;	;"/../fonts/Oswald-Regular-webfont.eot?#iefix;iX;;;@o;
-;"format;iX;{ ;@;[o;	;"embedded-opentype;iX;;;@;iX;;;@o;	;[o;
-;"url;iY;{ ;@;[o;	;")../fonts/Oswald-Regular-webfont.woff;iY;;;@o;
-;"format;iY;{ ;@;[o;	;"	woff;iY;;;@;iY;;;@o;	;[o;
-;"url;iZ;{ ;@;[o;	;"(../fonts/Oswald-Regular-webfont.ttf;iZ;;;@o;
-;"format;iZ;{ ;@;[o;	;"truetype;iZ;;;@;iZ;;;@o;	;[o;
-;"url;i[;{ ;@;[o;	;"3../fonts/Oswald-Regular-webfont.svg#OswaldBook;i[;;;@o;
-;"format;i[;{ ;@;[o;	;"svg;i[;;;@;i[;;;@;iX;;;@;i[;	[ ;@o;;["font-weight;i ;;;o;;"normal;;;@;i\;	[ ;@o;;["font-style;i ;;;o;;"normal;;;@;i];	[ ;@;@o;
-;0;["Í/* ==========================================================================
-   Base Layout (small desktop, laptop, 9" landscape) | For 1024 screen size
-   ========================================================================== */;ib;0;	[ ;@o;
-;0;["Y/*
- * 1. Sets root font-size for sizing with rem units.
- * 2. For sticky footer.
- */;if;0;	[ ;@o:Sass::Tree::RuleNode;T;i ;ik:
-@rule["	html:@parsed_ruleso:"Sass::Selector::CommaSequence:@filename" ;ik:@members[o:Sass::Selector::Sequence;%[o:#Sass::Selector::SimpleSequence;$@;ik;%[o:Sass::Selector::Element	;["	html;$@;ik:@namespace0;	[o;;["font-size;i ;;;o;;"	20px;;;@;il;	[ ;@o;;["height;i ;;;o;;"	100%;;;@;im;	[ ;@;@o;
-;0;["P/*
- * 1. For sticky footer.
- * 2. Forces scrollbar to avoid jumpiness where content is light.
- * 3. Fallback for IE.
- * 4. Fallback for IE.
- * 5. Sets default font-size. Cascades through document.
- * 6. Sets default line-height. Cascades through document. Establishes baseline grid.
- * 7. Kills unwanted margins from UA style sheet.
- */;ip;0;	[ ;@o; ;T;i ;iz;!["	body;"o;#;$" ;iz;%[o;&;%[o;';$@;iz;%[o;(	;["	body;$@;iz;)0;	[o;;["height;i ;;;o;;"	100%;;;@;i{;	[ ;@o;
-;0;["/* 1 */;i{;0;	[ ;@o;;["overflow-y;i ;;;o;;"scroll;;;@;i|;	[ ;@o;
-;0;["/* 2 */;i|;0;	[ ;@o;
-;0;["/*IE*/;i~;0;	[ ;@o;;["font-size;i ;;;o;;"	20px;;;@;i~;	[ ;@o;
-;0;["/* 3 */;i~;0;	[ ;@o;
-;0;["/*IE*/;i;0;	[ ;@o;;["line-height;i ;;;o;;"	30px;;;@;i;	[ ;@o;
-;0;["/* 4 */;i;0;	[ ;@o;;["font-size;i ;;;o;;"	1rem;;;@;i|;	[ ;@o;
-;0;["/* 5 */;i|;0;	[ ;@o;;["line-height;i ;;;o;;"1.5rem;;;@;i};	[ ;@o;
-;0;["/* 6 */;i};0;	[ ;@o;;["margin;i ;;;o;;"0;;;@;i~;	[ ;@o;
-;0;["/* 7 */;i~;0;	[ ;@;@o; ;T;i ;iá;!["dl,
-dd,
-dt,
-ol,
-p,
-ul,
-pre;"o;#;$" ;iá;%[o;&;%[o;';$@{;iá;%[o;(	;["dl;$@{;iá;)0o;&;%["
-o;';$@{;iá;%[o;(	;["dd;$@{;iá;)0o;&;%["
-o;';$@{;iá;%[o;(	;["dt;$@{;iá;)0o;&;%["
-o;';$@{;iá;%[o;(	;["ol;$@{;iá;)0o;&;%["
-o;';$@{;iá;%[o;(	;["p;$@{;iá;)0o;&;%["
-o;';$@{;iá;%[o;(	;["ul;$@{;iá;)0o;&;%["
-o;';$@{;iá;%[o;(	;["pre;$@{;iá;)0;	[	o;
-;0;["/*IE*/;ià;0;	[ ;@o;;["margin-bottom;i ;;;o;;"	30px;;;@;ià;	[ ;@o;;["margin-top;i ;;;o;;"0;;;@;iä;	[ ;@o;;["margin-bottom;i ;;;o;;"1.5rem;;;@;iã;	[ ;@;@o;
-;0;["//*
- * Prevents a double margin-bottom.
- */;ié;0;	[ ;@o; ;T;i ;iì;!["dl ol,
-dl ul;"o;#;$" ;iì;%[o;&;%[o;';$@”;iì;%[o;(	;["dl;$@”;iì;)0o;';$@”;iì;%[o;(	;["ol;$@”;iì;)0o;&;%["
-o;';$@”;iì;%[o;(	;["dl;$@”;iì;)0o;';$@”;iì;%[o;(	;["ul;$@”;iì;)0;	[o;;["margin-bottom;i ;;;o;;"0;;;@;iî;	[ ;@;@o; ;T;i ;iú;!["h1,
-h2,
-h3,
-h4,
-h5,
-h6;"o;#;$" ;iú;%[o;&;%[o;';$@˘;iú;%[o;(	;["h1;$@˘;iú;)0o;&;%["
-o;';$@˘;iú;%[o;(	;["h2;$@˘;iú;)0o;&;%["
-o;';$@˘;iú;%[o;(	;["h3;$@˘;iú;)0o;&;%["
-o;';$@˘;iú;%[o;(	;["h4;$@˘;iú;)0o;&;%["
-o;';$@˘;iú;%[o;(	;["h5;$@˘;iú;)0o;&;%["
-o;';$@˘;iú;%[o;(	;["h6;$@˘;iú;)0;	[
-o;;["font-family;i ;;;o;;"A'OswaldBook', "Helvetica Neue", Helvetica, Arial, sans-serif;;;@;iù;	[ ;@o;
-;0;["/*IE*/;iû;0;	[ ;@o;;["margin;i ;;;o;;"0 0 30px 0;;;@;iû;	[ ;@o;;["font-weight;i ;;;o;;"normal;;;@;i†;	[ ;@o;;["margin;i ;;;o;;"0 0 1.5rem 0;;;@;i°;	[ ;@;@o; ;T;i ;i£;!["h1;"o;#;$" ;i£;%[o;&;%[o;';$@K;i£;%[o;(	;["h1;$@K;i£;)0;	[o;
-;0;["/*IE*/;i§;0;	[ ;@o;;["font-size;i ;;;o;;"
-100px;;;@;i§;	[ ;@o;
-;0;["/*IE*/;i•;0;	[ ;@o;;["line-height;i ;;;o;;"	90px;;;@;i•;	[ ;@o;
-;0;["/*IE*/;i¶;0;	[ ;@o;;["letter-spacing;i ;;;o:Sass::Script::Number:@original"	-2px;i˘;i¶:@denominator_units[ :@numerator_units["px;@;i¶;	[ ;@o;;["font-size;i ;;;o;;"	5rem;;;@;i®;	[ ;@o;
-;0;["H/* 3 lines of text, aligns optically from baseline to cap height */;i®;0;	[ ;@o;;["line-height;i ;;;o;;"4.5rem;;;@;i©;	[ ;@o;
-;0;["'/* 3x line-height set on <body> */;i©;0;	[ ;@o;;["letter-spacing;i ;;;o;*;+"-0.1rem;f-0.10000000000000001 ôö;i™;,[ ;-["rem;@;i™;	[ ;@;@o; ;T;i ;i¨;!["h2;"o;#;$" ;i¨;%[o;&;%[o;';$@ò;i¨;%[o;(	;["h2;$@ò;i¨;)0;	[o;
-;0;["/*IE*/;i≠;0;	[ ;@o;;["font-size;i ;;;o;;"	60px;;;@;i≠;	[ ;@o;
-;0;["/*IE*/;iÆ;0;	[ ;@o;;["line-height;i ;;;o;;"	60px;;;@;iÆ;	[ ;@o;;["font-size;i ;;;o;;"	3rem;;;@;i∞;	[ ;@o;
-;0;["H/* 2 lines of text, aligns optically from baseline to cap height */;i∞;0;	[ ;@o;;["line-height;i ;;;o;;"	3rem;;;@;i±;	[ ;@o;
-;0;["*/* 2x of line-height set on <body> */;i±;0;	[ ;@;@o; ;T;i ;i≥;!["h3;"o;#;$" ;i≥;%[o;&;%[o;';$@Œ;i≥;%[o;(	;["h3;$@Œ;i≥;)0;	[	o;
-;0;["/*IE*/;i¥;0;	[ ;@o;;["font-size;i ;;;o;;"	20px;;;@;i¥;	[ ;@o;;["font-size;i ;;;o;;"	1rem;;;@;iµ;	[ ;@o;
-;0;["/* Same as <body> */;iµ;0;	[ ;@;@o; ;T;i ;i∑;!["h4;"o;#;$" ;i∑;%[o;&;%[o;';$@;i∑;%[o;(	;["h4;$@;i∑;)0;	[o;
-;0;["/*IE*/;i∏;0;	[ ;@o;;["font-size;i ;;;o;;"	18px;;;@;i∏;	[ ;@o;;["font-size;i ;;;o;;"
-.9rem;;;@;iπ;	[ ;@;@o; ;T;i ;iª;!["h5;"o;#;$" ;iª;%[o;&;%[o;';$@;iª;%[o;(	;["h5;$@;iª;)0;	[o;
-;0;["/*IE*/;iº;0;	[ ;@o;;["font-size;i ;;;o;;"	16px;;;@;iº;	[ ;@o;;["font-size;i ;;;o;;"
-.8rem;;;@;iΩ;	[ ;@;@o; ;T;i ;iø;!["h6;"o;#;$" ;iø;%[o;&;%[o;';$@,;iø;%[o;(	;["h6;$@,;iø;)0;	[o;
-;0;["/*IE*/;i¿;0;	[ ;@o;;["font-size;i ;;;o;;"	14px;;;@;i¿;	[ ;@o;;["font-size;i ;;;o;;"
-.7rem;;;@;i¡;	[ ;@;@o;
-;0;["f/* Sticky Footer
-   ========================================================================== */;i∆;0;	[ ;@o; ;T;i ;i…;![".l-wrap;"o;#;$" ;i…;%[o;&;%[o;';$@N;i…;%[o:Sass::Selector::Class;["l-wrap;$@N;i…;	[o;;["min-height;i ;;;o;;"	100%;;;@;i ;	[ ;@;@o; ;T;i ;iÕ;![".l-content;"o;#;$" ;iÕ;%[o;&;%[o;';$@b;iÕ;%[o;.;["l-content;$@b;iÕ;	[o;
-;0;["/*IE*/;iŒ;0;	[ ;@o;;["padding-bottom;i ;;;o;;"
-120px;;;@;iŒ;	[ ;@o;;["padding-bottom;i ;;;o;;"	6rem;;;@;i–;	[ ;@;@o; ;T;i ;i”;![".l-footer;"o;#;$" ;i”;%[o;&;%[o;';$@Ä;i”;%[o;.;["l-footer;$@Ä;i”;	[o;
-;0;["/*IE*/;i‘;0;	[ ;@o;;["margin-top;i ;;;o;*;+"-120px;iÉ;i‘;,[ ;-["px;@;i‘;	[ ;@o;
-;0;["/*IE*/;i’;0;	[ ;@o;;["padding-top;i ;;;o;;"	30px;;;@;i’;	[ ;@o;
-;0;["/*IE*/;i÷;0;	[ ;@o;;["height;i ;;;o;;"
-120px;;;@;i÷;	[ ;@o;;["margin-top;i ;;;o;*;+"
--6rem;iı;iÿ;,[ ;-["rem;@;iÿ;	[ ;@o;;["padding-top;i ;;;o;;"1.5rem;;;@;iŸ;	[ ;@o;;["height;i ;;;o;;"	6rem;;;@;i⁄;	[ ;@;@o;
-;0;["f/* Page Sections
-   ========================================================================== */;iﬂ;0;	[ ;@o; ;T;i ;i‚;![".l-header;"o;#;$" ;i‚;%[o;&;%[o;';$@»;i‚;%[o;.;["l-header;$@»;i‚;	[	o;
-;0;["/*IE*/;i„;0;	[ ;@o;;["height;i ;;;o;;"	75px;;;@;i„;	[ ;@o;;["height;i ;;;o;;"3.75rem;;;@;i‰;	[ ;@o;;["padding-top;i ;;;o;;"0;;;@;iÂ;	[ ;@;@o; ;T;i ;iÁ;![".l-header *;"o;#;$" ;iÁ;%[o;&;%[o;';$@Ï;iÁ;%[o;.;["l-header;$@Ï;iÁo;';$@Ï;iÁ;%[o:Sass::Selector::Universal;$@Ï;iÁ;)0;	[o;;["margin-bottom;i ;;;o;;"0;;;@;iË;	[ ;@;@o; ;T;i ;iÎ;![".l-header-int;"o;#;$" ;iÎ;%[o;&;%[o;';$@;iÎ;%[o;.;["l-header-int;$@;iÎ;	[o;
-;0;["/*IE*/;iÏ;0;	[ ;@o;;["padding-top;i ;;;o;;"	60px;;;@;iÏ;	[ ;@o;
-;0;["/*IE*/;iÌ;0;	[ ;@o;;["padding-bottom;i ;;;o;;"
-150px;;;@;iÌ;	[ ;@o;;["padding-top;i ;;;o;;"	3rem;;;@;iÔ;	[ ;@o;;["padding-bottom;i ;;;o;;"7.5rem;;;@;i;	[ ;@;@o;
-;0;["¶/* ==========================================================================
-   Grid
-   ========================================================================== */;iı;0;	[ ;@o; ;T;i ;i˘;![".l-bound;"o;#;$" ;i˘;%[o;&;%[o;';$@5;i˘;%[o;.;["l-bound;$@5;i˘;	[o;
-;0;["/*IE*/;i˙;0;	[ ;@o;;["
-width;i ;;;o;;"
-930px;;;@;i˙;	[ ;@o;
-;0;["/*IE*/;i˚;0;	[ ;@o;;["padding-right;i ;;;o;;"	40px;;;@;i˚;	[ ;@o;
-;0;["/*IE*/;i¸;0;	[ ;@o;;["padding-left;i ;;;o;;"	40px;;;@;i¸;	[ ;@o;;["
-width;i ;;;o;;"46.5rem;;;@;i˛;	[ ;@o;;["padding-right;i ;;;o;;"	2rem;;;@;iˇ;	[ ;@o;;["padding-left;i ;;;o;;"	2rem;;;@;i ;	[ ;@o;;["margin;i ;;;o;;"0 auto;;;@;i;	[ ;@;@o;
-;0;["X/*
- * For containers containing .l-col's
- * Uses Micro Clearfix to clear floats
- */;i;0;	[ ;@o; ;T;i ;i	;![".l-row;"o;#;$" ;i	;%[o;&;%[o;';$@};i	;%[o;.;["
-l-row;$@};i	;	[ ;@o;
-;0;["m/* 
- * Uses Micro Clearfix by Nicolas Gallagher 
- * http://nicolasgallagher.com/micro-clearfix-hack/
- */;i;0;	[ ;@o; ;T;i ;i;!["G.l-bound:before,
-  .l-bound:after,
-  .l-row:before,
-  .l-row:after;"o;#;$" ;i;%[	o;&;%[o;';$@è;i;%[o;.;["l-bound;$@è;io:Sass::Selector::Pseudo
-;["before:	@arg0;$@è;i;:
-classo;&;%["
-o;';$@è;i;%[o;.;["l-bound;$@è;io;0
-;["
-after;10;$@è;i;;2o;&;%["
-o;';$@è;i;%[o;.;["
-l-row;$@è;io;0
-;["before;10;$@è;i;;2o;&;%["
-o;';$@è;i;%[o;.;["
-l-row;$@è;io;0
-;["
-after;10;$@è;i;;2;	[o;;["content;i ;;;o;;"" ";;;@;i;	[ ;@o;;["display;i ;;;o;;"
-table;;;@;i;	[ ;@;@o; ;T;i ;i;!["#.l-bound:after,
-  .l-row:after;"o;#;$" ;i;%[o;&;%[o;';$@Õ;i;%[o;.;["l-bound;$@Õ;io;0
-;["
-after;10;$@Õ;i;;2o;&;%["
-o;';$@Õ;i;%[o;.;["
-l-row;$@Õ;io;0
-;["
-after;10;$@Õ;i;;2;	[o;;["
-clear;i ;;;o;;"	both;;;@;i;	[ ;@;@o; ;T;i ;i;![".l-bound,
-  .l-row;"o;#;$" ;i;%[o;&;%[o;';$@Ô;i;%[o;.;["l-bound;$@Ô;io;&;%["
-o;';$@Ô;i;%[o;.;["
-l-row;$@Ô;i;	[o;;["
-*zoom;i ;;;o;;"1;;;@;i;	[ ;@;@o; ;T;i ;i ;![".l-col;"o;#;$" ;i ;%[o;&;%[o;';$@;i ;%[o;.;["
-l-col;$@;i ;	[o;
-;0;["/*IE*/;i!;0;	[ ;@o;;["margin-left;i ;;;o;;"	30px;;;@;i!;	[ ;@o;;["
-float;i ;;;o;;"	left;;;@;i#;	[ ;@o;;["margin-left;i ;;;o;;"1.5rem;;;@;i$;	[ ;@o;;["-webkit-box-sizing;i ;;;o;;"border-box;;;@;i&;	[ ;@o;;["-moz-box-sizing;i ;;;o;;"border-box;;;@;i';	[ ;@o;;["box-sizing;i ;;;o;;"border-box;;;@;i(;	[ ;@;@o;
-;0;["8/* 
- * A container will be needed for a new row
- */;i+;0;	[ ;@o; ;T;i ;i/;![".l-col:first-child;"o;#;$" ;i/;%[o;&;%[o;';$@E;i/;%[o;.;["
-l-col;$@E;i/o;0
-;["first-child;10;$@E;i/;;2;	[o;;["margin-left;i ;;;o;;"0;;;@;i0;	[ ;@;@o;
-;0;["3/* 
- * Extender class to reverse the float
- */;i3;0;	[ ;@o; ;T;i ;i7;![".l-col\+r;"o;#;$" ;i7;%[o;&;%[o;';$@`;i7;%[o;.;["l-col\+r;$@`;i7;	[o;;["
-float;i ;;;o;;"
-right;;;@;i8;	[ ;@;@o;
-;0;["-/*
- * col + margin-left, etc. = 4rem
- */;i;;0;	[ ;@o; ;T;i ;i?;![".l-col\+1;"o;#;$" ;i?;%[o;&;%[o;';$@x;i?;%[o;.;["l-col\+1;$@x;i?;	[o;
-;0;["/*IE*/;i?;0;	[ ;@o;;["
-width;i ;;;o;;"	50px;;;@;i?;	[ ;@o;;["
-width;i ;;;o;;"2.5rem;;;@;i?;	[ ;@;@o; ;T;i ;i@;![".l-col\+2;"o;#;$" ;i@;%[o;&;%[o;';$@ñ;i@;%[o;.;["l-col\+2;$@ñ;i@;	[o;
-;0;["/*IE*/;i@;0;	[ ;@o;;["
-width;i ;;;o;;"
-130px;;;@;i@;	[ ;@o;;["
-width;i ;;;o;;"6.5rem;;;@;i@;	[ ;@;@o; ;T;i ;iA;![".l-col\+3;"o;#;$" ;iA;%[o;&;%[o;';$@¥;iA;%[o;.;["l-col\+3;$@¥;iA;	[o;
-;0;["/*IE*/;iA;0;	[ ;@o;;["
-width;i ;;;o;;"
-210px;;;@;iA;	[ ;@o;;["
-width;i ;;;o;;"10.5rem;;;@;iA;	[ ;@;@o; ;T;i ;iB;![".l-col\+4;"o;#;$" ;iB;%[o;&;%[o;';$@“;iB;%[o;.;["l-col\+4;$@“;iB;	[o;
-;0;["/*IE*/;iB;0;	[ ;@o;;["
-width;i ;;;o;;"
-290px;;;@;iB;	[ ;@o;;["
-width;i ;;;o;;"14.5rem;;;@;iB;	[ ;@;@o; ;T;i ;iC;![".l-col\+5;"o;#;$" ;iC;%[o;&;%[o;';$@;iC;%[o;.;["l-col\+5;$@;iC;	[o;
-;0;["/*IE*/;iC;0;	[ ;@o;;["
-width;i ;;;o;;"
-370px;;;@;iC;	[ ;@o;;["
-width;i ;;;o;;"18.5rem;;;@;iC;	[ ;@;@o; ;T;i ;iD;![".l-col\+6;"o;#;$" ;iD;%[o;&;%[o;';$@;iD;%[o;.;["l-col\+6;$@;iD;	[o;
-;0;["/*IE*/;iD;0;	[ ;@o;;["
-width;i ;;;o;;"
-450px;;;@;iD;	[ ;@o;;["
-width;i ;;;o;;"22.5rem;;;@;iD;	[ ;@;@o; ;T;i ;iE;![".l-col\+7;"o;#;$" ;iE;%[o;&;%[o;';$@,;iE;%[o;.;["l-col\+7;$@,;iE;	[o;
-;0;["/*IE*/;iE;0;	[ ;@o;;["
-width;i ;;;o;;"
-530px;;;@;iE;	[ ;@o;;["
-width;i ;;;o;;"26.5rem;;;@;iE;	[ ;@;@o; ;T;i ;iF;![".l-col\+8;"o;#;$" ;iF;%[o;&;%[o;';$@J;iF;%[o;.;["l-col\+8;$@J;iF;	[o;
-;0;["/*IE*/;iF;0;	[ ;@o;;["
-width;i ;;;o;;"
-610px;;;@;iF;	[ ;@o;;["
-width;i ;;;o;;"30.5rem;;;@;iF;	[ ;@;@o; ;T;i ;iG;![".l-col\+9;"o;#;$" ;iG;%[o;&;%[o;';$@h;iG;%[o;.;["l-col\+9;$@h;iG;	[o;
-;0;["/*IE*/;iG;0;	[ ;@o;;["
-width;i ;;;o;;"
-690px;;;@;iG;	[ ;@o;;["
-width;i ;;;o;;"34.5rem;;;@;iG;	[ ;@;@o; ;T;i ;iH;![".l-col\+10;"o;#;$" ;iH;%[o;&;%[o;';$@Ü;iH;%[o;.;["l-col\+10;$@Ü;iH;	[o;
-;0;["/*IE*/;iH;0;	[ ;@o;;["
-width;i ;;;o;;"
-770px;;;@;iH;	[ ;@o;;["
-width;i ;;;o;;"38.5rem;;;@;iH;	[ ;@;@o; ;T;i ;iI;![".l-col\+11;"o;#;$" ;iI;%[o;&;%[o;';$@§;iI;%[o;.;["l-col\+11;$@§;iI;	[o;
-;0;["/*IE*/;iI;0;	[ ;@o;;["
-width;i ;;;o;;"
-850px;;;@;iI;	[ ;@o;;["
-width;i ;;;o;;"42.5rem;;;@;iI;	[ ;@;@o; ;T;i ;iJ;![".l-col\+12;"o;#;$" ;iJ;%[o;&;%[o;';$@¬;iJ;%[o;.;["l-col\+12;$@¬;iJ;	[o;
-;0;["/*IE*/;iJ;0;	[ ;@o;;["
-width;i ;;;o;;"
-930px;;;@;iJ;	[ ;@o;;["
-width;i ;;;o;;"46.5rem;;;@;iJ;	[ ;@;@o;
-;0;["π/* ==========================================================================
-   Remaining Media Queries
-   ========================================================================== */;iN;0;	[ ;@o;
-;0;["å/* ¬ßBold (larger desktop displays) | For 1287+ screen size
-   ========================================================================== */;iR;0;	[ ;@o:Sass::Tree::MediaNode;T;i ;" ;iU:@query["(only screen and (min-width: 1286px);	[o; ;T;i ;iW;!["	html;"o;#;$" ;iW;%[o;&;%[o;';$@Ì;iW;%[o;(	;["	html;$@Ì;iW;)0;	[o;;["font-size;i ;;;o;;"	22px;;;@;iX;	[ ;@;@o; ;T;i ;i[;![".l-bound;"o;#;$" ;i[;%[o;&;%[o;';$@;i[;%[o;.;["l-bound;$@;i[;	[o;;["
-width;i ;;;o;;"52.5rem;;;@;i\;	[ ;@o;
-;0;["/* = 1155px */;i\;0;	[ ;@;@o;
-;0;["//*
- * col + margin-left, etc. = 4.5rem
- */;i_;0;	[ ;@o; ;T;i ;ic;![".l-col\+1;"o;#;$" ;ic;%[o;&;%[o;';$@;ic;%[o;.;["l-col\+1;$@;ic;	[o;;["
-width;i ;;;o;;"	3rem;;;@;ic;	[ ;@;@o; ;T;i ;id;![".l-col\+2;"o;#;$" ;id;%[o;&;%[o;';$@1;id;%[o;.;["l-col\+2;$@1;id;	[o;;["
-width;i ;;;o;;"7.5rem;;;@;id;	[ ;@;@o; ;T;i ;ie;![".l-col\+3;"o;#;$" ;ie;%[o;&;%[o;';$@E;ie;%[o;.;["l-col\+3;$@E;ie;	[o;;["
-width;i ;;;o;;"
-12rem;;;@;ie;	[ ;@;@o; ;T;i ;if;![".l-col\+4;"o;#;$" ;if;%[o;&;%[o;';$@Y;if;%[o;.;["l-col\+4;$@Y;if;	[o;;["
-width;i ;;;o;;"16.5rem;;;@;if;	[ ;@;@o; ;T;i ;ig;![".l-col\+5;"o;#;$" ;ig;%[o;&;%[o;';$@m;ig;%[o;.;["l-col\+5;$@m;ig;	[o;;["
-width;i ;;;o;;"
-21rem;;;@;ig;	[ ;@;@o; ;T;i ;ih;![".l-col\+6;"o;#;$" ;ih;%[o;&;%[o;';$@Å;ih;%[o;.;["l-col\+6;$@Å;ih;	[o;;["
-width;i ;;;o;;"25.5rem;;;@;ih;	[ ;@;@o; ;T;i ;ii;![".l-col\+7;"o;#;$" ;ii;%[o;&;%[o;';$@ï;ii;%[o;.;["l-col\+7;$@ï;ii;	[o;;["
-width;i ;;;o;;"
-30rem;;;@;ii;	[ ;@;@o; ;T;i ;ij;![".l-col\+8;"o;#;$" ;ij;%[o;&;%[o;';$@©;ij;%[o;.;["l-col\+8;$@©;ij;	[o;;["
-width;i ;;;o;;"34.5rem;;;@;ij;	[ ;@;@o; ;T;i ;ik;![".l-col\+9;"o;#;$" ;ik;%[o;&;%[o;';$@Ω;ik;%[o;.;["l-col\+9;$@Ω;ik;	[o;;["
-width;i ;;;o;;"
-39rem;;;@;ik;	[ ;@;@o; ;T;i ;il;![".l-col\+10;"o;#;$" ;il;%[o;&;%[o;';$@—;il;%[o;.;["l-col\+10;$@—;il;	[o;;["
-width;i ;;;o;;"43.5rem;;;@;il;	[ ;@;@o; ;T;i ;im;![".l-col\+11;"o;#;$" ;im;%[o;&;%[o;';$@Â;im;%[o;.;["l-col\+11;$@Â;im;	[o;;["
-width;i ;;;o;;"
-48rem;;;@;im;	[ ;@;@o; ;T;i ;in;![".l-col\+12;"o;#;$" ;in;%[o;&;%[o;';$@˘;in;%[o;.;["l-col\+12;$@˘;in;	[o;;["
-width;i ;;;o;;"52.5rem;;;@;in;	[ ;@;@;@o;
-;0;["Ä/* ¬ßRoman (9" portrait) | For 768 screen size 
-   ========================================================================== */;it;0;	[ ;@o;3;T;i ;" ;iw;4["?only screen and (min-width: 768px) and (max-width: 1009px);	[o; ;T;i ;iy;!["	html;"o;#;$" ;iy;%[o;&;%[o;';$@	;iy;%[o;(	;["	html;$@	;iy;)0;	[o;;["font-size;i ;;;o;;"	18px;;;@;iy;	[ ;@;@o; ;T;i ;i{;![".l-bound;"o;#;$" ;i{;%[o;&;%[o;';$@*	;i{;%[o;.;["l-bound;$@*	;i{;	[o;;["
-width;i ;;;o;;"
-39rem;;;@;i|;	[ ;@o;;["padding-right;i ;;;o;;"1.75rem;;;@;i};	[ ;@o;;["padding-left;i ;;;o;;"1.75rem;;;@;i~;	[ ;@;@o;
-;0;["1/*
- * col + margin-left, etc. = 3.375rem
- */;iÅ;0;	[ ;@o; ;T;i ;iÖ;![".l-col\+1;"o;#;$" ;iÖ;%[o;&;%[o;';$@N	;iÖ;%[o;.;["l-col\+1;$@N	;iÖ;	[o;;["
-width;i ;;;o;;"1.875rem;;;@;iÖ;	[ ;@;@o; ;T;i ;iÜ;![".l-col\+2;"o;#;$" ;iÜ;%[o;&;%[o;';$@b	;iÜ;%[o;.;["l-col\+2;$@b	;iÜ;	[o;;["
-width;i ;;;o;;"5.25rem;;;@;iÜ;	[ ;@;@o; ;T;i ;iá;![".l-col\+3;"o;#;$" ;iá;%[o;&;%[o;';$@v	;iá;%[o;.;["l-col\+3;$@v	;iá;	[o;;["
-width;i ;;;o;;"8.625rem;;;@;iá;	[ ;@;@o; ;T;i ;ià;![".l-col\+4;"o;#;$" ;ià;%[o;&;%[o;';$@ä	;ià;%[o;.;["l-col\+4;$@ä	;ià;	[o;;["
-width;i ;;;o;;"
-12rem;;;@;ià;	[ ;@;@o; ;T;i ;iâ;![".l-col\+5;"o;#;$" ;iâ;%[o;&;%[o;';$@û	;iâ;%[o;.;["l-col\+5;$@û	;iâ;	[o;;["
-width;i ;;;o;;"15.375rem;;;@;iâ;	[ ;@;@o; ;T;i ;iä;![".l-col\+6;"o;#;$" ;iä;%[o;&;%[o;';$@≤	;iä;%[o;.;["l-col\+6;$@≤	;iä;	[o;;["
-width;i ;;;o;;"18.75rem;;;@;iä;	[ ;@;@o; ;T;i ;iã;![".l-col\+7;"o;#;$" ;iã;%[o;&;%[o;';$@∆	;iã;%[o;.;["l-col\+7;$@∆	;iã;	[o;;["
-width;i ;;;o;;"22.125rem;;;@;iã;	[ ;@;@o; ;T;i ;iå;![".l-col\+8;"o;#;$" ;iå;%[o;&;%[o;';$@⁄	;iå;%[o;.;["l-col\+8;$@⁄	;iå;	[o;;["
-width;i ;;;o;;"25.5rem;;;@;iå;	[ ;@;@o; ;T;i ;iç;![".l-col\+9;"o;#;$" ;iç;%[o;&;%[o;';$@Ó	;iç;%[o;.;["l-col\+9;$@Ó	;iç;	[o;;["
-width;i ;;;o;;"28.875rem;;;@;iç;	[ ;@;@o; ;T;i ;ié;![".l-col\+10;"o;#;$" ;ié;%[o;&;%[o;';$@
-;ié;%[o;.;["l-col\+10;$@
-;ié;	[o;;["
-width;i ;;;o;;"32.25rem;;;@;ié;	[ ;@;@o; ;T;i ;iè;![".l-col\+11;"o;#;$" ;iè;%[o;&;%[o;';$@
-;iè;%[o;.;["l-col\+11;$@
-;iè;	[o;;["
-width;i ;;;o;;"35.625rem;;;@;iè;	[ ;@;@o; ;T;i ;iê;![".l-col\+12;"o;#;$" ;iê;%[o;&;%[o;';$@*
-;iê;%[o;.;["l-col\+12;$@*
-;iê;	[o;;["
-width;i ;;;o;;"
-39rem;;;@;iê;	[ ;@;@;@o;
-;0;["w/* ¬ßLight | For 480 screen size 
-   ========================================================================== */;iñ;0;	[ ;@o;3;T;i ;" ;iô;4[">only screen and (min-width: 480px) and (max-width: 767px);	[	o;
-;0;["L/* Back to 20px to optimize words/chararcters per line. Readability. */;iõ;0;	[ ;@o; ;T;i ;iú;!["	html;"o;#;$" ;iú;%[o;&;%[o;';$@K
-;iú;%[o;(	;["	html;$@K
-;iú;)0;	[o;;["font-size;i ;;;o;;"	20px;;;@;iú;	[ ;@;@o; ;T;i ;iû;![".l-bound;"o;#;$" ;iû;%[o;&;%[o;';$@_
-;iû;%[o;.;["l-bound;$@_
-;iû;	[o;;["padding-right;i ;;;o;;"1.25rem;;;@;iü;	[ ;@o;;["padding-left;i ;;;o;;"1.25rem;;;@;i†;	[ ;@;@o;
-;0;["2/* Repeated styles are in last media query */;i£;0;	[ ;@;@o;
-;0;["}/* ¬ßExtra-Light | For 320 screen size 
-   ========================================================================== */;i©;0;	[ ;@o;3;T;i ;" ;i¨;4[">only screen and (min-width: 320px) and (max-width: 479px);	[o; ;T;i ;iÆ;!["	html;"o;#;$" ;iÆ;%[o;&;%[o;';$@Ü
-;iÆ;%[o;(	;["	html;$@Ü
-;iÆ;)0;	[o;;["font-size;i ;;;o;;"	18px;;;@;iÆ;	[ ;@;@o; ;T;i ;i∞;![".l-bound;"o;#;$" ;i∞;%[o;&;%[o;';$@ö
-;i∞;%[o;.;["l-bound;$@ö
-;i∞;	[o;;["padding-right;i ;;;o;;"	1rem;;;@;i±;	[ ;@o;;["padding-left;i ;;;o;;"	1rem;;;@;i≤;	[ ;@;@o;
-;0;["2/* Repeated styles are in last media query */;iµ;0;	[ ;@;@o;
-;0;["{/* ¬ßCondensed | For 240 screen size 
-   ========================================================================== */;iª;0;	[ ;@o;3;T;i ;" ;iæ;4["'only screen and (max-width: 319px);	[o; ;T;i ;i¿;!["	html;"o;#;$" ;i¿;%[o;&;%[o;';$@¡
-;i¿;%[o;(	;["	html;$@¡
-;i¿;)0;	[o;;["font-size;i ;;;o;;"	16px;;;@;i¿;	[ ;@;@o; ;T;i ;i¬;![".l-bound;"o;#;$" ;i¬;%[o;&;%[o;';$@’
-;i¬;%[o;.;["l-bound;$@’
-;i¬;	[o;;["padding-right;i ;;;o;;".75rem;;;@;i√;	[ ;@o;;["padding-left;i ;;;o;;".75rem;;;@;iƒ;	[ ;@;@o;
-;0;["2/* Repeated styles are in last media query */;i«;0;	[ ;@;@o;
-;0;["è/* ¬ßLight, ¬ßExtra-Light, ¬ßCondensed | For 768- screen size 
-   ========================================================================== */;iÕ;0;	[ ;@o;3;T;i ;" ;i–;4["'only screen and (max-width: 767px);	[o; ;T;i ;i“;!["h1;"o;#;$" ;i“;%[o;&;%[o;';$@¸
-;i“;%[o;(	;["h1;$@¸
-;i“;)0;	[	o;;["font-size;i ;;;o;;"	3rem;;;@;i”;	[ ;@o;
-;0;["/* 3x body */;i”;0;	[ ;@o;;["line-height;i ;;;o;;"	3rem;;;@;i‘;	[ ;@o;;["letter-spacing;i ;;;o;*;+"-0.1rem;f-0.10000000000000001 ôö;i’;,[ ;-["rem;@;i’;	[ ;@;@o; ;T;i ;iÿ;!["h2;"o;#;$" ;iÿ;%[o;&;%[o;';$@$;iÿ;%[o;(	;["h2;$@$;iÿ;)0;	[o;;["font-size;i ;;;o;;"	2rem;;;@;iŸ;	[ ;@o;
-;0;["/* 2x body */;iŸ;0;	[ ;@o;;["letter-spacing;i ;;;o;;"normal;;;@;i⁄;	[ ;@;@o; ;T;i ;i›;![".l-header-int;"o;#;$" ;i›;%[o;&;%[o;';$@B;i›;%[o;.;["l-header-int;$@B;i›;	[o;;["padding-top;i ;;;o;;"1.5rem;;;@;iﬁ;	[ ;@o;;["padding-bottom;i ;;;o;;"	3rem;;;@;iﬂ;	[ ;@;@o; ;T;i ;i‚;![".l-bound;"o;#;$" ;i‚;%[o;&;%[o;';$@\;i‚;%[o;.;["l-bound;$@\;i‚;	[	o;;["
-width;i ;;;o;;"	100%;;;@;i„;	[ ;@o;;["-webkit-box-sizing;i ;;;o;;"border-box;;;@;iÂ;	[ ;@o;;["-moz-box-sizing;i ;;;o;;"border-box;;;@;iÊ;	[ ;@o;;["box-sizing;i ;;;o;;"border-box;;;@;iÁ;	[ ;@;@o;
-;0;[""/* one-column fluid layout */;iÍ;0;	[ ;@o; ;T;i ;iÎ;![".l-col;"o;#;$" ;iÎ;%[o;&;%[o;';$@Ü;iÎ;%[o;.;["
-l-col;$@Ü;iÎ;	[o;;["margin-left;i ;;;o;;"0;;;@;iÎ;	[ ;@;@o; ;T;i ;i¯;!["õ.l-col\+1,
-  .l-col\+2,
-  .l-col\+3,
-  .l-col\+4,
-  .l-col\+5,
-  .l-col\+6,
-  .l-col\+7,
-  .l-col\+8,
-  .l-col\+9,
-  .l-col\+10,
-  .l-col\+11,
-  .l-col\+12;"o;#;$" ;i¯;%[o;&;%[o;';$@ö;i¯;%[o;.;["l-col\+1;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+2;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+3;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+4;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+5;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+6;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+7;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+8;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+9;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+10;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+11;$@ö;i¯o;&;%["
-o;';$@ö;i¯;%[o;.;["l-col\+12;$@ö;i¯;	[o;;["
-width;i ;;;o;;"	100%;;;@;i¯;	[ ;@;@;@;@
