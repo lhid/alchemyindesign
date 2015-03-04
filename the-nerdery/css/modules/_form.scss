@@ -1,0 +1,39 @@
+.form {
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+  /**
+   * 1. Pixel fallback for IE8
+   */
+
+  .form__field {
+    @include border-box;
+    @include box-shadow(inset 0px 0px 5px 0px rgba(0,0,0,.35));
+    border: 1px solid #cecece;
+    color: #9c9fa3;
+    padding: 6px 6px 6px 6px; /* 1 */
+    padding: .5rem .5rem .5rem .5rem;
+    &:focus {
+      border: 1px solid #595959;
+      outline: none;
+    }
+  }
+
+  .form__label {
+    font-weight: bold;
+  }
+
+  .form__field--full {
+    width: 100%;
+    margin-bottom: .85em;
+  }
+
+  .form__row {
+    margin-bottom: .85em;
+    margin-top: .85em;
+  }

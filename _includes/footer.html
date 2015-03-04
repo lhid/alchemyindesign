@@ -2,64 +2,70 @@
 
     <!-- Stickey Footer -->
     <footer class="l-footer" role="contentinfo">
-
       <div class="l-bound">
 
           <div class="l-col l-col+3">
-
             <h4 class="logo-ftr dsp-5">
               <a href="index.html" title="Home">Alchemy In Design.</a>
             </h4>
 
             <p>
-              <small>&copy;2014 Leban Hyde.</small>
+              <small>&copy; 
+                <script type="text/javascript">
+                  document.write(new Date().getFullYear());
+                </script> 
+                Leban Hyde.
+              </small>
             </p>
-
           </div>
 
-          
           <div class="l-col l-col+4">
-
             <h5 class="txt-tight">Email:</h5>
 
+            <script language="javascript">
+              function m_sfcon (u) {
+                pre = "mail";
+                url = pre + "to:" + u;
+                document.location.href = url + "@alchemyindesign.com";
+              }
+            </script>
             <p>
-              <a href="mailto:leban@alchemyindesign.com" class="txt-6">leban@alchemyindesign.com</a>
+              <a href="javascript:m_sfcon('leban')" class="txt-6">leban[at]alchemyindesign[dot]com</a>
             </p>
-
           </div>
 
           <div class="l-col l-col+4">
-
             <h5 class="txt-tight">Social:</h5>
 
             <ul class="list list+row txt-6">
               <li>
                 <a href="https://twitter.com/lhid">Twitter</a>
               </li>
+
               <li>
                 <a href="http://pinterest.com/lebanh/">Pinterest</a>
               </li>
+
               <li>
                 <a href="http://www.behance.net/lhid">Behance</a>
               </li>
+
               <li>
                 <a title="Author: Leban Hyde on Google+" rel="author" href="https://plus.google.com/106003408367233906479?rel=author">Google+</a>
               </li>
             </ul>
-
           </div>
 
           <div class="l-col l-col+1">
             <nav class="nav nav+ftr">
               <h5 class="is-hidden">Footer Navigation</h5>
+
               <a href="#top" title="Back to Top" class="dsp-2">
                 <span role="presentation">&and;</span>
               </a>
             </nav>
           </div>
-
       </div><!-- /.l-bound -->
-
     </footer>
 
     <!-- Google Analytics -->
@@ -69,7 +75,5 @@
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-
   </body>
-
 </html>

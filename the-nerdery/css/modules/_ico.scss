@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Section Module
+   ========================================================================== */
+
+
+
+/* Ico Base
+   ========================================================================== */
+
+.ico {
+  background: url(../img/ico--sprite.png) no-repeat;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+
+
+/* Ico Image Modifiers
+   ========================================================================== */
+
+.ico--articles {
+  background-position: 0 0;
+  height: 16px;
+  width: 15px;
+}
+
+.ico--browse {
+  background-position: 0 -66px;
+  height: 12px;
+  width: 15px;
+}
+
+.ico--contests {
+  background-position: 0 -128px;
+  height: 11px;
+  width: 12px;
+}
+
+.ico--deals {
+  background-position: 0 -189px;
+  height: 11px;
+  width: 11px;
+}
+
+.ico--facebook {
+  background-position: 0 -250px;
+  height: 26px;
+  width: 26px;
+}
+
+.ico--flickr {
+  background-position: 0 -326px;
+  height: 26px;
+  width: 26px;
+}
+
+.ico--newsletter {
+  background-position: 0 -402px;
+  height: 11px;
+  width: 12px;
+}
+
+.ico--rss {
+  background-position: 0 -463px;
+  height: 26px;
+  width: 26px;
+}
+
+.ico--search {
+  background-position: 0 -539px;
+  height: 16px;
+  width: 16px;
+}
+
+.ico--triangle {
+  background-position: 0 -605px;
+  height: 9px;
+  width: 11px;
+}
+
+.ico--twitter {
+  background-position: 0 -664px;
+  height: 26px;
+  width: 26px;
+}
+
+.ico--videos {
+  background-position: 0 -740px;
+  height: 12px;
+  width: 16px;
+}
+
+.ico--vimeo {
+  background-position: 0 -802px;
+  height: 26px;
+  width: 26px;
+}
+
+
+
+/* Ico Directional Modifiers
+   ========================================================================== */
+
+.ico--l {
+  margin-right: .25em;
+}
+
+.ico--r {
+  margin-left: .25em;
+}
+
+

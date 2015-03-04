@@ -1,0 +1,11 @@
+.l-content {
+  @extend .cf;
+  background-color: #ffffff;
+  padding: 1em 1em 0 1em;
+}
+
+@media screen and (min-width: 1000px) {
+  .l-content {
+    padding: 1.25em 1.25em 0 1.25em;
+  }
+}

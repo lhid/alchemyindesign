@@ -1,0 +1,35 @@
+.featured {
+  margin: 0 0 1.5em 0;
+  position: relative;
+  & * {
+    @include border-box;
+  }
+}
+
+  .featured__cap {
+    background-color: rgba(255,255,255,.75);
+    bottom: 0;
+    font-size: 1.1em;
+    left: 0;
+    padding: .5em .75em;
+    position: absolute;
+    width: 100%;
+    & > :first-child {
+      margin-top: 0;
+    }
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .featured__h {
+    font-size: 1.35em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .featured__bd {
+    font-size: .85em;
+    margin: 0;
+  }

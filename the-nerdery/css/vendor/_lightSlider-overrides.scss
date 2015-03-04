@@ -1,0 +1,32 @@
+.lSAction > a {
+  background-image: url('../img/vendor/controls.png');
+}
+
+.lightSlider {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.lSGallery {
+  margin-top: 0;
+}
+
+.lSSlideOuter .lSPager.lSGallery li {
+  position: relative;
+  & img {
+    @include border-box;
+    border: 3px solid transparent;
+  }
+  &.active img,
+  &:hover img {
+    border: 3px solid #0084d9;
+  }
+  // &.active:after {
+  //   content: '';
+  //   border: 6px solid transparent;
+  //   border-bottom-color: #0084d9;
+  //   position: absolute;
+  //   right: 45%;
+  //   top: -6px;
+  // }
+}

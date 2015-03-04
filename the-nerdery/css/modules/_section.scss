@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Section Module
+   ========================================================================== */
+
+
+
+/* Section Base
+   ========================================================================== */
+
+.section {
+  margin-bottom: 1.25em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+  .section__hdr {
+    padding: .625em;
+  }
+
+  .section__h {
+    font-size: .75em;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
+  .section__bd {}
+
+
+
+/* Section Primary
+   ========================================================================== */
+
+.section--primary {}
+
+  .section--primary__hdr {
+    background-color: #0084d9;
+    &.has-overhang {
+      margin-left: -2em;
+      position: relative;
+      &:before {
+        content: '';
+        border-bottom: .2em solid transparent;
+        border-left: .4em solid transparent;
+        border-right: .4em solid #0061a0;
+        border-top: .2em solid #0061a0;
+        bottom: -.375em;
+        height: 0;
+        left: 0;
+        position: absolute;
+        width: 0;
+      }
+    }
+  }
+
+  .section--primary__h {
+    color: #ffffff;
+  }
+
+  .section--primary__bd {
+    font-size: .85em;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+    & > :first-child {
+      margin-top: 0;
+    }
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+
+/* Section Seconday
+   ========================================================================== */
+
+.section--secondary {
+  background-color: #dbdbdb;
+}
+
+  .section--secondary__hdr {
+    padding-bottom: 0;
+  }
+
+  .section--secondary__h {
+    border-bottom: 1px solid #969696;
+    padding-bottom: .625em;
+  }
+
+  .section--secondary__bd {
+    font-size: .75em;
+    padding: .85em;
+    & > :first-child {
+      margin-top: 0;
+    }
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .section--secondary__inlay {
+    @include box-shadow(inset 0px 0px 7px 0px rgba(0,0,0,.1));
+    background-color: #cac9c9;
+    padding: .85em;
+    & > :first-child {
+      margin-top: 0;
+    }
+    & > :last-child {
+      margin-bottom: 0;
+    }
+    &.is-tight {
+      line-height: 1;
+    }
+  }
+
+  .section__ftr {
+    background-color: #cac9c9;
+    border-top: 1px solid #969696;
+    font-size: .75em;
+    padding: .5em .85em;
+    text-align: center;
+    & > :first-child {
+      margin-top: 0;
+    }
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+
+/* Section Callout
+   ========================================================================== */
+
+.section--callout {
+  background-color: #595959;
+}
+
+  .section--callout__hdr {
+    padding-bottom: 0;
+  }
+
+  .section--callout__h {
+    border-bottom: 1px solid #999999;
+    color: #ffffff;
+    padding-bottom: .85em;
+  }
+
+  .section--callout__bd {
+    font-size: .75em;
+    padding: .85em;
+    & > :first-child {
+      margin-top: 0;
+    }
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+

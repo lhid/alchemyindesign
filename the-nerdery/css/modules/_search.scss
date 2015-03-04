@@ -1,0 +1,25 @@
+.search {
+  margin-top: 2em;
+  position: relative;
+  & input[type="search"] {
+    @include border-box;
+  }
+}
+
+  .search__field {
+    font-size: .75em;
+    padding-right: 1.5em;
+    width: 100%;
+  }
+
+  .search__submit {
+    @extend .ir;
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    height: 1em;
+    position: absolute;
+    right: .5em;
+    top: .5em;
+    width: 1em;
+  }

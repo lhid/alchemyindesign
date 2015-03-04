@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Btn Module
+   ========================================================================== */
+
+
+
+/* Btn Base
+   ========================================================================== */
+
+/**
+ * 1. Pixel fallback for IE8
+ */
+
+.btn {
+  border: none;
+  display: inline-block;
+  line-height: 1;
+  padding: 8px 12px; /* 1 */
+  padding: .5rem .75rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+/* Btn Primary
+   ========================================================================== */
+
+.btn--primary {
+  background-color: #0084d9;
+  color: #ffffff;
+  &:hover,
+  &:focus {
+    background-color: #35a4eb;
+    @include fade(background-color);
+  }
+}
+
+

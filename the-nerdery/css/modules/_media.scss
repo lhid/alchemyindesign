@@ -1,0 +1,52 @@
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+   <div class="media">
+     <img class="media__img" src="http://placekitten.com/200/300" alt="" />
+     <p class="media__bd">
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     </p>
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+
+.media {
+  @extend .cf;
+  display: block;
+  margin-bottom: 1em;
+}
+
+  .media__img {
+    float: left;
+    margin-right: .85em;
+  }
+
+  /**
+   * Reversed image location (right instead of left).
+   */
+
+  .media__img--r {
+    float: right;
+    margin-left: .85em;
+  }
+
+    .media__img img,
+    .media__img--r img {
+      display: block;
+    }
+
+  .media__bd {
+    overflow: hidden;
+  }
+
+    .media__bd,
+    .media__bd > :last-child {
+      margin-bottom: 0;
+    }
+
+

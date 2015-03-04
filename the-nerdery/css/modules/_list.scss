@@ -1,0 +1,68 @@
+/* ==========================================================================
+   List Module
+   ========================================================================== */
+
+
+
+/* List Base
+   ========================================================================== */
+
+.list {
+  padding-left: 0;
+  list-style: none;
+}
+
+
+
+/* List Row
+   ========================================================================== */
+
+/**
+ * For horizontal lists
+ */
+
+.list--row {
+  & > li {
+    display: inline-block;
+  }
+}
+
+
+/* List Center
+   ========================================================================== */
+
+/**
+ * For centered lists
+ */
+
+.list--center {
+  display: table;
+  text-align: center;
+  width: 100%;
+  & > li {
+    display: table-cell;
+  }
+}
+
+
+
+/* List Social
+   ========================================================================== */
+
+/**
+ * For social media lists with icons
+ */
+
+.list--social {
+  float: right;
+  margin-bottom: .25em;
+  margin-top: .25em;
+  & > li {
+    margin-left: .5em;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+

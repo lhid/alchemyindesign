@@ -45,7 +45,8 @@ textarea,
 
 
 button,
-[type='submit'] {
+[type='submit'],
+.btn {
   border: none;
   background-color: #464646;
   color: #ffffff;
@@ -60,10 +61,13 @@ textarea:focus,
 
 button:hover,
 [type='submit']:hover,
+.btn:hover,
 button:focus,
-[type='submit']:focus {
+[type='submit']:focus,
+.btn:focus {
   background-color: #F4AA00;
   outline: none;
+  text-decoration: none;
 }
 
 /*
@@ -72,16 +76,16 @@ button:focus,
  */
 
 ::-moz-selection {
-    background: #F4AA00;
-    color: #ffffff;
-    text-shadow: none;
+  background: #F4AA00;
+  color: #ffffff;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #F4AA00;
-    color: #ffffff;
-    text-shadow: none;
-    color: white;
+  background: #F4AA00;
+  color: #ffffff;
+  text-shadow: none;
+  color: white;
 }
 
 
@@ -91,10 +95,10 @@ button:focus,
    ========================================================================== */
 
 .l-footer {
-    border-top-style: solid;
+  border-top-style: solid;
 
-    /*IE*/border-top-width: 15px;
-    border-top-width: .75rem;
+  /*IE*/border-top-width: 15px;
+  border-top-width: .75rem;
 }
 
 .l-header {

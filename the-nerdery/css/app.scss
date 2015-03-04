@@ -1,0 +1,104 @@
+/*! Mother file for all CSS. Link only this file to the htdoc. */
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Import Rules
+ *  1.1 - Base Rules
+ *  1.2 - Utility Rules
+ *  1.3 - Layout Rules
+ *  1.4 - Module Rules
+ *  1.5 - State Rules
+ *  1.6 - Theme Rules
+ */
+
+
+/* ==========================================================================
+   1.0 Import Rules
+   ========================================================================== */
+
+
+
+/* 1.1 Base Rules
+   ========================================================================== */
+
+/**
+ * 1. Normalize loads first for a a stable base.
+ * 2. Mixins load second for optimum reuse.
+ */
+
+@import "base/normalize", /* 1 */
+        "base/mixins", /* 2 */
+        "base/main";
+
+
+
+/* 1.3 Utility Rules
+   ========================================================================== */
+
+@import "utils/cf",
+        "utils/ir",
+        "utils/pull";;
+
+
+
+/* 1.3 Layout Rules
+   ========================================================================== */
+
+@import "layout/l-grid",
+        "layout/l-constrain",
+        "layout/l-header",
+        "layout/l-navigation",
+        "layout/l-content",
+        "layout/l-footer";
+
+
+
+/* 1.4 Module Rules
+   ========================================================================== */
+
+@import "modules/btn",
+        "modules/featured",
+        "modules/form",
+        "modules/ico",
+        "modules/list",
+        "modules/logo",
+        "modules/media",
+        "modules/nav",
+        "modules/search",
+        "modules/section",
+        "modules/txt";
+
+
+
+/* 1.5 State Rules
+   ========================================================================== */
+
+/**
+ * General states can be found here. Must load last to override default state.
+ * Module-specific states found within their respective Sass partials.
+ */
+
+@import "state/is-hidden",
+        "state/is-invisible",
+        "state/is-scalable-max",
+        "state/is-scalable",
+        "state/is-subtle",
+        "state/is-visually-hidden";
+
+
+
+/* 1.6 Vendor Rules
+   ========================================================================== */
+
+/**
+ * Unedited style sheets for third-party plugins (only changed to .scss partial)
+ * NOTE: Do not edit core files directly. Use a separate partial for overrides.
+ *       Any overrides should below core file.
+ */
+
+@import "vendor/lightSlider",
+        "vendor/lightSlider-overrides",
+        "vendor/lightGallery";
+
+

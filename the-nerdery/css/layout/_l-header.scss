@@ -1,0 +1,8 @@
+.l-header {
+  @extend .cf;
+  height: 8.25em;
+}
+
+@media screen and (min-width: 1000px) {
+  .l-header {}
+}
