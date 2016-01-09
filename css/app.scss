@@ -1,7 +1,11 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
 /*! AlchemyInDesign.com 2013 | MIT License */
 
-@import "smacss/base";
-@import "smacss/massimo";
-@import "smacss/modules";
-@import "smacss/theme";
-@import "smacss/state";
+@import "base",
+        "massimo",
+        "modules",
+        "theme",
+        "state";
