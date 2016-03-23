@@ -1,0 +1,54 @@
+/**
+ * For offset right columns
+ */
+
+/* 12-Column
+   ========================================================================== */
+
+.l-push--1-12 {
+  margin-right: 8.333%
+}
+.l-push--2-12 {
+  margin-right: 16.666%
+}
+.l-push--3-12 {
+  margin-right: 25%;
+}
+.l-push--4-12 {
+  margin-right: 33.333%;
+}
+.l-push--5-12 {
+  margin-right: 41.665%
+}
+.l-push--6-12 {
+  margin-right: 50%;
+}
+.l-push--7-12 {
+  margin-right: 58.331%
+}
+.l-push--8-12 {
+  margin-right: 66.666%;
+}
+.l-push--9-12 {
+  margin-right: 75%;
+}
+.l-push--10-12 {
+  margin-right: 83.333%
+}
+.l-push--11-12 {
+  margin-right: 91.663%
+}
+
+
+
+/* Media Queries
+   ========================================================================== */
+
+@media only screen and (max-width: 48em) {
+
+  [class*="l-push--"] {
+    margin-right: 0;
+    width: 100%;
+  }
+
+}

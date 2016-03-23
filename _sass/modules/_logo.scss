@@ -1,0 +1,36 @@
+.logo {
+  font-size: 1rem;
+  margin: 0 0 1rem;
+  & > a {
+    border-bottom: none;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 47.9375em) {
+
+  .logo {
+    left: 0;
+    margin-left: 0;
+    position: relative;
+    & > a {
+      width: 14rem;
+      max-width: 50vw;
+    }
+  }
+
+}
+
+
+
+.logo-resort {
+  border-bottom: none;
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  max-width: 17rem;
+  text-decoration: none;
+  width: 100%;
+  &:hover {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,18 @@
+.ico {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: bottom;
+}
+
+.ico--21 {
+  height: 21px;
+  width: 21px;
+}
+
+.ico--arrow-up {
+  background-position: 0 0;
+}
+.ico--arrow-up:hover,
+a:hover > .ico--arrow-up {
+  background-position: -21px 0;
+}

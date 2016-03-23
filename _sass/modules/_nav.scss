@@ -1,0 +1,131 @@
+.nav {
+  display: table;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  & > li {
+    display: table-cell;
+    list-style: none;
+    &.nav__back {
+      display: none;
+    }
+    & > a {
+      display: block;
+      font-size: .875em;
+      line-height: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 300ms ease-in-out;
+    }
+  }
+}
+
+.nav--main {
+  & > li {
+    &:last-child > a {
+      padding-right: 0;
+    }
+    & > a {
+      padding: 2vw 1em;
+    }
+  }
+}
+
+.nav--int {
+  margin-bottom: 2.8rem;
+  & > li {
+    & > a {
+      padding: 1em;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 58.75em) {
+
+  .nav {
+    & > li {
+      & > a {
+        font-size: .75em;
+      }
+    }
+  }
+
+  .nav--main {
+    & > li {
+      & > a {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+}
+
+
+
+@media only screen and (max-width: 47.9375em) {
+
+  /**
+   * Mobile Navigation.
+   * Uses Aaron Gustafson's Method.
+   * http://www.netmagazine.com/tutorials/build-smart-mobile-navigation-without-hacks
+   * Selectors refactored for Modular.
+   */
+
+  [id='nav-top'] {
+    display: none;
+    &:target {
+      display: block;
+    }
+  }
+
+  .nav--main {
+    border-radius: 3px;
+    display: block;
+    padding: .5rem 0;
+    & > li {
+      display: block;
+      width: 100%;
+      & > a {
+        font-size: 1em;
+        padding: .75rem 1rem;
+      }
+    }
+  }
+
+  body:not(:target) [id='nav-top'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-top: 5rem;
+    z-index: 1000;
+    &:target {
+      z-index: 1001;
+      & a {
+        position: relative;
+        z-index: 1;
+      }
+      & .nav__back {
+        display: block;
+        position: relative;
+        width: 100%;
+        & a {
+          display: block;
+          height: auto;
+          position: absolute;
+          top: -101rem;
+          bottom: -101rem;
+          left: 0;
+          right: 0;
+          text-indent: -999rem;
+          z-index: 0;
+        }
+      }
+    }
+  }
+
+}

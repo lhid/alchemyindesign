@@ -1,0 +1,90 @@
+.dsp-1,
+.dsp-2,
+.dsp-3,
+.dsp-4,
+.dsp-5,
+.dsp-6 {
+  text-transform: uppercase;
+}
+
+.dsp-1,
+.txt-1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.dsp-2,
+.txt-2 {
+  font-size: 3.75rem;
+  line-height: 1.2;
+}
+
+.dsp-3 {
+  font-size: 1.875rem;
+  line-height: 1.3;
+}
+
+.txt-3 {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+@media only screen and (max-width: 48em) {
+
+  .dsp-1,
+  .txt-1 {
+    font-size: 6rem;
+  }
+
+  .dsp-2,
+  .txt-2 {
+    font-size: 2.5rem;
+  }
+
+  .dsp-3 {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 30em) {
+
+  .dsp-1,
+  .txt-1 {
+    font-size: 4.25rem;
+  }
+
+  .dsp-2,
+  .txt-2 {
+    font-size: 2rem;
+  }
+
+  .dsp-3 {
+    font-size: 1.25rem;
+  }
+
+}
+
+
+
+.txt-l {
+  text-align: left;
+}
+.txt-r {
+  text-align: right;
+}
+.txt-c {
+  text-align: center;
+}
+
+
+
+.txt-tight,
+.txt-tight-b {
+  margin-bottom: 0,
+}
+
+.txt-tight,
+.txt-tight-t {
+  margin-top: 0;
+}

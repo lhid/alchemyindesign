@@ -1,0 +1,10 @@
+/**
+ * 1. Compensates for background (see _theme.scss)
+ */
+.l-content {
+  position: relative;
+  padding-top: 20px; /* 1 */
+}
+
+@media only screen and (max-width: 48em) {}
+@media only screen and (max-width: 30em) {}
