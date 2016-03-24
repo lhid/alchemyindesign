@@ -1,13 +1,4 @@
 .dsp-1,
-.dsp-2,
-.dsp-3,
-.dsp-4,
-.dsp-5,
-.dsp-6 {
-  text-transform: uppercase;
-}
-
-.dsp-1,
 .txt-1 {
   font-size: 3rem;
   line-height: 1;
@@ -19,11 +10,7 @@
   line-height: 1.2;
 }
 
-.dsp-3 {
-  font-size: 1.875rem;
-  line-height: 1.3;
-}
-
+.dsp-3,
 .txt-3 {
   font-size: inherit;
   line-height: inherit;
@@ -41,10 +28,6 @@
     font-size: 2.5rem;
   }
 
-  .dsp-3 {
-    font-size: 1.5rem;
-  }
-
 }
 
 @media only screen and (max-width: 30em) {
@@ -57,10 +40,6 @@
   .dsp-2,
   .txt-2 {
     font-size: 2rem;
-  }
-
-  .dsp-3 {
-    font-size: 1.25rem;
   }
 
 }
