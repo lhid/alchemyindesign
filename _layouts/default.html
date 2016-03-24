@@ -1,5 +1,25 @@
-{% include header.html %}
+<!doctype html>
+<html>
 
-  {{ content }}
+  {% include head.html %}
 
-{% include footer.html %}
+  <body id="body">
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    <script>
+      smoothScroll.init();
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-34170107-1','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>
