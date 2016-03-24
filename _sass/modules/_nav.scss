@@ -2,10 +2,10 @@
   display: table;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: right;
   width: 100%;
   & > li {
-    display: table-cell;
+    display: inline-block;
     list-style: none;
     &.nav__back {
       display: none;
@@ -27,7 +27,7 @@
       padding-right: 0;
     }
     & > a {
-      padding: 2vw 1em;
+      padding: 3em 2em;
     }
   }
 }
