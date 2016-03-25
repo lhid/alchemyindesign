@@ -1,12 +1,12 @@
 .dsp-1,
 .txt-1 {
-  font-size: 3rem;
+  font-size: 5rem;
   line-height: 1;
 }
 
 .dsp-2,
 .txt-2 {
-  font-size: 3.75rem;
+  font-size: 3rem;
   line-height: 1.2;
 }
 
@@ -16,11 +16,26 @@
   line-height: inherit;
 }
 
+.dsp-4,
+.txt-4 {
+  font-size: .9rem;
+}
+
+.dsp-5,
+.txt-5 {
+  font-size: .8rem;
+}
+
+.dsp-6,
+.txt-6 {
+  font-size: .7rem;
+}
+
 @media only screen and (max-width: 48em) {
 
   .dsp-1,
   .txt-1 {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 
   .dsp-2,
@@ -34,7 +49,7 @@
 
   .dsp-1,
   .txt-1 {
-    font-size: 4.25rem;
+    font-size: 3rem;
   }
 
   .dsp-2,
