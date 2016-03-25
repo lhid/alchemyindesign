@@ -1,5 +1,4 @@
 .nav {
-  display: table;
   margin: 0;
   padding: 0;
   text-align: right;
@@ -7,9 +6,6 @@
   & > li {
     display: inline-block;
     list-style: none;
-    &.nav__back {
-      display: none;
-    }
     & > a {
       display: block;
       font-size: .875em;
@@ -23,41 +19,24 @@
 
 .nav--main {
   & > li {
-    &:nth-child(3) > a {
+    &:last-child > a {
       padding-right: 0;
     }
     & > a {
-      padding: 3em 2em;
-    }
-  }
-}
-
-.nav--int {
-  margin-bottom: 2.8rem;
-  & > li {
-    & > a {
-      padding: 1em;
+      padding: 3vw 2vw;
     }
   }
 }
 
 
 
-@media only screen and (max-width: 58.75em) {
+@media only screen and (max-width: 48em) {
 
-  .nav {
+  .nav--main {
     & > li {
       & > a {
         font-size: .75em;
-      }
-    }
-  }
-
-  .nav--main {
-    & > li {
-      & > a {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 1.5em 1.5vw;
       }
     }
   }
@@ -66,64 +45,23 @@
 
 
 
-@media only screen and (max-width: 47.9375em) {
-
-  /**
-   * Mobile Navigation.
-   * Uses Aaron Gustafson's Method.
-   * http://www.netmagazine.com/tutorials/build-smart-mobile-navigation-without-hacks
-   * Selectors refactored for Modular.
-   */
-
-  [id='nav-top'] {
-    display: none;
-    &:target {
-      display: block;
-    }
-  }
+@media only screen and (max-width: 30em) {
 
   .nav--main {
-    border-radius: 3px;
-    display: block;
-    padding: .5rem 0;
-    & > li {
-      display: block;
-      width: 100%;
-      & > a {
-        font-size: 1em;
-        padding: .75rem 1rem;
-      }
-    }
-  }
-
-  body:not(:target) [id='nav-top'] {
-    position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    display: table;
     left: 0;
-    padding-top: 5rem;
-    z-index: 1000;
-    &:target {
-      z-index: 1001;
-      & a {
-        position: relative;
-        z-index: 1;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    & > li {
+      display: table-cell;
+      width: 33%;
+      &:last-child > a {
+        padding-right: 1em;
       }
-      & .nav__back {
-        display: block;
-        position: relative;
-        width: 100%;
-        & a {
-          display: block;
-          height: auto;
-          position: absolute;
-          top: -101rem;
-          bottom: -101rem;
-          left: 0;
-          right: 0;
-          text-indent: -999rem;
-          z-index: 0;
-        }
+      & > a {
+        padding: 1.5em 1em;
       }
     }
   }

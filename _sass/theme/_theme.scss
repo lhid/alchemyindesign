@@ -222,12 +222,6 @@ a.btn {
   }
 }
 
-.btn--menu {
-  background-color: #bc1d73;
-  border-color: #ffb10a;
-  color: #ffb10a;
-}
-
 .btn--jump-up {
   background-color: rgba(255,255,255,.4);
   border-color: #2b8aca;
@@ -272,28 +266,13 @@ a.btn {
   }
 }
 
-@media only screen and (max-width: 47.9375em) {
-
-  /**
-   * Mobile Navigation.
-   * Uses Aaron Gustafson's Method.
-   * http://www.netmagazine.com/tutorials/build-smart-mobile-navigation-without-hacks
-   * Selectors refactored for Modular.
-   */
-
-  [id='nav-top'] {
-    &:target {
-      background: transparent;
-    }
-  }
+@media only screen and (max-width: 30em) {
 
   .nav--main {
-    background-color: #ffffff;
-    border: 1px solid #d7d7d7;
+    background-color: #202020;
     & > li {
-      border-right: none;
-      &:first-child {
-        border-left: none;
+      & > a {
+        color: #ffffff;
       }
     }
   }

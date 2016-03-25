@@ -17,24 +17,6 @@ a.btn {
 
 
 
-.btn--menu {
-  display: none;
-  font-size: .85em;
-}
-
-@media only screen and (max-width: 47.9375em) {
-  .btn--menu {
-    display: block;
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    /* make sure the menu button is on top */
-    z-index: 1001;
-  }
-}
-
-
-
 .btn--jump-up {
   margin: 0;
   padding: 1rem;
@@ -58,9 +40,5 @@ a.btn {
     max-width: initial;
     min-width: initial;
     width: 100%
-  }
-
-  .btn--menu {
-    top: .25rem;
   }
 }
