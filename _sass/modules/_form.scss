@@ -1,0 +1,16 @@
+.form-stacked {
+  textarea {
+    min-height: 7em;
+  }
+  textarea,
+  [type='email'],
+  [type='text'] {
+    margin: 1.4em 0;
+    width: 100%;
+  }
+  label + textarea,
+  label + [type='email'],
+  label + [type='text'] {
+    margin-top: .5em;
+  }
+}

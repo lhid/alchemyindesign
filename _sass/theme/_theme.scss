@@ -121,6 +121,14 @@ hr {
   margin: 1.5rem auto;
 }
 
+textarea,
+[type='email'],
+[type='text'] {
+  border: 1px solid #9a9a9a;
+  border-radius: 3px;
+}
+
+
 /**
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -211,12 +219,12 @@ a.btn {
 }
 
 .btn--callout {
-  background-color: #bc1d73;
-  border-color: #bc1d73;
+  background-color: #f75284;
+  border-color: #f75284;
   color: #ffffff;
   &:hover {
-    background-color: #2e3192;
-    border-color: #2e3192;
+    background-color: #66f1fa;
+    border-color: #66f1fa;
     color: #ffffff;
   }
 }

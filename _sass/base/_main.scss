@@ -181,6 +181,12 @@ textarea {
   resize: vertical;
 }
 
+textarea,
+[type='email'],
+[type='text'] {
+  padding: .5em;
+}
+
 
 
 /* ==========================================================================
