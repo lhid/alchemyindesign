@@ -159,38 +159,14 @@ textarea,
    -------------------------------------------------------------------------- */
 
 .l-banner {
-  xbackground-color: #dcf0f5;
-  &:before {
-    background: url('../img/bnr-top.png') repeat-x top center;
-    content: '';
-    display: block;
-    height: 20px;
-    position: absolute;
-    top: 0;
-    width: 101vw;
-    z-index: 1;
-  }
+  border: 20px solid #ffffff;
 }
 
-.l-banner--sldr {
-  background-image: url(../img/welcome-hero-1.jpg);
+.l-banner--about {
+  background-attachment: fixed;
+  background-image: url(../img/hero-about.png);
   background-repeat: no-repeat;
   @include background-size(cover);
-}
-
-.l-callout {
-  xbackground: #2b8aca url('../img/callout-top.png') repeat-x top center;
-}
-
-.l-content {
-  xbackground-color: #fdad09;
-  background-image: url('../img/content-top.png');
-  background-position: top center;
-  background-repeat: repeat-x;
-}
-
-.l-header {
-  xbackground-color: #bc1d73;
 }
 
 
