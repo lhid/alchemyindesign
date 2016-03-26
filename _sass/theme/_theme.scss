@@ -212,6 +212,12 @@ a.btn {
 
 
 
+[class*='dsp-'] {
+  font-family: 'permanent_markerregular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+
+
 .heading-major {}
 
 
@@ -272,9 +278,29 @@ a.btn {
 }
 
 
+.panel {
+  border: 20px solid #ffffff;
+}
 
-[class*='dsp-'] {
-  font-family: 'permanent_markerregular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+.panel--skills {
+  background-attachment: fixed;
+  background-image: url(../img/panel--skills.png);
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--process {
+  background-attachment: fixed;
+  background-image: url(../img/panel--process.png);
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--contact {
+  background-attachment: fixed;
+  background-image: url(../img/panel--contact.png);
+  background-repeat: no-repeat;
+  @include background-size(cover);
 }
 
 
