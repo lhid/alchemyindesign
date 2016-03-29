@@ -178,7 +178,7 @@ textarea:focus,
 
 .l-banner--about {
   background-attachment: fixed;
-  background-image: url(../img/hero-about.png);
+  background-image: url(../img/hero-about.jpg);
   background-repeat: no-repeat;
   @include background-size(cover);
 }
@@ -318,21 +318,21 @@ a.btn {
 
 .panel--skills {
   background-attachment: fixed;
-  background-image: url(../img/panel--skills.png);
+  background-image: url(../img/panel--skills.jpg);
   background-repeat: no-repeat;
   @include background-size(cover);
 }
 
 .panel--process {
   background-attachment: fixed;
-  background-image: url(../img/panel--process.png);
+  background-image: url(../img/panel--process.jpg);
   background-repeat: no-repeat;
   @include background-size(cover);
 }
 
 .panel--contact {
   background-attachment: fixed;
-  background-image: url(../img/panel--contact.png);
+  background-image: url(../img/panel--contact.jpg);
   background-repeat: no-repeat;
   @include background-size(cover);
 }
