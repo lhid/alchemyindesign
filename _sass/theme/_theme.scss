@@ -319,6 +319,7 @@ a.btn {
 .panel--skills {
   background-attachment: fixed;
   background-image: url(../img/panel--skills.jpg);
+  background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);
 }
@@ -326,6 +327,7 @@ a.btn {
 .panel--process {
   background-attachment: fixed;
   background-image: url(../img/panel--process.jpg);
+  background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);
 }
@@ -333,6 +335,7 @@ a.btn {
 .panel--contact {
   background-attachment: fixed;
   background-image: url(../img/panel--contact.jpg);
+  background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);
 }

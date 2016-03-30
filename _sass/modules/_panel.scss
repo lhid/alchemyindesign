@@ -4,17 +4,33 @@
   padding: 2.8rem 0 4.2rem;
 }
 
-.panel--about {}
-.panel--skills {}
+.panel--about {
+  padding-top: 19vh;
+}
+
+.panel--skills {
+  padding-top: 17vh;
+}
+
 .panel--work {}
-.panel--process {}
-.panel--notes {}
-.panel--contact {}
+
+.panel--process {
+  padding-top: 11vh;
+}
+
+.panel--notes {
+  padding-top: 18vh;
+}
+
+.panel--contact {
+  padding-top: 18vh;
+}
 
 
 
 @media only screen and (max-width: 30em) {
   .panel {
     min-height: 50vh;
+    padding: 2.8rem 0 4.2rem;
   }
 }
