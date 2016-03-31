@@ -23,6 +23,18 @@
 }
 
 
+
+.list--social {
+  text-align: right;
+  & > li {
+    & > a:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+
+
 .list--steps {
   counter-reset: item;
   margin: 0 0 1.5em;

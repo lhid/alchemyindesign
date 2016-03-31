@@ -1,0 +1,21 @@
+.jump-link-down {
+  bottom: 1.5rem;
+  left: -32px;
+  margin: 0 0 0 50%;
+  position: absolute;
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width: 48em) and (orientation: landscape) {
+  .jump-link-down {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .jump-link-down {
+    display: none;
+  }
+}

@@ -93,10 +93,6 @@ h6 {
 
 a {
   text-decoration: none;
-  transition: all 300ms ease-in-out;
-  &:hover {
-    text-decoration: underline;
-  }
   & img {
     border: none;
     outline: none;

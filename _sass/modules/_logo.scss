@@ -3,6 +3,9 @@
   margin: 0;
   & > a {
     display: block;
+    &:hover {
+      border-bottom: none;
+    }
   }
 }
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="368px" height="120px" viewBox="0 0 368 120" enable-background="new 0 0 368 120" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-109.5796" y1="790.2676" x2="-130.4199" y2="672.0772" gradientTransform="matrix(1 0 0 1 180 -671.1719)">
+	<stop  offset="0" style="stop-color:#66F1FA"/>
+	<stop  offset="0.0497" style="stop-color:#60DEE6"/>
+	<stop  offset="0.233" style="stop-color:#499BA0"/>
+	<stop  offset="0.3982" style="stop-color:#376669"/>
+	<stop  offset="0.5395" style="stop-color:#2B4041"/>
+	<stop  offset="0.6514" style="stop-color:#232929"/>
+	<stop  offset="0.72" style="stop-color:#202020"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M57.79,67.804l-6.302-6.302l-1.416,1.562l7.01,7.156h1.417l13.019-13.165l-1.416-1.49L57.79,67.804z
+	 M60,0C26.916,0,0,26.916,0,60c0,33.085,26.916,60,60,60c33.085,0,60-26.915,60-60C120,26.916,93.085,0,60,0z M60,115.994
+	C29.125,115.994,4.006,90.875,4.006,60S29.125,4.006,60,4.006S115.994,29.125,115.994,60S90.875,115.994,60,115.994z M68.587,32.167
+	H64.8v-4.005H54.786v4.005H51l-0.751,3.004H36.761v57.082h46.065V35.171H69.339L68.587,32.167z M52.563,34.17h4.226v-4.006h6.008
+	v4.006h4.225l1.502,6.009H51.062L52.563,34.17z M80.823,37.174V90.25H38.762V37.174h10.985l-1.252,5.007h22.594l-1.252-5.007H80.823
+	z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="138.4277" y1="790.2656" x2="117.5879" y2="672.0771" gradientTransform="matrix(1 0 0 1 180 -671.1719)">
+	<stop  offset="0" style="stop-color:#66F1FA"/>
+	<stop  offset="0.0497" style="stop-color:#60DEE6"/>
+	<stop  offset="0.233" style="stop-color:#499BA0"/>
+	<stop  offset="0.3982" style="stop-color:#376669"/>
+	<stop  offset="0.5395" style="stop-color:#2B4041"/>
+	<stop  offset="0.6514" style="stop-color:#232929"/>
+	<stop  offset="0.72" style="stop-color:#202020"/>
+</linearGradient>
+<path fill="url(#SVGID_2_)" d="M325.818,31.58v8.599h2.002V29.163l-1-1.002h-11.018v2.003h8.6l-35.34,35.344l1.416,1.416
+	L325.818,31.58z M300.781,92.253h14.021V59.206h-14.021V92.253z M302.785,61.209h10.014V90.25h-10.014V61.209z M316.805,92.253
+	h14.02V45.186h-14.02V92.253z M318.809,47.189h10.014v43.062h-10.014V47.189z M284.765,92.253h14.015V72.225h-14.015V92.253z
+	 M286.767,74.229h10.011V90.25h-10.011V74.229z M308,0c-33.077,0-59.984,26.915-59.984,60s26.907,60,59.984,60
+	c33.084,0,60-26.915,60-60S341.084,0,308,0z M308,115.994c-30.868,0-55.979-25.119-55.979-55.994S277.133,4.006,308,4.006
+	c30.875,0,55.994,25.119,55.994,55.994S338.875,115.994,308,115.994z"/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="14.4204" y1="790.2676" x2="-6.4197" y2="672.0772" gradientTransform="matrix(1 0 0 1 180 -671.1719)">
+	<stop  offset="0" style="stop-color:#66F1FA"/>
+	<stop  offset="0.0497" style="stop-color:#60DEE6"/>
+	<stop  offset="0.233" style="stop-color:#499BA0"/>
+	<stop  offset="0.3982" style="stop-color:#376669"/>
+	<stop  offset="0.5395" style="stop-color:#2B4041"/>
+	<stop  offset="0.6514" style="stop-color:#232929"/>
+	<stop  offset="0.72" style="stop-color:#202020"/>
+</linearGradient>
+<path fill="url(#SVGID_3_)" d="M216.214,74.604l-2.476-9.899l-36.957-36.957l-7.424,7.425l36.955,36.956L216.214,74.604z
+	 M172.19,35.171l4.592-4.592l4.593,4.592l-4.593,4.593L172.19,35.171z M182.791,36.587l29.141,29.138l1.528,6.123l-6.122-1.529
+	L178.199,41.18L182.791,36.587z M164.766,55.787V83.24h27.453L164.766,55.787z M166.769,60.622l20.615,20.614h-20.615V60.622z
+	 M184,0c-33.085,0-60,26.916-60,60c0,33.085,26.915,60,60,60s60-26.915,60-60C244,26.916,217.085,0,184,0z M184,115.994
+	c-30.875,0-55.994-25.119-55.994-55.994S153.125,4.006,184,4.006S239.994,29.125,239.994,60S214.875,115.994,184,115.994z
+	 M151.747,92.253h64.506l-64.506-64.506V92.253z M153.75,83.24h6.008v-2.004h-6.008v-6.008h4.006v-2.002h-4.006v-6.009h6.008v-2.003
+	h-6.008v-6.009h4.006v-2.003h-4.006v-6.009h6.008v-2.003h-6.008V32.582l57.668,57.668H153.75V83.24z"/>
+</svg>
