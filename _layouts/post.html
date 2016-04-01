@@ -2,46 +2,35 @@
 layout: default
 ---
 
-<div class="l-content" role="main">
+<article>
+  <div class="l-banner l-banner--about" role="banner">
+    <div class="l-constrain">
+      <h1 class="txt-c">
+        {{ page.title }}
+      </h1>
+    </div>
+  </div>
 
-  <div class="l-bound">
-
-    <article>
-
-      <div class="hero hero-entry">
-        <h1>
-          {{ page.title }}
-        </h1>
+  <div class="l-constrain">
+    <div class="l-row section-minor">
+      <div class="l-col l-col--4-12">
+        <p>
+          <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+        </p>
       </div>
 
-      <hr class="hr hr+1" />
+      <div class="l-col l-col--8-12">
 
-      <div class="l-row section-std">
+        {{ content }}
 
-        <div class="l-col l-col+4">
-          <p>
-            <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-          </p>
-        </div>
+        {% include comments.html %}
 
-        <div class="l-col l-col+8">
+        <hr />
 
-          {{ content }}
-
-          {% include comments.html %}
-
-          <hr class="hr hr+3" />
-
-          <p>
-            <a href="/notes.html">&#8592; Back to Notes</a>
-          </p>
-
-        </div><!-- /.l-col+8 -->
-
-      </div><!-- /.l-row -->
-
-    </article>
-
-  </div><!-- /.l-bound -->
-
-</div><!-- /.l-content -->
+        <p>
+          <a href="/notes.html">&#8592; Back to Notes</a>
+        </p>
+      </div><!-- /.l-col--8-12 -->
+    </div><!-- /.l-row -->
+  </div>
+</article>
