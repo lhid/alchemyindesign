@@ -2,7 +2,6 @@
   padding: 0;
   & > li {
     list-style-type: none;
-    margin: .7em 0;
   }
 }
 
@@ -26,11 +25,20 @@
 
 .list--social {
   text-align: right;
+  margin: 0;
   & > li {
     & > a:hover {
       border-bottom: none;
     }
   }
+}
+
+@media only screen and (max-width: 30em) {
+
+  .list--social {
+    text-align: center;
+  }
+
 }
 
 

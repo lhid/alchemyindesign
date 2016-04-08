@@ -143,6 +143,15 @@ blockquote {
 
 
 
+ol,
+ul {
+  li {
+    margin: .7em 0;
+  }
+}
+
+
+
 /**
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
