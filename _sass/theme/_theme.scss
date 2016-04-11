@@ -254,6 +254,16 @@ a.btn {
 .ico {}
 
 
+
+.fig {}
+  .fig__cap {
+    background-color: #ffffff;
+    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
+  }
+
+
+
 .nav {
   & > li {
     & > a {
