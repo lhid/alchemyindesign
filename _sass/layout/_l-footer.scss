@@ -1,22 +1,22 @@
 .l-footer {
   padding: 2rem 0;
   position: relative;
-  nav {
-    a:hover {
-      border-bottom: none;
-    }
+}
+
+
+@media only screen and (max-width: 39em) {
+  .l-footer {
+    padding: 5rem 0 1rem;
   }
 }
 
+
 @media only screen and (max-width: 30em) {
   .l-footer {
-    padding-bottom: 5em;
+    padding: 6rem 0 5rem;
     text-align: center;
     .txt-r {
       text-align: center;
-    }
-    nav {
-      display: none;
     }
   }
 }

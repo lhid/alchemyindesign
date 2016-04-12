@@ -1,11 +1,17 @@
-.jump-link-down {
-  bottom: 1.5rem;
+.jump-link-down,
+.jump-link-up {
   left: -32px;
   margin: 0 0 0 50%;
   position: absolute;
   &:hover {
     border-bottom: none;
   }
+}
+.jump-link-down {
+  bottom: 1.5rem;
+}
+.jump-link-up {
+  top: -.25rem;
 }
 
 @media only screen and (max-width: 48em) and (orientation: landscape) {
@@ -14,8 +20,20 @@
   }
 }
 
+@media only screen and (max-width: 39em) {
+  .jump-link-up {
+    top: -4.5rem;
+  }
+}
+
 @media only screen and (max-width: 30em) {
+
   .jump-link-down {
     display: none;
   }
+
+  .jump-link-up {
+    top: -5rem;
+  }
+
 }
