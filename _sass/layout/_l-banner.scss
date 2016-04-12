@@ -1,8 +1,16 @@
 .l-banner {
   height: 100vh;
-  padding-top: 35vh;
   position: relative;
   width: 100%;
+}
+
+.l-banner--about,
+.l-banner--notes {
+  padding-top: 35vh;
+}
+
+.l-banner--nst {
+  padding-top: 30vh;
 }
 
 @media only screen and (max-width: 48.125em) {}
