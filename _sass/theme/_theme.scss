@@ -207,6 +207,7 @@ textarea:focus,
 
 @media only screen and (max-width: 30em) {
   .l-banner {
+    background-attachment: initial;
     border-width: 10px;
   }
 }
@@ -328,9 +329,9 @@ a.btn {
   border-width: 20px;
 }
 
-.panel--skills {
+.panel--approach {
   background-attachment: fixed;
-  background-image: url(../img/panel--skills.jpg);
+  background-image: url(../img/panel--approach.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);
