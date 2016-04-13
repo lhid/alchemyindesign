@@ -2,9 +2,11 @@
 .jump-link-up {
   left: -32px;
   margin: 0 0 0 50%;
+  opacity: .4;
   position: absolute;
   &:hover {
     border-bottom: none;
+    opacity: 1;
   }
 }
 .jump-link-down {

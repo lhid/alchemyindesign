@@ -1,7 +1,8 @@
 .panel {
   min-height: 100vh;
-  width: 100%;
   padding: 2.8rem 0 4.2rem;
+  position: relative;
+  width: 100%;
 }
 
 .panel--about {
@@ -9,15 +10,15 @@
 }
 
 .panel--skills {
-  padding-top: 17vh;
+  padding-top: 16vh;
 }
 
 .panel--work {
-  padding-top: 20vh;
+  padding-top: 19vh;
 }
 
 .panel--process {
-  padding-top: 11vh;
+  padding-top: 8vh;
 }
 
 .panel--notes {
