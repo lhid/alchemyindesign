@@ -35,7 +35,7 @@
 $(document).ready(function(){
   $("#contact-form").bind('submit',function(){
     //let's start by disabling the submit button. hopefully this will help prevent any issues with people double-clicking and submitting the form multiple times
-    $("#send").attr("disabled","disabled");
+    $("#submit").attr("disabled","disabled");
 
     //ajax post request
     $.post(
@@ -44,11 +44,34 @@ $(document).ready(function(){
       function(data){
         if (data == 'true'){
           //success
-          $("#send").attr("value","Message Sent");
+          $("#submit").attr("value","Message Sent");
         } else {
           //failure
           //not sure what to do here...
-          $("#send")
+          $("#submit")
+            .attr("value","Send Failed. Try Again?")
+            .removeAttr("disabled");
+        }
+      });
+    return false;
+  });
+
+  $("#modal-contact").bind('submit',function(){
+    //let's start by disabling the submit button. hopefully this will help prevent any issues with people double-clicking and submitting the form multiple times
+    $("#modal-submit").attr("disabled","disabled");
+
+    //ajax post request
+    $.post(
+      "modal-contact.php",
+      $("#modal-contact").serialize(),
+      function(data){
+        if (data == 'true'){
+          //success
+          $("#modal-submit").attr("value","Message Sent");
+        } else {
+          //failure
+          //not sure what to do here...
+          $("#modal-submit")
             .attr("value","Send Failed. Try Again?")
             .removeAttr("disabled");
         }

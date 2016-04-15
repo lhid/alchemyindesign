@@ -91,6 +91,14 @@ a:hover > .ico--arrow-down {
   background-position: -68px -68px;
 }
 
+.ico--close {
+  background-position: -132px 0;
+}
+.ico--close:hover,
+a:hover > .ico--close {
+  background-position: -132px -68px;
+}
+
 
 
 .ico--120 {

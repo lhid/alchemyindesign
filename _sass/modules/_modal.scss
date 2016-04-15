@@ -1,0 +1,38 @@
+[id='modal'] {
+  display: none;
+  opacity: 0;
+  transition: opacity 3000ms ease-in-out;
+  &:target {
+    display: block;
+    opacity: 1;
+  }
+}
+
+body:not(:target) [id='modal'] {
+  background-color: rgba(0,0,0,0.9);
+  color: #ffffff;
+  height: 100vh;
+  left: 0;
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  &:target {
+    z-index: 1001;
+    & .modal__close {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+  & input,
+  & textarea {
+    color: #202020;
+  }
+}

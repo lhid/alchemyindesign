@@ -11,7 +11,58 @@
     </li>
 
     <li>
-      <a href="/index.html#contact">Contact</a>
+      <a href="#modal">Contact</a>
     </li>
   </ol>
 </nav>
+
+<div id="modal">
+  <div class="l-row">
+    <div class="l-col l-col--6-12 l-push--3-12 l-pull--3-12">
+      <h2>Contact Me</h2>
+
+      <p>
+        If you have questions about what I do or have a project you would like to collaborate on, I’d love to hear from you!
+      </p>
+
+      <br />
+
+      <form
+        class="form-stacked"
+        id="modal-contact"
+        name="modal-contact"
+        method="post">
+
+        <label for="email">Your Email</label>
+
+        <input
+          type="email"
+          name="modal-email"
+          id="modal-email"
+          tabindex="1"
+          reqired />
+
+        <label for="comments">Your Message</label>
+
+        <textarea
+          name="modal-comments"
+          id="modal-comments"
+          tabindex="2"
+          required></textarea>
+
+        <input
+          type="submit"
+          class="btn btn--callout btn--wide"
+          name="modal-submit"
+          id="modal-submit"
+          value="Get in touch"
+          tabindex="3" />
+      </form>
+
+      <a class="modal__close" href="#body">
+        <i class="ico ico--64 ico--close"></i>
+        <span class="is-visually-hidden">Close</span>
+      </a>
+    </div>
+  </div>
+</div>
