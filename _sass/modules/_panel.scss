@@ -38,8 +38,16 @@
 }
 
 @media only screen and (max-width: 30em) {
+
   .panel {
     min-height: 50vh;
-    padding: 2.8rem 0 4.2rem;
+    padding: 4.2rem 0;
   }
+
+  .panel__content {
+    position: static;
+    top: 0;
+    transform: none;
+  }
+
 }
