@@ -1,0 +1,53 @@
+<div id="modal">
+  <div class="l-constrain">
+    <div class="l-row">
+      <div class="l-col l-col--6-12 l-push--3-12 l-pull--3-12">
+        <h2 class="txt-rev">Contact Me</h2>
+
+        <p class="txt-rev">
+          If you have questions about what I do or have a project you would like to collaborate on, I’d love to hear from you!
+        </p>
+
+        <br />
+
+        <form
+          class="form-stacked"
+          id="modal-contact"
+          name="modal-contact"
+          method="post">
+
+          <label class="txt-rev" for="email">Your Email</label>
+
+          <input
+            type="email"
+            name="modal-email"
+            id="modal-email"
+            tabindex="1"
+            reqired />
+
+          <label class="txt-rev" for="comments">Your Message</label>
+
+          <textarea
+            name="modal-comments"
+            id="modal-comments"
+            tabindex="2"
+            required></textarea>
+
+          <input
+            type="submit"
+            class="btn btn--callout btn--wide"
+            name="modal-submit"
+            id="modal-submit"
+            value="Get in touch"
+            tabindex="3" />
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <a class="modal__close" href="#body">
+    <i class="ico ico--64 ico--close"></i>
+    <span class="is-visually-hidden">Close</span>
+  </a>
+</div>
