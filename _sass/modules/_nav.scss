@@ -19,9 +19,6 @@
 
 .nav--main {
   & > li {
-    &:last-child > a {
-      padding-right: 0;
-    }
     & > a {
       padding: 1.65rem 2vw;
     }
@@ -30,7 +27,7 @@
 
 
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 56em) {
 
   .nav--main {
     & > li {

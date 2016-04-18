@@ -244,12 +244,12 @@ a.btn {
 
 .btn--default {
   background-color: transparent;
-  border-color: #2e3192;
-  color: #2e3192;
+  border-color: #202020;
+  color: #202020;
   &:hover,
   &:focus {
-    background-color: #2e3192;
-    border-color: #2e3192;
+    background-color: #202020;
+    border-color: #202020;
     color: #ffffff;
   }
 }
@@ -299,6 +299,7 @@ a.btn {
   }
 }
 
+
 .nav--main {
   & > li {
     & > a {
@@ -307,8 +308,31 @@ a.btn {
       &.is-active {
         color: #f95197;
       }
+      &.is-called-out {
+      @extend .btn;
+      @extend .btn--default;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-left: 2vw;
+      }
     }
   }
+}
+
+@media only screen and (max-width: 56em) {
+
+  .nav--main {
+    & > li {
+      & > a {
+        &.is-called-out {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          margin-left: 1.5vw;
+        }
+      }
+    }
+  }
+
 }
 
 @media only screen and (max-width: 41em) {
@@ -317,6 +341,13 @@ a.btn {
     & > li {
       & > a {
         color: #ffffff;
+        &.is-called-out {
+          color: #ffffff;
+          margin-left: 0;
+          &:hover {
+            color: #f95197;
+          }
+        }
       }
     }
   }
