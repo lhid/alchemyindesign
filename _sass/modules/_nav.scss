@@ -23,14 +23,14 @@
       padding-right: 0;
     }
     & > a {
-      padding: 3vw 2vw;
+      padding: 1.65rem 2vw;
     }
   }
 }
 
 
 
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 50em) {
 
   .nav--main {
     & > li {
@@ -45,7 +45,7 @@
 
 
 
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 41em) {
 
   .nav--main {
     bottom: 0;

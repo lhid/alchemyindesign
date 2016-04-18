@@ -1,7 +1,23 @@
 .l-navigation {
-  width: 100%;
-  z-index: 1;
+  float: right;
 }
 
 @media only screen and (max-width: 48em) {}
+
+
+
+@media only screen and (max-width: 41em) {
+
+  .l-navigation {
+    bottom: 0;
+    float: none;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+  }
+
+}
+
+
+
 @media only screen and (max-width: 30em) {}

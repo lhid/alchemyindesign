@@ -1,6 +1,8 @@
 .logo {
+  float: left;
   font-size: 1rem;
   margin: 0;
+  max-width: 25rem;
   & > a {
     display: block;
     &:hover {
@@ -9,13 +11,21 @@
   }
 }
 
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 50em) {
+  .logo {
+    max-width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 41em) {
 
   .logo {
+    float: none;
     text-align: center;
+    max-width: 100%;
     & > a {
       display: inline-block;
-      max-width: 75vw;
+      max-width: 25rem;
     }
   }
 
