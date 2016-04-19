@@ -201,13 +201,13 @@ textarea:focus,
 
 @media only screen and (max-width: 48em) {
   .l-banner {
+    background-attachment: initial;
     border-width: 15px;
   }
 }
 
 @media only screen and (max-width: 30em) {
   .l-banner {
-    background-attachment: initial;
     border-width: 10px;
   }
 }
@@ -397,9 +397,11 @@ a.btn {
 
 @media only screen and (max-width: 48em) {
   .panel {
+    background-attachment: initial;
     border-width: 15px;
   }
 }
+
 
 @media only screen and (max-width: 30em) {
   .panel {
