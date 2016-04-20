@@ -1,0 +1,19 @@
+.box {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.box--example {
+  border-top-width: .1rem;
+  border-top-style: solid;
+  padding-top: 1.4rem; /* padding value based on border-top-width */
+  border-bottom-width: .1rem;
+  border-bottom-style: solid;
+  margin-bottom: 1.4rem;
+}
+
+.box--aside {
+  border-left-width: .1rem;
+  border-left-style: solid;
+  padding-left: 1.5rem;
+}

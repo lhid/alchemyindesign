@@ -15,7 +15,7 @@ excerpt: A spin-off article from the Creating Modules series. Addresses typograp
     When building a web site, one of the places I like to start is with the typography of the site. I use no more than six font-sizes. I would argue that even six is too many, but HTML allows for a total of six heading levels: <code>h1–h6</code>. Therefore, we’ll account for those headings but cap it off there. There are deeper design concerns outside of writing SMACSS or OOCSS, but I’ll address that at another time.
   </p>
 
-  <aside class="box box-aside">
+  <aside class="box box--aside">
     <h4>
       Author’s Note
     </h4>
@@ -37,7 +37,7 @@ excerpt: A spin-off article from the Creating Modules series. Addresses typograp
     Based off the sizes we established for the headings in our HTML document (<code>h1–h6</code>), we can turn these into sibling modules. Remember that sibling modules have no common base class, but share a common purpose. Using the sizes and hierarchy of <code>h1–h6</code>, I might write:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 .display-1 {
@@ -69,7 +69,7 @@ excerpt: A spin-off article from the Creating Modules series. Addresses typograp
     We would finish out the remaining heading siblings in this fashion from 1–6. We might also consider an additional set of classes intended for body text. The <code>font-size</code> and <code>line-height</code> would be the same as their <code>.display-(n)</code> counterparts, but the <code>font-weight</code> would be normal. Something like:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 .text-1 {
@@ -85,7 +85,7 @@ excerpt: A spin-off article from the Creating Modules series. Addresses typograp
     This helps keep our body text hierarchy in congruence with our heading hierarchy and maintain a standard of type size throught the site or application.
   </p>
 
-  <aside class="box box-aside">
+  <aside class="box box--aside">
     <h4>
       Typographic Hierarchy System
     </h4>
@@ -139,7 +139,7 @@ excerpt: A spin-off article from the Creating Modules series. Addresses typograp
     For example, we may create another series of sibling modules that address text alignment:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 .text-l {

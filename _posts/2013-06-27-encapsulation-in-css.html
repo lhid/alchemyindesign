@@ -208,7 +208,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
       We minimize that depth by authoring classes for the desired rule sets and respecting the Cascade by avoiding the use of descendent selectors from those classes. This prevents any undesired coupling of the CSS to the HTML structure and also keeps our Specificity low. For example, we want to avoid this:
     </p>
 
-    <figure class="box box-example">
+    <figure class="box box--example">
 <pre>
 <code>
 .callout {
@@ -229,7 +229,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
       In instances where the HTML structure is more predictable in accordance to the function of that object (e.g., navigation), we can use child selectors for the child nodes. The use of child selectors limits the applicability of the styles only to the children directly associated with the parent providing the styles—tightening the bundle of information.
     </p>
 
-    <figure class="box box-example">
+    <figure class="box box--example">
 <pre>
 <code>
 .nav {
@@ -267,7 +267,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
       For example, if we write the following:
     </p>
 
-    <figure class="box box-example">
+    <figure class="box box--example">
       <h4 class="txt-tight">
         CSS
       </h4>
@@ -310,7 +310,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
       Information Hiding can also be addressed by Inheritance within the object. Just like in the example above, we can prevent access to the styles of descendant nodes within the <code>.callout</code> object by avoiding properties that pass their values through Inheritance. For example:
     </p>
 
-    <figure class="box box-example">
+    <figure class="box box--example">
       <h4 class="txt-tight">
         CSS
       </h4>
