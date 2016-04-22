@@ -13,11 +13,11 @@ excerpt: This article is a review of Jonathan Snook's book &ldquo;SMACSS&#58; Sc
   This article is a review of <a href="http://snook.ca/about/">Jonathan Snook's</a> book <cite><a href="http://smacss.com/">&ldquo;SMACSS: Scalable and Modular Architecture for CSS&rdquo;</a></cite> with additional notes based on my experience with the approach. I will go over a brief refresher of its integral talking points and expand on it where I can.
 </p>
 
-<hr class="hr hr+2" />
+<hr />
 
-<aside class="section-std">
+<aside class="section-minor">
 
-  <h2 class="is-hidden">Definition of Terms</h2>
+  <h2 class="is-visually-hidden">Definition of Terms</h2>
 
   <dl>
     <dt>
@@ -36,7 +36,7 @@ excerpt: This article is a review of Jonathan Snook's book &ldquo;SMACSS&#58; Sc
     </cite>
   </p>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <dl>
     <dt>
@@ -70,9 +70,9 @@ excerpt: This article is a review of Jonathan Snook's book &ldquo;SMACSS&#58; Sc
 
 </aside>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">Intro</h2>
+  <h2>Intro</h2>
 
   <p>
     SMACSS is an acronym for Scalable and Modular Architecture for Cascading Style Sheets. It is not a framework, but an approach to authoring style sheets. In it, I found the primary points that define it are: Categorizing CSS Rules, Naming Conventions, and Depth of Applicability. Once you have these three points down, it is relatively smooth sailing.
@@ -80,9 +80,9 @@ excerpt: This article is a review of Jonathan Snook's book &ldquo;SMACSS&#58; Sc
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">Goals of Implementation</h2>
+  <h2>Goals of Implementation</h2>
 
   <p>
     Before we go any further, let's establish the core goals of SMACSS so we can best evaluate the practice.
@@ -97,9 +97,9 @@ excerpt: This article is a review of Jonathan Snook's book &ldquo;SMACSS&#58; Sc
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">Categorizing CSS Rules</h2>
+  <h2>Categorizing CSS Rules</h2>
 
   <p>
     A lot of what SMACSS does is aid in better organization of rules so that the workflow is smoother and the styles are repeated less. It places CSS rules into five main categories:
@@ -141,9 +141,9 @@ excerpt: This article is a review of Jonathan Snook's book &ldquo;SMACSS&#58; Sc
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">Naming Conventions</h2>
+  <h2>Naming Conventions</h2>
 
   <p>
     In his book, Jonathan Snook covers naming conventions as a section under the Categorizing CSS Rules chapter. I found this to be such an integral part of SMACSS, that I wanted to cover it on it's own. It has much to do with the scalability and modularity of the styles and needs careful consideration. As a rule of thumb, the name should be independent of page context, yet increase the semantic value of the content it addresses (whenever possible).
@@ -193,7 +193,7 @@ excerpt: This article is a review of Jonathan Snook's book &ldquo;SMACSS&#58; Sc
     Even though chaining is generally discouraged in SMACSS, I have found it more practical to chain state classes to the element or module they are meant to modify. By chaining the state rule to the modified element, we can recycle namespaces while isolating the appropriate rules to their respective element. For example:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
     <code>
 <pre>
 a.is-disabled { 
@@ -223,15 +223,15 @@ background: gray;
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">Depth of Applicability</h2>
+  <h2>Depth of Applicability</h2>
 
   <p>
     Depth of applicability refers to how deep into the document tree a CSS selector has the ability to style an HTML element. We can minimize this by only styling the element that we need in the most direct manner possible. One of the ways to achieve this is by using child selectors. For example:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
     <code>
 <pre>
 .list > li { 
@@ -245,7 +245,7 @@ margin-bottom: 0;
     ...would only apply a bottom margin of 0 to the list-items that are the direct children of the parent element with a class of <code>.list</code>. That means we have a combined applicability depth of 2: 1 for the parent <code>.list</code> + 1 for the child <code>&lt;li&gt;</code>. We could also say:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
     <code>
 <pre>
 .list > li > a {
@@ -261,9 +261,9 @@ display: block;
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">Caveats and Difficulties</h2>
+  <h2>Caveats and Difficulties</h2>
 
   <p>
     As mentioned, there are some things to be aware of when applying the SMACSS approach to your next project. There will be the undoubted tendency to fall into classitis. I would hold firm to a predetermined &ldquo;number of class&rdquo; rule for any given element. For more practical reasons, it has more to do with readability of code than a &ldquo;keep the markup clean&ldquo; ideology. If there are multiple classes thrown onto a single element, it becomes unclear where the offending style is coming from.
@@ -279,9 +279,9 @@ display: block;
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">Further Reading</h2>
+  <h2>Further Reading</h2>
 
   <p>
     I would highly recommend checking out <a href="http://www.stubbornella.org/">Nicole Sullivan's</a> <a href="https://github.com/stubbornella/oocss/">OOCSS</a>, <a href="http://bem.github.com/bem-method/pages/beginning/beginning.en.html">BEM</a> by <a href="http://company.yandex.com/">Yandex</a>, <a href="http://andyhume.net/about/">Andy Hume</a> at <a hrefhttp://schedule.sxsw.com/2012/events/event_IAP9410="">SXSW: 2012</a>, and Harry Roberts at <a href="http://csswizardry.com/">CSS Wizardry</a>.
@@ -309,9 +309,9 @@ display: block;
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">In Conclusion</h2>
+  <h2>In Conclusion</h2>
 
   <p>
     SMACSS may not be for everybody. It may not be for every project. But it will at least give you a different perspective to the way you approach your site builds. As Jonathan Snook says,

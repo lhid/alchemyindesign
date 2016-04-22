@@ -1,5 +1,31 @@
-{% include header.html %}
+<!doctype html>
+<html>
 
-  {{ content }}
+  {% include head.html %}
 
-{% include footer.html %}
+  <body id="top">
+
+    {% include header.html %}
+
+    <main class="l-content">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="/js/plugins.js"></script>
+
+    <script>
+      smoothScroll.init();
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-34170107-1','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>

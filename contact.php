@@ -3,7 +3,7 @@
 		return false;
 	}
 	$to = "leban@alchemyindesign.com";
-	$subject = "Contact Us";
+	$subject = "Contact Form";
 	$email = $_REQUEST['email'];
 	$message = $_REQUEST['comments'];
 	$headers = "From: $email";

@@ -1,0 +1,66 @@
+.nav {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  width: 100%;
+  & > li {
+    display: inline-block;
+    list-style: none;
+    & > a {
+      display: block;
+      font-size: .875em;
+      line-height: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 300ms ease-in-out;
+    }
+  }
+}
+
+.nav--main {
+  & > li {
+    & > a {
+      padding: 1.65rem 2vw;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 56em) {
+
+  .nav--main {
+    & > li {
+      & > a {
+        font-size: .75em;
+        padding: 1.5em 1.5vw;
+      }
+    }
+  }
+
+}
+
+
+
+@media only screen and (max-width: 41em) {
+
+  .nav--main {
+    bottom: 0;
+    display: table;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    & > li {
+      display: table-cell;
+      width: 33%;
+      &:last-child > a {
+        padding-right: 1em;
+      }
+      & > a {
+        padding: 1.5em 1em;
+      }
+    }
+  }
+
+}

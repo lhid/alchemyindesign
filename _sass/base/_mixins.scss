@@ -1,0 +1,23 @@
+@mixin box-sizing($model) {
+  -webkit-box-sizing: $model;
+  -moz-box-sizing: $model;
+  box-sizing: $model;
+}
+
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  background-size: $size;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin fade($property) {
+  -webkit-transition: $property .25s ease-in-out;
+  -moz-transition: $property .25s ease-in-out;
+  transition: $property .25s ease-in-out;
+}

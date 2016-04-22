@@ -1,0 +1,25 @@
+.l-constrain {
+  margin: 0 auto;
+  max-width: 70rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 70em) {
+  .l-constrain {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .l-constrain {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .l-constrain {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

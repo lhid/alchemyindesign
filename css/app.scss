@@ -1,11 +1,120 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
+@charset "utf-8";
 
-/*! AlchemyInDesign.com 2013 | MIT License */
+/**
+ * Table of Contents:
+ *
+ * 1.0 Import Rules
+ *   1.1 Base Rules
+ *   1.2 Utility Rules
+ *   1.3 Layout Rules
+ *   1.4 Module Rules
+ *   1.5 State Rules
+ *   1.6 Vendor Rules
+ *   1.7 Theme Rules
+ */
 
-@import "base",
-        "massimo",
-        "modules",
-        "theme",
-        "state";
+
+
+/* ==========================================================================
+   1.0 Import Rules
+   ========================================================================== */
+
+/* 1.1 Base Rules
+   ========================================================================== */
+
+/**
+ * 1. Normalize loads first for a a stable base.
+ * 2. Mixins load second for optimum reuse.
+ */
+
+@import "base/normalize", /* 1 */
+        "base/mixins", /* 2 */
+        "base/main";
+
+
+
+/* 1.2 Utility Rules
+   ========================================================================== */
+
+@import "utils/cf",
+        "utils/kir";
+
+
+
+/* 1.3 Layout Rules
+   ========================================================================== */
+
+@import "layout/l-banner",
+        "layout/l-constrain",
+        "layout/l-content",
+        "layout/l-footer",
+        "layout/l-grid",
+        "layout/l-header",
+        "layout/l-navigation",
+        "layout/l-pull",
+        "layout/l-push";
+
+
+
+/* 1.4 Module Rules
+   ========================================================================== */
+
+@import "modules/box",
+        "modules/btn",
+        "modules/fig",
+        "modules/form",
+        "modules/ico",
+        "modules/jump-link",
+        "modules/list",
+        "modules/logo",
+        "modules/modal",
+        "modules/nav",
+        "modules/panel",
+        "modules/profile",
+        "modules/section",
+        "modules/txt";
+
+
+
+/* 1.5 State Rules
+   ========================================================================== */
+
+/**
+ * General states can be found here. Must load last to override default state.
+ * Module-specific states found within their respective Sass partials.
+ */
+
+@import "state/is-hidden",
+        "state/is-invisible",
+        "state/is-scalable",
+        "state/is-visually-hidden";
+
+
+
+/* 1.6 Vendor Rules
+   ========================================================================== */
+
+/**
+ * Unedited style sheets for third-party plugins (only changed to .scss partial)
+ * NOTE: Do not edit core files directly. Use a separate partial for overrides.
+ *       Any overrides should below core file.
+ */
+
+
+
+/* 1.6 Vendor Rules
+   ========================================================================== */
+
+/**
+ * Colors, images, and assets specific to this website build.
+ */
+
+@import "theme/theme";
+
+
+
+
+

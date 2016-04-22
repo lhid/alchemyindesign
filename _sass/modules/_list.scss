@@ -1,0 +1,74 @@
+.list {
+  padding: 0;
+  & > li {
+    list-style-type: none;
+  }
+}
+
+
+
+.list--row {
+  & > li {
+    display: inline-block;
+    margin-left: .1em;
+    margin-right: .1em;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+.list--social {
+  text-align: right;
+  margin: 0;
+  & > li {
+    & > a:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 30em) {
+
+  .list--social {
+    text-align: center;
+  }
+
+}
+
+
+
+.list--steps {
+  counter-reset: item;
+  margin: 0 0 1.5em;
+  & > li {
+    counter-increment: item;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 1.5em;
+    text-indent: -1.5em;
+    &:before {
+      content: counter(item) ".";
+      display: inline-block;
+      font-weight: bold;
+      padding-right: 0.5em;
+      text-align: right;
+      width: 1.3em;
+    }
+  }
+}
+
+
+
+.list--bullets {
+  padding: 0 0 0 1em;
+  & > li {
+    margin: 0;
+    padding: 0 0 0 .4em;
+  }
+}

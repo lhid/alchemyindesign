@@ -1,0 +1,32 @@
+.l-header {
+  left: 50%;
+  margin-left: -35rem;
+  max-width: 70rem;
+  padding: 1rem 0 0;
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 70em) {
+  .l-header {
+    left: 0;
+    margin-left: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .l-header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .l-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

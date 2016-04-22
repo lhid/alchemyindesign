@@ -1,0 +1,554 @@
+/**
+ * Colors, images, and assets specific to this website build.
+ */
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 Import Rules
+ *   1.1 Base Rules
+ *   1.2 Layout Rules
+ *   1.3 Module Rules
+ *   1.4 State Rules
+ *   1.5 Vendor Rules
+ */
+
+/* 1.1 Base Rules
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'permanent_markerregular';
+  src: url('../fonts/PermanentMarker-webfont.eot');
+  src: url('../fonts/PermanentMarker-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/PermanentMarker-webfont.woff') format('woff'),
+       url('../fonts/PermanentMarker-webfont.ttf') format('truetype'),
+       url('../fonts/PermanentMarker-webfont.svg#permanent_markerregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dejavu_sansbook';
+  src: url('../fonts/DejaVuSans-webfont.eot');
+  src: url('../fonts/DejaVuSans-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DejaVuSans-webfont.woff') format('woff'),
+       url('../fonts/DejaVuSans-webfont.ttf') format('truetype'),
+       url('../fonts/DejaVuSans-webfont.svg#dejavu_sansbook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dejavu_sansoblique';
+  src: url('../fonts/DejaVuSans-Oblique-webfont.eot');
+  src: url('../fonts/DejaVuSans-Oblique-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DejaVuSans-Oblique-webfont.woff') format('woff'),
+       url('../fonts/DejaVuSans-Oblique-webfont.ttf') format('truetype'),
+       url('../fonts/DejaVuSans-Oblique-webfont.svg#dejavu_sansoblique') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dejavu_sansbold';
+  src: url('../fonts/DejaVuSans-Bold-webfont.eot');
+  src: url('../fonts/DejaVuSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DejaVuSans-Bold-webfont.woff') format('woff'),
+       url('../fonts/DejaVuSans-Bold-webfont.ttf') format('truetype'),
+       url('../fonts/DejaVuSans-Bold-webfont.svg#dejavu_sansbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dejavu_sansbold_oblique';
+  src: url('../fonts/DejaVuSans-BoldOblique-webfont.eot');
+  src: url('../fonts/DejaVuSans-BoldOblique-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DejaVuSans-BoldOblique-webfont.woff') format('woff'),
+       url('../fonts/DejaVuSans-BoldOblique-webfont.ttf') format('truetype'),
+       url('../fonts/DejaVuSans-BoldOblique-webfont.svg#dejavu_sansbold_oblique') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dejavu_sans_monobook';
+  src: url('../fonts/DejaVuSansMono-webfont.eot');
+  src: url('../fonts/DejaVuSansMono-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DejaVuSansMono-webfont.woff') format('woff'),
+       url('../fonts/DejaVuSansMono-webfont.ttf') format('truetype'),
+       url('../fonts/DejaVuSansMono-webfont.svg#dejavu_sans_monobook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body {
+  background-color: #ffffff;
+  color: #202020;
+  font-family: 'dejavu_sansbook', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'permanent_markerregular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'dejavu_sansbold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+a {
+  color: #f95197;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+  }
+}
+
+b,
+strong {
+  font-family: 'dejavu_sansbold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+code {
+  font-family: 'dejavu_sans_monobook', 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #202020;
+  margin: 1.5rem auto;
+}
+
+textarea,
+[type='email'],
+[type='text'] {
+  background-color: rgba(255, 255, 255, .5);
+  border: 1px solid #9a9a9a;
+  border-radius: 3px;
+}
+
+textarea:focus,
+[type='email']:focus,
+[type='text']:focus {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid #66f1fa;
+  outline: none;
+}
+
+
+/**
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #f95197;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #f95197;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.browserupgrade {
+  background: #cccccc;
+  color: #000000;
+}
+
+
+
+/* 1.2 Layout Rules
+   -------------------------------------------------------------------------- */
+
+.l-banner {
+  border-width: 20px;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+.l-banner--about {
+  background-attachment: fixed;
+  background-image: url(../img/hero-about.jpg);
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.l-banner--notes {
+  background-attachment: fixed;
+  background-image: url(../img/hero-notes.jpg);
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.l-banner--nst {
+  background-attachment: fixed;
+  background-image: url(../img/hero-nst.jpg);
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.l-banner--404 {
+  background-attachment: fixed;
+  background-image: url(../img/hero-404.jpg);
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+@media only screen and (max-width: 48em) {
+  .l-banner {
+    background-attachment: initial;
+    border-width: 15px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .l-banner {
+    border-width: 10px;
+  }
+}
+
+
+
+.l-navigation {}
+
+@media only screen and (max-width: 41em) {
+
+  .l-navigation {
+    background-color: #202020;
+  }
+
+}
+
+
+
+/* 1.3 Module Rules
+   -------------------------------------------------------------------------- */
+
+.box--example {
+  border-top-color: #c7c7c7;
+  border-bottom-color: #c7c7c7;
+  background-color: #f3f3f3;
+}
+
+.box--aside {
+  border-left-color: #c7c7c7;
+  color: #818181;
+}
+
+
+
+.btn {
+  border: 2px solid transparent;
+  &:focus {
+    outline: none;
+  }
+}
+a.btn {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.btn--default {
+  background-color: transparent;
+  border-color: #202020;
+  color: #202020;
+  &:hover,
+  &:focus {
+    background-color: #202020;
+    border-color: #202020;
+    color: #ffffff;
+  }
+}
+
+.btn--callout {
+  background-color: #f75284;
+  border-color: #f75284;
+  color: #ffffff;
+  &:hover,
+  &:focus {
+    background-color: #66f1fa;
+    border-color: #66f1fa;
+    color: #ffffff;
+  }
+}
+
+
+
+[class*='dsp-'] {
+  font-family: 'permanent_markerregular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+
+
+.heading-major {}
+
+
+
+.ico--21 {
+  background: url(../img/ico--21.svg) no-repeat;
+}
+.ico--mail {
+  background-position: 0 0;
+}
+.ico--pen {
+  background-position: -23px 0;
+}
+.ico--twitter-21 {
+  background-position: -46px 0;
+}
+
+
+.ico--40 {
+  background: url(../img/ico--40.svg) no-repeat;
+}
+.ico--twitter {
+  background-position: 0 0;
+  &:hover {
+    background-position: 0 -44px;
+  }
+}
+.ico--pinterest {
+  background-position: -44px 0;
+  &:hover {
+    background-position: -44px -44px;
+  }
+}
+.ico--linkedin {
+  background-position: -88px 0;
+  &:hover {
+    background-position: -88px -44px;
+  }
+}
+.ico--behance {
+  background-position: -132px 0;
+  &:hover {
+    background-position: -132px -44px;
+  }
+}
+.ico--dribbble {
+  background-position: -176px 0;
+  &:hover {
+    background-position: -176px -44px;
+  }
+}
+
+
+
+.ico--64 {
+  background: url(../img/ico--64.svg) no-repeat;
+}
+.ico--arrow-up {
+  background-position: 0 0;
+}
+.ico--arrow-up:hover,
+a:hover > .ico--arrow-up {
+  background-position: 0 -68px;
+}
+.ico--arrow-down {
+  background-position: -68px 0;
+}
+.ico--arrow-down:hover,
+a:hover > .ico--arrow-down {
+  background-position: -68px -68px;
+}
+.ico--close {
+  background-position: -132px 0;
+}
+.ico--close:hover,
+a:hover > .ico--close {
+  background-position: -132px -68px;
+}
+
+
+
+.ico--120 {
+  background: url(../img/ico--120.svg) no-repeat;
+}
+.ico--research {
+  background-position: 0 0;
+}
+.ico--design {
+  background-position: -124px 0;
+}
+.ico--evaluation {
+  background-position: -248px 0;
+}
+.ico--ucd {
+  background-position: 0 -124px;
+}
+.ico--brand {
+  background-position: -124px -124px;
+}
+.ico--collab {
+  background-position: -248px -124px;
+}
+
+
+
+
+.fig {}
+  .fig__cap {
+    background-color: #ffffff;
+    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
+  }
+
+
+
+[id='modal'] {
+  &:target {
+    background-color: rgba(0,0,0,0.9);
+  }
+}
+
+
+
+.nav {
+  & > li {
+    & > a {
+      border-bottom: none;
+    }
+  }
+}
+
+
+.nav--main {
+  & > li {
+    & > a {
+      color: #202020;
+      &:hover,
+      &.is-active {
+        color: #f95197;
+      }
+      &.is-called-out {
+      @extend .btn;
+      @extend .btn--default;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-left: 2vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 56em) {
+
+  .nav--main {
+    & > li {
+      & > a {
+        &.is-called-out {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          margin-left: 1.5vw;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 41em) {
+
+  .nav--main {
+    & > li {
+      & > a {
+        color: #ffffff;
+        &.is-called-out {
+          color: #ffffff;
+          margin-left: 0;
+          &:hover {
+            color: #f95197;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+.picture {
+  background-color: #ffffff;
+  border: 6px solid #ffffff;
+  border-radius: 3px;
+  @include box-shadow(0px 0px 1px 0px rgba(113,95,68,.5));
+}
+
+
+
+.panel {
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 20px;
+}
+
+.panel--approach {
+  background-attachment: fixed;
+  background-image: url(../img/panel--approach.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--process {
+  background-attachment: fixed;
+  background-image: url(../img/panel--process.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--contact {
+  background-attachment: fixed;
+  background-image: url(../img/panel--contact.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+@media only screen and (max-width: 48em) {
+  .panel {
+    background-attachment: initial;
+    border-width: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 30em) {
+  .panel {
+    border-width: 10px;
+  }
+}
+
+
+
+.txt-rev {
+  color: #ffffff;
+}
+
+
+
+/* 1.4 State Rules
+   -------------------------------------------------------------------------- */
+
+
+
+/* 1.5 Vendor Rules
+   -------------------------------------------------------------------------- */
+
+

@@ -1,0 +1,90 @@
+.dsp-1,
+.txt-1 {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.dsp-2,
+.txt-2 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.dsp-3,
+.txt-3 {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.dsp-4,
+.txt-4 {
+  font-size: .9rem;
+}
+
+.dsp-5,
+.txt-5 {
+  font-size: .8rem;
+}
+
+.dsp-6,
+.txt-6 {
+  font-size: .7rem;
+}
+
+@media only screen and (max-width: 48em) {
+
+  .dsp-1,
+  .txt-1 {
+    font-size: 4rem;
+  }
+
+  .dsp-2,
+  .txt-2 {
+    font-size: 2.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 30em) {
+
+  .dsp-1,
+  .txt-1 {
+    font-size: 3rem;
+  }
+
+  .dsp-2,
+  .txt-2 {
+    font-size: 2rem;
+  }
+
+}
+
+
+
+.txt-l {
+  text-align: left;
+}
+.txt-r {
+  text-align: right;
+}
+.txt-c {
+  text-align: center;
+}
+
+
+
+.txt-tight,
+.txt-tight-b {
+  margin-bottom: 0,
+}
+
+.txt-tight,
+.txt-tight-t {
+  margin-top: 0;
+}
+
+
+
+.txt-rev {
+  /* Styles in `_theme.scss` */
+}

@@ -1,0 +1,53 @@
+.panel {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+  /**
+   * 1. Centers horizontally. Uses offset based on max-width set on `.l-constrain`
+   * 2. Centers vertically.
+   *    https://css-tricks.com/centering-css-complete-guide/#vertical-block-unknown
+   */
+  .panel__content {
+    left: 50%; /* 1 */
+    margin-left: -35rem; /* 1 */
+    position: absolute; /* 2 */
+    top: 50%; /* 2 */
+    transform: translateY(-55%); /* 2 */
+  }
+
+.panel--about {}
+
+.panel--approach {}
+
+.panel--work {}
+
+.panel--process {}
+
+.panel--notes {}
+
+.panel--contact {}
+
+
+
+@media only screen and (max-width: 70em) {
+  .panel__content {
+    left: 0;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+
+  .panel {
+    min-height: 50vh;
+    padding: 4.2rem 0;
+  }
+
+  .panel__content {
+    position: static;
+    top: 0;
+    transform: none;
+  }
+
+}

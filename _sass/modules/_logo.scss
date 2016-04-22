@@ -1,0 +1,32 @@
+.logo {
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  max-width: 25rem;
+  & > a {
+    display: block;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 56em) {
+  .logo {
+    max-width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 41em) {
+
+  .logo {
+    float: none;
+    text-align: center;
+    max-width: 100%;
+    & > a {
+      display: inline-block;
+      max-width: 25rem;
+    }
+  }
+
+}

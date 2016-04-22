@@ -1,0 +1,20 @@
+ErrorDocument 404 http://www.alchemyindesign.com/404.html
+
+Redirect 301 /about.html /index.html
+Redirect 301 /notes/encapsulation-in-css.html /notes/2013/06/27/encapsulation-in-css.html
+Redirect 301 /notes/future-futuro.html /notes/2013/04/24/future-futuro.html
+Redirect 301 /notes/modular-typography.html /notes/2013/03/15/modular-typography.html
+Redirect 301 /notes/creating-modules-part-ii.html /notes/2013/03/12/creating-modules-part-ii.html
+Redirect 301 /notes/creating-modules-part-i.html /notes/2013/02/13/creating-modules-part-i.html
+Redirect 301 /notes/why-the-i.html /notes/2013/01/25/why-the-i.html
+Redirect 301 /notes/web-design-toolkit.html /notes/2012/11/16/web-design-toolkit.html
+Redirect 301 /notes/character-escaping.html /notes/2012/11/05/character-escaping.html
+Redirect 301 /notes/smacss-notes-on-usage.html /notes/2012/10/03/smacss-notes-on-usage.html
+Redirect 301 /notes/resources-for-modularizing-your-css.html /notes/2012/10/03/resources-for-modularizing-your-css.html
+Redirect 301 /notes/skeuomorphism.html /notes/2012/09/16/skeuomorphism.html
+Redirect 301 /notes/the-strategic-web-designer-review.html /notes/2012/08/30/the-strategic-web-designer-review.html
+Redirect 301 /notes/antique-graphics.html /notes/2012/06/18/antique-graphics.html
+Redirect 301 /notes/web-directory.html /notes/2012/05/23/web-directory.html
+Redirect 301 /notes/color-chemistry.html /notes/2012/03/16/color-chemistry.html
+Redirect 301 /notes/on-web-type-and-font-rendering.html /notes/2012/02/20/on-web-type-and-font-rendering.html
+Redirect 301 /notes/everything-i-know.html /notes/2012/02/01/everything-i-know.html

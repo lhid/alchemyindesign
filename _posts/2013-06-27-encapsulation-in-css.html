@@ -9,7 +9,7 @@ disqus_id: encapsulation-in-css.html
 excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the past few months now. It is not an extremely difficult idea to grasp, yet more difficult to put into words. What makes it so difficult? Because there are several interrelated concepts that are part of describing the object-oriented approach to design...
 ---
 
-<div class="section-std">
+<div class="section-minor">
 
   <p>
     Encapsulation in CSS is a concept that I’ve been mulling over for the past few months now. It is not an extremely difficult idea to grasp, yet more difficult to put into words. What makes it so difficult? Because there are several interrelated concepts that are part of describing the object-oriented approach to design. Likewise, when applying these concepts to CSS (which is not an object-oriented language), there are also interrelated concepts in CSS to describe its key features. I will cover Encapsulation and related matters, the fundamentals of CSS, and how we can apply Encapsulation to CSS using SMACSS and OOCSS.
@@ -17,9 +17,9 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
 </div>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Encapsulation and Such
   </h2>
 
@@ -47,7 +47,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
   </section>
 
-  <hr class="hr hr+3">
+  <hr />
 
   <section>
 
@@ -75,9 +75,9 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     The Cascade, Specificity, and Inheritance
   </h2>
 
@@ -105,7 +105,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
   </section>
 
-  <hr class="hr hr+3">
+  <hr />
 
   <section>
 
@@ -119,7 +119,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
   </section>
 
-  <hr class="hr hr+3">
+  <hr />
 
   <section>
 
@@ -147,9 +147,9 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Encapsulation In CSS: Putting It All Together
   </h2>
 
@@ -188,7 +188,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
   </section>
 
-  <hr class="hr hr+3">
+  <hr />
 
   <section>
 
@@ -208,7 +208,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
       We minimize that depth by authoring classes for the desired rule sets and respecting the Cascade by avoiding the use of descendent selectors from those classes. This prevents any undesired coupling of the CSS to the HTML structure and also keeps our Specificity low. For example, we want to avoid this:
     </p>
 
-    <figure class="box box-example">
+    <figure class="box box--example">
 <pre>
 <code>
 .callout {
@@ -229,7 +229,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
       In instances where the HTML structure is more predictable in accordance to the function of that object (e.g., navigation), we can use child selectors for the child nodes. The use of child selectors limits the applicability of the styles only to the children directly associated with the parent providing the styles—tightening the bundle of information.
     </p>
 
-    <figure class="box box-example">
+    <figure class="box box--example">
 <pre>
 <code>
 .nav {
@@ -251,7 +251,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
   </section>
 
-  <hr class="hr hr+3">
+  <hr />
 
   <section>
 
@@ -267,7 +267,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
       For example, if we write the following:
     </p>
 
-    <figure class="box box-example">
+    <figure class="box box--example">
       <h4 class="txt-tight">
         CSS
       </h4>
@@ -310,7 +310,7 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
       Information Hiding can also be addressed by Inheritance within the object. Just like in the example above, we can prevent access to the styles of descendant nodes within the <code>.callout</code> object by avoiding properties that pass their values through Inheritance. For example:
     </p>
 
-    <figure class="box box-example">
+    <figure class="box box--example">
       <h4 class="txt-tight">
         CSS
       </h4>
@@ -342,9 +342,9 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Conclusion
   </h2>
 
@@ -358,9 +358,9 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
 </section>
 
-<hr class="hr hr+2" />
+<hr />
 
-<section class="section-std txt-5">
+<section class="section-minor txt-5">
 
   <h5>
     Footnotes
@@ -402,9 +402,9 @@ excerpt: Encapsulation in CSS is a concept that I’ve been mulling over for the
 
 </section>
 
-<hr class="hr hr+3" />
+<hr />
 
-<section class="section-std txt-5">
+<section class="section-minor txt-5">
 
   <h5>
     Additional References

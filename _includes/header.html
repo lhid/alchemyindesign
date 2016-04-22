@@ -1,73 +1,11 @@
-<!doctype html>
-<html>
+<header class="l-header">
+  <div class="l-constrain">
+    <h1 class="logo">
+      <a href="/index.html" title="Home">
+        <img class="is-scalable-max" src="/img/logo.svg" alt="Alchemy by Leban Hyde | UX + Branding" />
+      </a>
+    </h1>
 
-  <head>
-
-    <meta charset="utf-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-    <title>{{ page.title_meta }}</title>
-
-    <meta name="description" content="{{ page.description }}" />
-    <meta name="author" content="Leban Hyde. Visual Alchemist | Codesmith | Brandologist" />
-    <meta name="contact" content="leban@alchemyindesign.com" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" type="text/css" href="/css/app.css" />
-
-    <!-- Scripts -->
-    <script src="/contact-files/jquery-1.js"></script>
-    <script src="/contact-files/contact.js"></script>
-
-    <!-- This fix for alternate rendering modes. http://www.sitepoint.com/html5-shim-ie-emulation-mode/ -->
-    <!--[if IE]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-  </head>
-
-  <body id="body">
-
-    <!-- Closing tag is in footer.html -->
-    <div class="l-wrap" id="top">
-      <header class="l-header">
-        <div class="l-bound">
-          <div class="l-col l-col+7">
-            <h1>
-              <a href="/index.html" title="Home" class="logo ir">
-                Leban Hyde. Visual Alchemist | Codesmith | Brandologist
-              </a>
-            </h1>
-
-            <a class="menu dsp-3" href="#nav" aria-hidden="true">Menu</a>
-          </div>
-
-          <nav id="nav" class="l-col l-col+5" role="navigation">
-            <h3 class="is-hidden">Site Navigation</h3>
-
-            <ol class="l-row nav nav+main">
-              <li class="l-col l-col+1">
-                <a href="/work.html">Work</a>
-              </li>
-
-              <li class="l-col l-col+1">
-                <a href="/notes.html">Notes</a>
-              </li>
-
-              <li class="l-col l-col+1">
-                <a href="/about.html">About</a>
-              </li>
-
-              <li class="l-col l-col+2">
-                <a href="/contact.html">Contact</a>
-              </li>
-
-              <li class="back">
-                <a href="#body">Close</a>
-              </li>
-            </ol>
-          </nav>
-        </div><!-- /.l-bound -->
-      </header><!-- /.l-header -->
+    {% include navigation.html %}
+  </div><!-- /.l-constrain -->
+</header><!-- /.l-header -->

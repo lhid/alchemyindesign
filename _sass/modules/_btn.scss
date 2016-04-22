@@ -1,0 +1,35 @@
+.btn {
+  border-radius: 2em;
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: 1em;
+  padding: .75em 3em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+}
+a.btn {
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+
+
+.btn--full {
+  width: 100%;
+}
+
+
+
+.btn--wide {
+  min-width: 50%;
+}
+
+@media only screen and (max-width: 30em) {
+  .btn--wide {
+    max-width: initial;
+    min-width: initial;
+    width: 100%
+  }
+}

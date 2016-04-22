@@ -9,7 +9,7 @@ disqus_id: creating-modules-part-i.html
 excerpt: As a grid-based designer, modularity is a familiar concept to me. There are a variety of applications of modular design in the physical world, from furniture to architecture. Naturally, when I encountered the ideas of OOCSS and SMACSS, a light turned on for me. I’ve been abiding by these principles for a little over a year and I wanted to share my process for creating a CSS module.
 ---
 
-<div class="section-std">
+<div class="section-minor">
 
   <p>
     As a grid-based designer, modularity is a familiar concept to me. There are a variety of applications of modular design in the physical world, from furniture to architecture. Naturally, when I encountered the ideas of <a href="https://github.com/stubbornella/oocss">OOCSS</a> and <a href="http://smacss.com/">SMACSS</a>, a light turned on for me. I’ve been abiding by these principles for a little over a year and I wanted to share my process for creating a CSS module.
@@ -27,9 +27,9 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
 
 </div>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Analysis
   </h2>
 
@@ -41,7 +41,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     First, I analyze the information that’s on the page and write my HTML accordingly. If you are a designer, this should already be part of your process, but I’ll harp on that in another post. Write your HTML without any considerations for style and presentation. Just get the page structure down. This prevents us from getting ahead of ourselves and writing sloppy modules.
   </p>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <h3>
     Pre-module CSS
@@ -55,7 +55,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     As we go, we may discover additional styles that felt like modules at first, but can be converted into site-wide defaults. Again, just avoid heavy-handed decisions and keep the selectors simple.
   </p>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <h3>
     Visual Analysis
@@ -71,9 +71,9 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Authoring a Module
   </h2>
 
@@ -81,7 +81,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     We’ve identified a module and are ready to start writing our styles. I usually do this as a three step process—Rough, Refactor, Repeat.
   </p>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <h3>
     Roughing
@@ -91,7 +91,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     Roughing is the loose coding of the module in order to get it to look the way we want, like a rough sketch. I don’t concern myself with naming, as this often takes careful consideration and can impede progress. I also avoid too many decisions on modularity. I’d much rather get the presentation correct. The rest we’ll review when we refactor.
   </p>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <h3>
     Refactoring
@@ -111,7 +111,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     The roughing and refactoring are steps that will repeat themselves throughout the process. It’s okay if our initial assumptions were incorrect. Refactoring as we go will help us see our mistakes and better optimize our CSS for scalability.
   </p>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <p>
     <dfn><sup>*</sup>Subcomponents</dfn> are the parts of a larger whole. Like in the example above, a callout could be broken down into header, body, and footer. These are styled independently, but are intended to create an entire component.
@@ -156,9 +156,9 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Naming a Module
   </h2>
 
@@ -170,7 +170,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     We want the name to be page-agnostic—the module shouldn’t care about the page, it should only care about what it does. Functionality is a primary consideration when I name a module. If a module looks a certain way, it should be so for a reason. That reason should be indicated by what it does—Form Follows Function. So, what does it do? What is the purpose of this component? If it’s a callout, then that should probably be present in the name.
   </p>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <h3>
     Approach
@@ -180,7 +180,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     Something to consider is what our overall approach is going to be. Are we going to be semantic purists or presentational pragmatists? On the <a href="https://github.com/stubbornella/oocss/wiki/FAQ">FAQ page</a> of the OOCSS Wiki, Nicole Sullivan states <q>OOCSS can be written in a semantic or non-semantic way</q> and, if you look at the framework, you will find class names that reflect both. For SMACSS, to <q>Increase the semantic value of a section of HTML and content</q> is one of two core goals. However, Jonathan Snook himself says to <q>Accept that class names may describe a visual state</q>, or in other words, be presentational. This will be something that you will have to make peace with as you work.
   </p>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <h3>
     Convention
@@ -190,7 +190,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     How we write the name of the module is part of the name we give it. SMACSS is largely a method of organizing your CSS, with naming conventions being a large part of what makes it work. In the case of modules and submodules, it is highly encouraged to include the name of the base module within the name of the submodule that extends it. For example:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 .callout {…}
@@ -203,7 +203,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     Also, our naming convention may need to indicate an item that is a subcomponent of its larger whole. Let’s revisit the header-body-footer pattern on this one:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 .callout {…}
@@ -218,7 +218,7 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
     Here we’ve indicated that the callout module is broken up into a header, some body, and a footer. However, we have an issue with clarity—both the submodule and the subcomponent look the same! To compound this issue, we could also have a sibling module. Like:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 .heading-1 {…}
@@ -238,9 +238,9 @@ excerpt: As a grid-based designer, modularity is a familiar concept to me. There
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Intermission
   </h2>
 

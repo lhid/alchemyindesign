@@ -9,7 +9,7 @@ disqus_id: creating-modules-part-ii.html
 excerpt: This is the second part of Creating Modules. As previously mentioned, I have been abiding by the principles of SMACSS and OOCSS for a little over a year now. I wanted to share my process for creating a CSS module so that the learning curve might be shallower for any newcomers. In Part I, we covered a lot of theory. In Part 2, we’ll go through the process with a mockup and write a module based off our analysis. Let’s get started!
 ---
 
-<div class="section-std">
+<div class="section-minor">
 
   <p>
     This is the second part of Creating Modules. As previously mentioned, I have been abiding by the principles of <a href="http://smacss.com/">SMACSS</a> and <a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a> for a little over a year now. I wanted to share my process for creating a CSS module so that the learning curve might be shallower for any newcomers. In <a href="/notes/2013/02/13/creating-modules-part-i.html">Part I</a>, we covered a lot of theory. In Part II, we’ll go through the process with a mockup and write a module based off our analysis. Let’s get started!
@@ -17,14 +17,14 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
 
 </div>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Analysis
   </h2>
 
   <figure>
-    <img src="/img/notes/creating-modules-mockup.jpg" alt="Our Design Mockup" class="scale" />
+    <img src="/img/notes/creating-modules-mockup.jpg" alt="Our Design Mockup" class="is-scalable-max" />
     <figcaption>
       <a href="/img/notes/creating-modules-mockup.jpg" title="Enlarged mockup">
         Enlarge
@@ -32,7 +32,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     </figcaption>
   </figure>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <p>
     Even though for this exercise we’re going to skip over the initial writing of the HTML, we’ll do a brief information analysis. Notice the overall structure of the information—the logo, the search bar, the nav, the content area with login box, the footer. Within the content area, we have a hierarchy established with a hero banner, headings, subheadings, copy text, and small print.
@@ -47,7 +47,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
   </p>
 
   <figure>
-    <img src="/img/notes/creating-modules-mockup-layout.jpg" alt="Our Design Mockup" class="scale" />
+    <img src="/img/notes/creating-modules-mockup-layout.jpg" alt="Our Design Mockup" class="is-scalable-max" />
     <figcaption>
       <a href="/img/notes/creating-modules-mockup-layout.jpg" title="Enlarged mockup">
         Enlarge
@@ -55,13 +55,13 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     </figcaption>
   </figure>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <p>
     You can see that we’ve mapped out considerations for <code>.l-header</code>, <code>l.-navigation</code>, <code>.l-content</code>, <code>.l-footer</code>.
   </p>
 
-  <aside class="box box-aside">
+  <aside class="box box--aside">
     <h4>
       Pro Tip
     </h4>
@@ -77,9 +77,9 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Authoring the Module
   </h2>
 
@@ -88,10 +88,10 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
   </p>
 
   <figure>
-    <img src="/img/notes/creating-modules-buttons.jpg" alt="Repeatable Element: Buttons" class="scale" />
+    <img src="/img/notes/creating-modules-buttons.jpg" alt="Repeatable Element: Buttons" class="is-scalable-max" />
   </figure>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <h3>
     Roughing
@@ -109,7 +109,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     As far as the mark-up, let’s start with an actual <code>&lt;button&gt;</code>. We may need to use an <code>&lt;a&gt;</code> for other instances or, alternatively, we could use the <code>&lt;input type="submit" /&gt;</code>. But for the purpose of demonstration, we’ll stick with the <code>&lt;button&gt;</code>.
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 &lt;button class="button"&gt;Find It!&lt;/button&gt;
@@ -121,7 +121,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     I went ahead and gave it a class name of <code>.button</code>. Remember, we’re just roughing in the code to get the initial look down—don’t get hung up on the name just yet. For clarity of styles, I am writing the CSS in an internal style sheet.
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 .button {
@@ -139,7 +139,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     I’m starting with the blue button here as it seems to be the standard button we’ll be using site-wide (note the search bar in the site header). This gives us the basic look of our standard button. Due to browser support issues and vendor prefixes, I intentionally skipped the background gradient. I also left out vendor prefixes for <code>border-radius</code> and <code>box-shadow</code>. Now on to typography…
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 /* Base Module */
@@ -168,7 +168,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     Now that we have our initial button looking close to the mockup, let’s look at some of the finer details. There are three buttons in the mockup: a "Find It" button, a "Join" button, and a "Login" button. All appear to be the same height. The "Login" and "Find It!" buttons are both blue, but the "Login" button is green. Everything else seems to be the same. So let's start a submodule based on the color difference.
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 /* Submodule */
@@ -189,7 +189,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     But does that feel right to you? Doesn’t that feel a bit like tying your shoe, then untying it only to tie it again? Yeah, it does to me to. So let’s refactor it!
   </p>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <h3>
     Refactoring
@@ -199,7 +199,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     I try my best not to create styles only to override them down the road. It feels much cleaner to be light-handed on the declarations and leave the base module open for extension. We’ve noted above that the major difference between the two button styles in the mockup is color. So, let’s remove any color declarations from the base module.
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 /* Base Module */
@@ -229,7 +229,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     The font color is the same in all three instances, so we are fine by leaving that in. Now let’s create another submodule with the color styles we just removed from the base.
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 /* Base Module */
@@ -266,7 +266,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     We now have a solid base module with to viable submodules to extend it. We can begin to focus more on the additional details. The custom font that we were suspicious of turned out to be Gill Sans Light. I’m sure that, at this point, we could find this exact typeface as a web font through a paid service, but for now we can use <a href="http://www.fontspring.com/fonts/mostardesign/sofia-pro">Sofia Pro Light</a> from <a href="http://www.fontspring.com/">FontSpring</a> (it’s free!). Also, if we wanted to go back and included declarations for a background gradient, this would be the time we would do it. Sense we offloaded our color to their respective submodules, all of the code necessary for cross-browser support won’t be such a maintenance bear.
   </p>
 
-  <aside class="box box-aside">
+  <aside class="box box--aside">
     <h4>
       A brief tangent on shorthand declarations:
     </h4>
@@ -276,7 +276,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     </p>
   </aside>
 
-  <hr class="hr hr+3" />
+  <hr />
 
   <h3>
     The Whys
@@ -300,9 +300,9 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Naming
   </h2>
 
@@ -318,7 +318,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     While these names well describe the buttons’ function and offer more semantic value, they are not as reusable a we would like. Other than the text inside the blue buttons being different, they look exactly the same. This would mean repeating the styles unnecessarily to describe two seemingly different bits of functionality. Of course, we could gang up the submodule selectors like this:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 .button-search,
@@ -343,7 +343,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     The green button only has one instance within this particular page, but it could have other instances within differing contexts in future pages. With blue being the second most used color in our mockups next to grey, we can see that the green offers contrast and tends to stand out next to the blue. This has a very callout-like nature to it. Not to mention that the verbiage on the button itself is inviting a call-to-action. So, <code>.button-cta</code> may be functionally and presentationally more accurate here (the form of the button is definitely following its function). However, though we are unsure of the future uses of this button and that they will always be a call-to-action, we can be sure that the contrast between green and blue will remain, making <code>.button-callout</code> feels like a the better choice:
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
 <pre>
 <code>
 /* Base Module */
@@ -382,7 +382,7 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
     We might also consider reducing the <code>.button</code> to just <code>.btn</code>. I definitely share the OOCSS value of brevity in class names, so <code>.btn</code> would be the name I would personally go with.
   </p>
 
-  <figure class="box box-example">
+  <figure class="box box--example">
     <p class="txt-c">
       <a href="http://cdpn.io/blcnC">Demo &#8594;</a>
     </p>
@@ -398,9 +398,9 @@ excerpt: This is the second part of Creating Modules. As previously mentioned, I
 
 </section>
 
-<section class="section-std">
+<section class="section-minor">
 
-  <h2 class="hrb hrb+2">
+  <h2>
     Conclusion
   </h2>
 

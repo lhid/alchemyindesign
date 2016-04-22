@@ -1,0 +1,9 @@
+/**
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.is-hidden {
+  display: none !important;
+  visibility: hidden;
+}

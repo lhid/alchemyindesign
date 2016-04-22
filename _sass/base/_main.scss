@@ -1,0 +1,302 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/**
+ * Apply a natural box layout model to all elements, but allowing components to change
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+html {
+  @include box-sizing(border-box);
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 30em) {
+  html {
+    font-size: .9em;
+  }
+}
+
+*,
+*:before,
+*:after {
+  @include box-sizing(inherit);
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+
+
+h1 {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+h4 {
+  font-size: .9rem;
+}
+
+h5 {
+  font-size: .8rem;
+}
+
+h6 {
+  font-size: .7rem;
+}
+
+@media only screen and (max-width: 48em) {
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 30em) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+}
+
+
+
+a {
+  text-decoration: none;
+  & img {
+    border: none;
+    outline: none;
+  }
+  &[href*='tel:'] {
+    white-space: nowrap;
+  }
+}
+
+hr {
+  width: 100%
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  & p {
+    font-style: italic;
+    &:before {
+      content: '\201C';
+      left: -1rem;
+      top: .75rem;
+      vertical-align: text-bottom;
+    }
+    &:after {
+      content: '\201D';
+      vertical-align: text-bottom;
+      bottom: -1rem;
+    }
+    &:before,
+    &:after {
+      font-size: 4.75rem;
+      line-height: 1rem;
+      position: relative
+    }
+  }
+  & footer {
+    font-weight: bold;
+  }
+}
+
+
+
+ol,
+ul {
+  li {
+    margin: .7em 0;
+  }
+}
+
+
+
+/**
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+
+
+/**
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/**
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+textarea,
+[type='email'],
+[type='text'] {
+  padding: .5em;
+}
+
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  padding: 0.2em 0;
+}
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+     (-webkit-min-device-pixel-ratio: 1.25),
+     (min-resolution: 1.25dppx),
+     (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster:
+                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

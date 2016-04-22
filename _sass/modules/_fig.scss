@@ -1,0 +1,13 @@
+.fig {
+  max-height: 20rem;
+  margin: 2.8em 0;
+  padding-bottom: 2.5rem;
+  position: relative;
+  overflow-y: hidden;
+}
+  .fig__cap {
+    bottom: 0;
+    padding: .4rem 0;
+    position: absolute;
+    width: 100%;
+  }
