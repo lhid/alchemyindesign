@@ -402,6 +402,14 @@ a:hover > .ico--close {
 
 
 
+[id='modal'] {
+  &:target {
+    background-color: rgba(0,0,0,0.9);
+  }
+}
+
+
+
 .nav {
   & > li {
     & > a {
