@@ -1,5 +1,6 @@
 ErrorDocument 404 http://www.alchemyindesign.com/404.html
 
+Redirect 301 /about.html /index.html
 Redirect 301 /notes/encapsulation-in-css.html /notes/2013/06/27/encapsulation-in-css.html
 Redirect 301 /notes/future-futuro.html /notes/2013/04/24/future-futuro.html
 Redirect 301 /notes/modular-typography.html /notes/2013/03/15/modular-typography.html
