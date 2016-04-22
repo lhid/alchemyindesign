@@ -199,6 +199,13 @@ textarea:focus,
   @include background-size(cover);
 }
 
+.l-banner--404 {
+  background-attachment: fixed;
+  background-image: url(../img/hero-404.jpg);
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
 @media only screen and (max-width: 48em) {
   .l-banner {
     background-attachment: initial;
