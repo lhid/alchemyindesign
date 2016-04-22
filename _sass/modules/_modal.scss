@@ -1,24 +1,48 @@
 [id='modal'] {
-  display: none;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  z-index: 0;
   &:target {
     background-color: rgba(0,0,0,0.9);
-    display: block;
     height: 100vh;
     left: 0;
     padding-top: 3rem;
     position: fixed;
     top: 0;
     right: 0;
+    visibility: visible;
     z-index: 1000;
-    & .modal__close {
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 1;
-      &:hover {
-        border-bottom: none;
-      }
+    transition: all 200ms ease-in-out;
+  }
+}
+  /**
+   * 1. Centers horizontally. Uses offset based on max-width set on `.l-constrain`
+   * 2. Centers vertically.
+   *    https://css-tricks.com/centering-css-complete-guide/#vertical-block-unknown
+   */
+  .modal__content {
+    left: 50%; /* 1 */
+    margin-left: -35rem; /* 1 */
+    position: absolute; /* 2 */
+    top: 50%; /* 2 */
+    transform: translateY(-55%); /* 2 */
+    width: 100%;
+  }
+  .modal__close {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    &:hover {
+      border-bottom: none;
     }
+  }
+
+@media only screen and (max-width: 70em) {
+  .modal__content {
+    left: 0;
+    margin-left: 0;
   }
 }
