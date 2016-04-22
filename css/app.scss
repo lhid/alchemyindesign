@@ -48,7 +48,6 @@
    ========================================================================== */
 
 @import "layout/l-banner",
-        "layout/l-callout",
         "layout/l-constrain",
         "layout/l-content",
         "layout/l-footer",
@@ -67,7 +66,6 @@
         "modules/btn",
         "modules/fig",
         "modules/form",
-        "modules/heading",
         "modules/ico",
         "modules/jump-link",
         "modules/list",
@@ -76,7 +74,6 @@
         "modules/nav",
         "modules/panel",
         "modules/profile",
-        "modules/picture",
         "modules/section",
         "modules/txt";
 
@@ -90,9 +87,7 @@
  * Module-specific states found within their respective Sass partials.
  */
 
-@import "state/has-btn-group",
-        "state/has-sticky-btn",
-        "state/is-hidden",
+@import "state/is-hidden",
         "state/is-invisible",
         "state/is-scalable",
         "state/is-visually-hidden";
@@ -107,8 +102,6 @@
  * NOTE: Do not edit core files directly. Use a separate partial for overrides.
  *       Any overrides should below core file.
  */
-
-@import "vendor/js-unslider";
 
 
 
