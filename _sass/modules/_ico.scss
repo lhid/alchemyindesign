@@ -7,126 +7,27 @@
 
 
 .ico--21 {
-  background: url(../img/ico--21.svg) no-repeat;
   height: 21px;
   width: 21px;
-}
-
-.ico--mail {
-  background-position: 0 0;
-}
-
-.ico--pen {
-  background-position: -23px 0;
-}
-
-.ico--twitter-21 {
-  background-position: -46px 0;
 }
 
 
 
 .ico--40 {
-  background: url(../img/ico--40.svg) no-repeat;
   height: 40px;
   width: 40px;
-}
-
-.ico--twitter {
-  background-position: 0 0;
-  &:hover {
-    background-position: 0 -44px;
-  }
-}
-
-.ico--pinterest {
-  background-position: -44px 0;
-  &:hover {
-    background-position: -44px -44px;
-  }
-}
-
-.ico--linkedin {
-  background-position: -88px 0;
-  &:hover {
-    background-position: -88px -44px;
-  }
-}
-
-.ico--behance {
-  background-position: -132px 0;
-  &:hover {
-    background-position: -132px -44px;
-  }
-}
-
-.ico--dribbble {
-  background-position: -176px 0;
-  &:hover {
-    background-position: -176px -44px;
-  }
 }
 
 
 
 .ico--64 {
-  background: url(../img/ico--64.svg) no-repeat;
   height: 64px;
   width: 64px;
-}
-
-.ico--arrow-up {
-  background-position: 0 0;
-}
-.ico--arrow-up:hover,
-a:hover > .ico--arrow-up {
-  background-position: 0 -68px;
-}
-
-.ico--arrow-down {
-  background-position: -68px 0;
-}
-.ico--arrow-down:hover,
-a:hover > .ico--arrow-down {
-  background-position: -68px -68px;
-}
-
-.ico--close {
-  background-position: -132px 0;
-}
-.ico--close:hover,
-a:hover > .ico--close {
-  background-position: -132px -68px;
 }
 
 
 
 .ico--120 {
-  background: url(../img/ico--120.svg) no-repeat;
   height: 120px;
   width: 120px;
-}
-
-.ico--research {
-  background-position: 0 0;
-}
-
-.ico--design {
-  background-position: -124px 0;
-}
-
-.ico--evaluation {
-  background-position: -248px 0;
-}
-
-.ico--ucd {
-  background-position: 0 -124px;
-}
-
-.ico--brand {
-  background-position: -124px -124px;
-}
-
-.ico--collab {
-  background-position: -248px -124px;
 }
