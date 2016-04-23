@@ -14,19 +14,25 @@
     position: absolute; /* 2 */
     top: 50%; /* 2 */
     transform: translateY(-55%); /* 2 */
+    width: 100%;
   }
 
+
+
+.panel--404 {}
 .panel--about {}
-
 .panel--approach {}
-
-.panel--work {}
-
-.panel--process {}
-
-.panel--notes {}
-
 .panel--contact {}
+.panel--intro {
+  .panel__content {
+    transform: translateY(-50%);
+  }
+}
+.panel--notes {}
+.panel--notes-sect {}
+.panel--nst {}
+.panel--process {}
+.panel--work {}
 
 
 
