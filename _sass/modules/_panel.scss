@@ -8,7 +8,7 @@
    * 2. Centers vertically.
    *    https://css-tricks.com/centering-css-complete-guide/#vertical-block-unknown
    */
-  .panel__content {
+  .panel__bd {
     left: 50%; /* 1 */
     margin-left: -35rem; /* 1 */
     position: absolute; /* 2 */
@@ -24,7 +24,7 @@
 .panel--approach {}
 .panel--contact {}
 .panel--intro {
-  .panel__content {
+  .panel__bd {
     transform: translateY(-50%);
   }
 }
@@ -37,7 +37,7 @@
 
 
 @media only screen and (max-width: 70em) {
-  .panel__content {
+  .panel__bd {
     left: 0;
     margin-left: 0;
   }
@@ -50,7 +50,7 @@
     padding: 4.2rem 0;
   }
 
-  .panel__content {
+  .panel__bd {
     position: static;
     top: 0;
     transform: none;

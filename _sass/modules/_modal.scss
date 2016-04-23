@@ -20,7 +20,7 @@
    * 2. Centers vertically.
    *    https://css-tricks.com/centering-css-complete-guide/#vertical-block-unknown
    */
-  .modal__content {
+  .modal__bd {
     left: 50%; /* 1 */
     margin-left: -35rem; /* 1 */
     position: absolute; /* 2 */
@@ -40,14 +40,14 @@
   }
 
 @media only screen and (max-width: 70em) {
-  .modal__content {
+  .modal__bd {
     left: 0;
     margin-left: 0;
   }
 }
 
 @media only screen and (max-width: 30em) {
-  .modal__content {
+  .modal__bd {
     text-align: left;
   }
 }
