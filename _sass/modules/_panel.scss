@@ -3,36 +3,41 @@
   position: relative;
   width: 100%;
 }
-  /**
-   * 1. Centers horizontally. Uses offset based on max-width set on `.l-constrain`
-   * 2. Centers vertically.
-   *    https://css-tricks.com/centering-css-complete-guide/#vertical-block-unknown
-   */
-  .panel__bd {
-    left: 50%; /* 1 */
-    margin-left: -35rem; /* 1 */
-    position: absolute; /* 2 */
-    top: 50%; /* 2 */
-    transform: translateY(-55%); /* 2 */
-    width: 100%;
-  }
 
-
+.panel--int {
+  min-height: 80vh;
+}
 
 .panel--404 {}
 .panel--about {}
 .panel--approach {}
 .panel--contact {}
-.panel--intro {
-  .panel__bd {
-    transform: translateY(-50%);
-  }
-}
+.panel--intro {}
 .panel--notes {}
 .panel--notes-sect {}
 .panel--nst {}
 .panel--process {}
 .panel--work {}
+
+
+
+/**
+ * 1. Centers horizontally. Uses offset based on max-width set on `.l-constrain`
+ * 2. Centers vertically.
+ *    https://css-tricks.com/centering-css-complete-guide/#vertical-block-unknown
+ */
+.panel__bd {
+  left: 50%; /* 1 */
+  margin-left: -35rem; /* 1 */
+  position: absolute; /* 2 */
+  top: 50%; /* 2 */
+  transform: translateY(-55%); /* 2 */
+  width: 100%;
+}
+
+.panel__bd--bnr {
+  transform: translateY(-50%);
+}
 
 
 
@@ -50,10 +55,24 @@
     padding: 4.2rem 0;
   }
 
+  .panel--404,
+  .panel--int,
+  .panel--intro {
+    min-height: 70vh;
+  }
+
+
+
   .panel__bd {
     position: static;
     top: 0;
     transform: none;
+  }
+
+  .panel__bd--bnr {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-35%);
   }
 
 }
