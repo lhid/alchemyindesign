@@ -120,10 +120,19 @@ code {
   font-family: 'dejavu_sans_monobook', 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
 }
 
+blockquote {
+  & p {
+    &:before,
+    &:after {
+      font-family: 'permanent_markerregular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    }
+  }
+}
+
 hr {
   border: none;
-  border-top: 2px solid #202020;
-  margin: 1.5rem auto;
+  border-top: 1px solid #9A9A9A;
+  margin: 2.8rem auto;
 }
 
 textarea,

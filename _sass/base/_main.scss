@@ -120,7 +120,7 @@ blockquote {
     font-style: italic;
     &:before {
       content: '\201C';
-      left: -1rem;
+      left: -1.25rem;
       top: .75rem;
       vertical-align: text-bottom;
     }
@@ -141,6 +141,15 @@ blockquote {
   }
 }
 
+
+figure {
+  margin: 1.4rem 0;
+}
+
+figcaption {
+  margin-top: .7rem;
+  text-align: center;
+}
 
 
 ol,
