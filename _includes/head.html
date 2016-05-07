@@ -9,6 +9,29 @@
   <meta name="author" content="Alchemy by Leban Hyde. UX + Branding." />
   <meta name="contact" content="leban@alchemyindesign.com" />
 
+
+
+  <!-- Facebook Meta -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
+  <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | replace:'/index.html','/' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:image" content="{% if page.featured_image %}{{ page.featured_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape_once }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:site_name" content="{{ site.name }}">
+
+
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@lhid">
+  <meta name="twitter:creator" content="@lhid">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape_once }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.featured_image %}{{ page.featured_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+  <meta name="twitter:url" content="{{ page.url | replace:'/index.html','/' | prepend: site.baseurl | prepend: site.url }}">
+
+
+
   <!-- Favicon stack | https://realfavicongenerator.net/ -->
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
