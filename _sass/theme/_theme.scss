@@ -151,6 +151,14 @@ textarea:focus,
   outline: none;
 }
 
+figure {
+  a {
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
+
 
 /**
  * Remove text-shadow in selection highlight:
@@ -481,9 +489,25 @@ a:hover > .ico--close {
   @include background-size(cover);
 }
 
+.panel--contact-mobile {
+  background-attachment: fixed;
+  background-image: url(../img/panel--contact-mobile.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
 .panel--intro {
   background-attachment: fixed;
   background-image: url(../img/hero-about.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--mobile {
+  background-attachment: fixed;
+  background-image: url(../img/hero-mobile.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);
