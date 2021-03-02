@@ -1,8 +1,8 @@
 name:           "Alchemy by Leban Hyde"
 description:    "The professional works and writings of Leban Hyde. Focusing on UX, branding, and the alchemy in between"
-url:            "http://alchemyindesign.com"
+url:            "https://alchemyindesign.com"
 baseurl:        ""
 logo:           "/img/profile-pic.png"
 timezone:       "US/Central"
 author:         "Leban Hyde"
-exclude:        ["drafts"]
+exclude:        ["drafts", "sftp-config.json"]
