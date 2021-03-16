@@ -5,4 +5,4 @@ baseurl:        ""
 logo:           "/img/profile-pic.png"
 timezone:       "US/Central"
 author:         "Leban Hyde"
-exclude:        ["drafts", "sftp-config.json"]
+exclude:        ["drafts"]
