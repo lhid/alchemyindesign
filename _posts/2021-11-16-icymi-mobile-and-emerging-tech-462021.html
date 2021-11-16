@@ -1,0 +1,113 @@
+---
+layout:           post
+categories:       notes
+title:            "ICYMI: Mobile & Emerging Tech; 46:2021"
+title_meta:       "App Store Hours, iOS 15.2, Virtual Fitting Rooms, and more in this week's issue of…"
+featured_image:   /img/hero-notes.jpg
+description:      "A weekly dispatch on mobile & emerging tech."
+excerpt:          "App Store Hours, iOS 15.2, Virtual Fitting Rooms, and more…"
+---
+
+<div class="section-minor">
+
+  <h2>Week 46</h2>
+
+  <img alt="AirTags and unknown items in Find My app" class="is-scalable" data-id="4426334" src="https://gallery.tinyletterapp.com/ef02f00f746e0f629442dbc6eec8e6a856b7c7a6/images/d81a98b2-c093-9592-9e90-48da10f23ba5.jpg" />
+
+  <p>
+    <strong>Push It.</strong> <a href="https://www.producthunt.com/posts/push-it-3?utm_campaign=9340_2021-11-07&utm_medium=email&utm_source=Product+Hunt&utm_term=editorial">An app for sending custom push notifications to your friends</a>, was trending no. 1 in Top Free Apps in the App Store. It&#39;s currently limited to Australia and California, which, obviously by the complaints under <a href="https://apps.apple.com/us/app/push-it-get-it-now/id1588144619">Ratings &amp; Reviews</a>, wasn&#39;t clearly communicated in the description. But what I really wanted to point out is that some of the 5-star ratings do not match the content of the review itself. Related: <a href="https://www.nngroup.com/articles/campbells-law/?utm_source=Alertbox&utm_campaign=dd3a6e24de-EMAIL_CAMPAIGN_2020_11_12_08_52_COPY_01&utm_medium=email&utm_term=0_7f29a2b335-dd3a6e24de-40313949">Campbell&#39;s Law</a>.
+  </p>
+
+  <p>
+    <strong>App Store&hellip;</strong> <a href="https://techcrunch.com/2021/11/08/apple-says-app-store-wont-close-to-developers-over-holidays-as-in-previous-years/?utm_medium=TCnewsletter&tpcc=TCdailynewsletter">will stay open to developer submissions over the holidays</a>. As this is one of the busiest times of the year for app traffic, the change will be a boon for developers who need to push any critical fixes or updates. Of course the downside is that, if you&#39;re on a team that has to push out updates, you may not get the holiday break you intended.
+  </p>
+
+  <p>
+    <strong>iOS 15.2 Beta.</strong> <a href="https://www.engadget.com/ios-15-2-beta-nearby-airtag-scan-legacy-contacts-112524218.html%20https://www.engadget.com/...">AirTag searches and Legacy contacts introduced in latest beta</a>. In an effort to help deter stalking, Apple allows the ability to disable any nearby trackable items in the Find My app. You can now also designate someone as a Legacy Contact for accessing your digital info in the event of&hellip; ahem, your passing. We&#39;ll see how both of these features work once they hit public release.
+  </p>
+
+  <p>
+    <strong>Virtual Fitting Rooms.</strong> <a href="https://www.morningbrew.com/emerging-tech/s/your-guide-to-virtual-fitting-rooms?utm_campaign=etb&utm_medium=newsletter&utm_source=morning_brew">Everything that you need to know about the tech that allows shoppers to try stuff on at home</a>. It&#39;s a bit of a long read, but this post by Emerging Tech Brew covers a brief history, the underlying tech, and the current challenges. Although I doubt that you&#39;ll ever be able to replace trying things on in-store, it&#39;s still pretty cool to see how far things have come along since the initial days of online shopping.
+  </p>
+
+  <p>
+    <strong>App Icon Book.</strong> <a href="https://www.appiconbook.com">A book that celebrates the art and craft and the golden age of icon design</a>. In a thread on Twitter, <a href="https://twitter.com/flarup/status/1458043469629431817">Michael Flarup announced</a> the Kickstarter campaign to power the first run of the now completed book. In what I&#39;m sure will become the new coffee table book for mobile product peeps, it&#39;s just a shame that it won&#39;t ship in time for the holidays. 
+  </p>
+
+
+
+  <h2>From the desk of&hellip;</h2>
+
+  <p>
+    Picking up where <a href="https://www.alchemyindesign.com/notes/2021/11/10/icymi-mobile-and-emerging-tech-452021.html">we left off</a>, I&#39;ll continue to dig in further on <a href="https://developer.android.com/about/versions/12/12L">Android 12L</a>. Last week we thought about the why behind taking an app from phone to larger screens, this week we&#39;ll go over the how. At first pass, many of us &mdash; myself included &mdash; would likely want to start with layout concerns. After all, that&#39;s the most logical thing to address when changing screen sizes. However, some of the layout changes we might make could be affected by <a href="https://youtu.be/ir3LztqbeRI?t=528">the navigation and app architecture</a> and vice versa.
+    </p>
+
+  <p>
+    The UI component itself is an easier lift, so it might be better to start here. If you are using the <a href="https://material.io/components/bottom-navigation">bottom navigation</a> pattern in the phone version of the app, Android recommends converting it to a <a href="https://m3.material.io/components/navigation-rail/overview">navigation rail</a> for larger screens. If you&#39;re not familiar, it was introduced earlier this year during <a href="https://io.google/2021/session/b2f0dee6-b649-4e20-8ad6-69266e353f05/?lng=en">Google I/O</a> and rolled out with the subsequent <a href="http://material.io/components/navigation-rail#behavior">Material Design</a> updates. This pattern makes better use of the available real estate by moving the navigation from the bottom of the screen to the lefthand side.
+  </p>
+
+  <p>
+    In Android, there is the concept of the <a href="https://developer.android.com/guide/navigation/navigation-design-graph">Navigation Graph</a> (similar to the <a href="https://developer.apple.com/tutorials/app-dev-training/creating-a-navigation-stack">Navigation Stack</a> in iOS, if you&#39;re more familiar with that). For those of us on the design side, it&#39;s essentially the development version of a screen flow. This may be a good time to review the overall architecture and compare it against research data to make sure the navigation is in sync with the user&#39;s task flow. Additional changes that we may need to make to the views themselves could also affect the Navigation Graph, which we&#39;ll cover in next week&#39;s dispatch.
+  </p>
+
+  <br />
+
+  <p>
+    <strong>P.S.</strong> App Annie has released a new report on <a href="http://www.appannie.com/en/insights/market-data/6-mobile-forecasts-to-help-you-succeed-in-2022/?utm_medium=TCnewsletter&tpcc=TCappnewsletter">six mobile forecasts for 2022</a>. Probably worth the download.
+  </p>
+
+
+
+  <hr />
+
+
+
+  <h3>Articles</h3>
+
+  <ul>
+    <li>
+      <a href="http://www.producthunt.com/posts/push-it-3?utm_campaign=9340_2021-11-07&utm_medium=email&utm_source=Product+Hunt&utm_term=editorial">Push It: Send custom push notifications to your friends</a> via <em>Product Hunt</em>
+    </li>
+    <li>
+      <a href="https://techcrunch.com/2021/11/08/apple-says-app-store-wont-close-to-developers-over-holidays-as-in-previous-years/?utm_medium=TCnewsletter&tpcc=TCdailynewsletter">Apple says App Store won&rsquo;t close to developers over holidays, as in previous years</a> via <em>TechCrunch</em>
+    </li>
+    <li>
+      <a href="https://www.engadget.com/ios-15-2-beta-nearby-airtag-scan-legacy-contacts-112524218.html%20https://www.engadget.com/...">iOS 15.2 beta introduces nearby AirTag searches and Legacy Contacts</a> via <em>Engadget</em>
+    </li>
+    <li>
+      <a href="https://www.morningbrew.com/emerging-tech/s/your-guide-to-virtual-fitting-rooms?utm_campaign=etb&utm_medium=newsletter&utm_source=morning_brew">Your Guide to Virtual Fitting Rooms</a> via <em>Emerging Tech Brew</em>
+    </li>
+    <li>
+      <a href="https://twitter.com/flarup/status/1458043469629431817?utm_medium=TCnewsletter&tpcc=TCappnewsletter">App Icon Book</a> via <em>Michael Flarup (Twitter)</em>
+    </li>
+  </ul>
+
+  <h3>Events</h3>
+
+  <ul>
+    <li>
+      [Nov 18 @ 11am CST] <a href="https://roadtoimmersivetech.splashthat.com/?utm_campaign=Other_global_Webinar-Invites_2021-11-%5BGLOBAL%5D-%5BDG%5D-ForresterReport-Event-Invitation&utm_content=2021-11-%5BGLOBAL%5D-%5BDG%5D-ForresterReport-Event-Invitation&utm_medium=email&utm_source=Eloqua">How the pandemic catalyzed enterprises to embrace immersive tech</a> via <em>Unity</em>
+    </li>
+    <li>
+      [Replay] <a href="https://firebase.google.com/summit">Firebase Summit 2021</a> via <em>Firebase</em>
+    </li>
+  </ul>
+
+  <h3>Resources</h3>
+
+  <ul>
+    <li>
+      [PDF] <a href="https://www.appannie.com/en/insights/market-data/6-mobile-forecasts-to-help-you-succeed-in-2022/?utm_medium=TCnewsletter&tpcc=TCappnewsletter">2022: A World Transformed &mdash; 6 Mobile Forecasts to Help You Succeed</a> via <em>App Annie</em>
+    </li>
+    <li>
+      [PDF] <a href="https://www.productboard.com/ebook/product-discovery-essential-guide/?utm_medium=email&utm_source=nurture&utm_content=mattermade-nurture-week4&mkt_tok=MTI4LUpIUi04NzEAAAGAqajxuuh2vzziSRUdKtLYCLmi-3AivmD08AsfSt65t0uTfSORHjpCrKEHYXBTs5bax_egMTTp1mpNAp7NvdNusL5DwBCbydxZ4b9OFxXsxA">The Essential Guide to Product Discovery</a> via <em>Productboard</em>
+    </li>
+    <li>
+      [PDF] <a href="https://www.theappfuel.com/upgrade#upgrade-examples">30 Free App Tricks (and Best Practices)</a> via <em>App Fuel</em>
+    </li>
+    <li>
+      [Library] <a href="http://mobbin.design/apps/git-hub-ios-df3496a6-f24d-4fce-be58-d3a1501e973a?utm_source=newsletter&utm_medium=email">GitHub: Projects, ideas &amp; code to go</a> via <em>Mobbin</em>
+    </li>
+  </ul>
+
+</div>
