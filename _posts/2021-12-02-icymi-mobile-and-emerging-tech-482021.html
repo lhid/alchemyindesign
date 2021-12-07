@@ -1,0 +1,145 @@
+---
+layout:           post
+categories:       notes
+title:            "ICYMI: Mobile & Emerging Tech; 48:2021"
+title_meta:       "Android 12 Review, Galaxy Fold Review, One UI 4, and more in this week's issue of…"
+featured_image:   /img/hero-notes.jpg
+description:      "A weekly dispatch on mobile & emerging tech."
+excerpt:          "Android 12 Review, Galaxy Fold Review, One UI 4, and more…"
+---
+
+<div class="section-minor">
+
+  <h2>Week 48</h2>
+
+  <img alt="Side-by-side comparison of Android 12 and One UI 4" class="is-scalable" data-id="4447030" src="https://gallery.tinyletterapp.com/ef02f00f746e0f629442dbc6eec8e6a856b7c7a6/images/e0151a91-b6ad-926f-11f9-db77baeaad14.jpg" />
+
+  <p>
+    <strong>Android 12.</strong> <a href="https://www.engadget.com/android-12-review-material-you-privacy-controls-180010087.html">A review of Material You and other features that came with the latest version of Android</a>. If you haven&#39;t already experienced it for yourself, this article gives a pretty solid overview of the main details as well as some screenshot candy. It also comes with a video if you don&#39;t care to read or prefer to multitask and have it playing in the background.
+  </p>
+
+  <p>
+    <strong>Galaxy Fold.</strong> <a href="https://www.getrevue.co/profile/shutupzac96/issues/wiki-weekly-issue-2-836350?utm_campaign=Issue&utm_content=view_in_browser&utm_medium=email&utm_source=Wiki+Weekly+">A review of the Galaxy Z Fold3 from a month of daily use</a>. In fully disclosure, the author also works for Android Police so it leans towards the positive, but the write-up still reads as sincere (see: <em>battery life</em>). And I&#39;m still trying to figure out a way to get my hands on one (no dice on Black Friday/Cyber Monday deals boooo).
+  </p>
+
+  <p>
+    <strong>One UI 4.</strong> <a href="https://www.digitaltrends.com/mobile/samsung-one-ui-4-vs-android-12-pixel-6-pro/?utm_campaign=155856_Editorial_Decrypted_11242021&utm_medium=email&utm_source=dotdigital&dm_i=6MG2,3C9C,1ZVVI1,FPBJ,1">A nice side-by-side comparison of Android 12 a la Samsung vs Pixel 6 Pro</a>. The author mainly compares items of everyday use, which I think is perfectly reasonable. It likely gives a more accurate impression of the experience of the majority of users.
+  </p>
+
+  <p>
+    <strong>Spotify.</strong> <a href="http://gizmodo.com/spotify-pulls-plug-on-car-view-feature-offers-users-no-1848127952?utm_source=gizmodo_newsletter&utm_medium=email&utm_campaign=2021-11-28">The Car View feature has been retired for both iOS and Android</a>. And without a viable alternative for immediate use (however, it looks like I still have it?). It was a useful feature that promoted safe driving, so I do not follow their logic at all. As mentioned in the article, I&#39;m also in the camp of users suspicious that the timing of this falls conveniently in line with the pre-order for Car Thing (quite literally the first thing I thought of when I came across the announcement).
+  </p>
+
+  <p>
+    <strong>Google Messages&hellip;</strong> <a href="https://mashable.com/article/android-ios-text-reactions-emoji">will finally be getting iOS reactions on Android</a>. That&#39;s it. That&#39;s the tweet.
+  </p>
+
+
+
+  <h2>From the desk of&hellip;</h2>
+
+  <p>
+    Continuing with the <a href="https://www.youtube.com/playlist?list=PLWz5rJ2EKKc99PA-mKk2rz0jYXshN94sM">Android 12L</a> deep dive, <a href="https://www.alchemyindesign.com/notes/2021/11/16/icymi-mobile-and-emerging-tech-462021.html">last issue</a> we covered the Navigation Graph and related UI components. This week we&#39;ll get into actual layout concerns and view recommendations.
+  </p>
+
+  <p>
+    In the example app used for the Android Developer Summit, the very common list and detail pattern was implemented as separate views on the phone version. For the version targeting larger screens, the recommendation is conjoin those views in a single view using the <a href="https://m3.material.io/foundations/adaptive-design/foldables/compositions#40b3eb64-8143-4c73-9a39-11b4fe123221">List Detail layout</a>. For foldables, this can be optimized further by using the <a href="https://developer.android.com/guide/topics/ui/layout/twopane">Sliding Pane</a> view to allow the layout to adjust as the device opens and closes.
+  </p>
+
+  <p>
+    The List Detail layout are just one of four <a href="https://m3.material.io/foundations/adaptive-design/foldables/compositions">Core Compositions</a> (also referred to as <a href="https://m3.material.io/libraries/mdc-android/canonical-layouts">Canonical Layouts</a>) that are worth exploring. The most appropriate choice depends on your app and which patterns are already being used. But as you make layout choices, you should be asking yourself the following questions as you go:
+  </p>
+
+  <ul>
+    <li>
+      Getting larger &mdash; What can I add?
+    </li>
+    <li>
+      Getting smaller &mdash; What can I take away?
+    </li>
+  </ul>
+
+  <p>
+    You can read more about large screens and foldables under the <a href="https://m3.material.io/foundations/adaptive-design/overview">Adaptive Design</a> section of MD3.
+  </p>
+
+
+
+  <hr />
+
+
+
+  <h3>Articles</h3>
+
+  <ul>
+    <li>
+      <a href="https://www.engadget.com/android-12-review-material-you-privacy-controls-180010087.html">Android 12 review: Living in a Material (You) world</a> via <em>Engadget</em>
+    </li>
+    <li>
+      <a href="https://www.getrevue.co/profile/shutupzac96/issues/wiki-weekly-issue-2-836350?utm_campaign=Issue&utm_content=view_in_browser&utm_medium=email&utm_source=Wiki+Weekly+">The Galaxy Z Fold3: Folding perfection</a> via <em>Wiki Weekly</em>
+    </li>
+    <li>
+      <a href="https://www.digitaltrends.com/mobile/samsung-one-ui-4-vs-android-12-pixel-6-pro/?utm_campaign=155856_Editorial_Decrypted_11242021&utm_medium=email&utm_source=dotdigital&dm_i=6MG2,3C9C,1ZVVI1,FPBJ,1">We compared Samsung&rsquo;s One UI 4 against Android 12 on the Google Pixel 6 Pro</a> via <em>Digital Trends</em>
+    </li>
+    <li>
+      <a href="https://gizmodo.com/spotify-pulls-plug-on-car-view-feature-offers-users-no-1848127952?utm_source=gizmodo_newsletter&utm_medium=email&utm_campaign=2021-11-28">Spotify Pulls Plug on Car View Feature, Offers Users No Alternative</a> via <em>Gizmodo</em>
+    </li>
+    <li>
+      <a href="https://mashable.com/article/android-ios-text-reactions-emoji">Google might finally fix iOS reactions in Android messages</a> via <em>Mashable</em>
+    </li>
+  </ul>
+
+  <p>
+    (Week 47&hellip; If I would&#39;ve gotten it out)
+  </p>
+
+  <ul>
+    <li>
+      <a href="https://gizmodo.com/google-has-reportedly-canceled-its-never-announced-fold-1848061031">Google Has Reportedly Canceled Its Never-Announced Foldable Phone</a> via <em>Gizmodo</em>
+    </li>
+    <li>
+      <a href="https://www.igeekphone.com/tesla-model-pi-smartphone-will-launch-with-starlink-technology/">Tesla Model Pi Smartphone Will Launch With Starlink Technology</a> via <em>IGeekphone</em>
+    </li>
+    <li>
+      <a href="https://www.engadget.com/samsung-galaxy-s21-phones-get-update-to-one-ui-4-110031121.html">Samsung&#39;s Galaxy S21 series updated to One UI 4 with new Android 12 features</a> via <em>Engadget</em>
+    </li>
+    <li>
+      <a href="https://www.digitaltrends.com/mobile/google-maps-new-holiday-tools/?utm_campaign=153932_Editorial_Decrypted_11182021&utm_medium=email&utm_source=dotdigital&dm_i=6MG2,3ARW,1ZVVI1,FHXT,1">Google Maps is adding new shopping tools for the holiday season</a> via <em>Digital Trends</em>
+    </li>
+    <li>
+      <a href="https://techcrunch.com/2021/11/17/beginning-next-year-apple-will-mail-you-parts-and-tools-to-fix-your-iphone-and-mac-at-home/?utm_medium=TCnewsletter&tpcc=TCdailynewsletter">Beginning next year, Apple will send you parts and tools to fix your iPhone and Mac at home</a> via <em>TechCrunch</em>
+    </li>
+  </ul>
+
+  <h3>Events</h3>
+
+  <ul>
+    <li>
+      [Dec 9 @ 11am CST] <a href="https://www.bitrise.io/webinar/state-of-mobile-shopping-apps-2021-webinar">The state of mobile shopping apps in 2021</a> via <em>Bitrise</em>
+    </li>
+  </ul>
+
+  <h3>Resources</h3>
+
+  <ul>
+    <li>
+      [Guidelines] <a href="https://android-developers.googleblog.com/2021/11/android-developer-summit-21-large-screens.html" itemprop="url" title="#Android Developer Summit: 3 things to know for Large Screens on Android!">3 things to know for Large Screens on Android!</a> via <em>Android Developers</em>
+    </li>
+    <li>
+      [Guidelines] <a href="https://developer.amazon.com/en-US/docs/alexa/interaction-model-design/about-designing-an-interaction-model.html?&sc_category=Owned&sc_channel=EM&sc_campaign=Newsletter&sc_publisher=NW&sc_content=Content&sc_funnel=Educate&sc_country=WW&sc_medium=Owned_EM_Newsletter_NW_Content_Educate_WW_AlexaDev&sc_segment=AlexaDev&mkt_tok=MzY1LUVGSS0wMjYAAAGAyYYi8_ZW7hqftCHT3Mmhht0WbSapLAd90yF7I2uCTh3Sn7bIz_U3ccpG8a2vUnN_gfzPjZCC9K-MCg6CVve0bQMO9gxBeBOc54dEksX3FigP9w">Design Guide for Interaction Models</a> via <em>Alexa Developer Documentation</em>
+    </li>
+    <li>
+      [Video] <a href="https://www.airship.com/resources/elevate-2021/?utm_medium=email&utm_source=marketo&utm_campaign=211027_event_elevate-2021-on-demand_ww&utm_content=amer&mkt_tok=MzEzLVFQSi0xOTUAAAGAyTk7iDsBRsv4f3M5VDdGekEikFCJvRw6pwVKyxkHl6Qn-mW1tEDgA6Xo20P-DpgqJwAD8bh0-QA0ompp_JvmqMi7nIfWelWYBoqnboW_iA">Elevate 2021: On-Demand Replay</a> via <em>Airship</em>
+    </li>
+    <li>
+      [Video] <a href="https://www.youtube.com/playlist?list=PLl-K7zZEsYLmK7Y_euagUdfKe1YXpAvxN">Firebase Summit 2021 Replay</a> via <em>Firebase</em>
+    </li>
+    <li>
+      [PDF] <a href="https://insights.poqcommerce.com/mobile_customer_experience_report_21?utm_campaign=Bath%20report&utm_medium=email&_hsenc=p2ANqtz-9saDMoYmbph8vr2hPt_ZNZliAEDcFtZMB3em0CZVdk8VItzdUkhqwLe8DMeviKvitUDueZROviosdf9Vnwg_szoldyFWHCeNo8hU584lP-ClAxt0g&_hsmi=183163552&utm_content=183159228&utm_source=hs_email&hsCtaTracking=dff4cd86-c44c-48c7-950a-cb12e4692e18%7C6446fa4f-ce86-4d25-962a-59fc66477c89">Mobile Customer Experience Report 2021</a> via <em>Poq</em>
+    </li>
+    <li>
+      [PDF] <a href="https://www.adjust.com/resources/ebooks/ecommerce-app-report-2021/?utm_source=email&utm_channel=0&utm_campaign=en-content-email-ecommerce-app-report-q42021">E-commerce App Report 2021</a> via <em>Adjust</em>
+    </li>
+  </ul>
+
+</div>
