@@ -534,6 +534,14 @@ a:hover > .ico--close {
   @include background-size(cover);
 }
 
+.panel--contact-ds {
+  background-attachment: fixed;
+  background-image: url(../img/panel--contact-ds.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
 .panel--contact-mobile {
   background-attachment: fixed;
   background-image: url(../img/panel--contact-mobile.jpg);
@@ -553,6 +561,14 @@ a:hover > .ico--close {
 .panel--mobile {
   background-attachment: fixed;
   background-image: url(../img/hero-mobile.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--netflix {
+  background-attachment: fixed;
+  background-image: url(../img/hero-netflix.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);
