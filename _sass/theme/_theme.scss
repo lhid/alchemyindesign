@@ -526,14 +526,6 @@ a:hover > .ico--close {
   @include background-size(cover);
 }
 
-.panel--cxn {
-  background-attachment: fixed;
-  background-image: url(../img/hero-connections.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  @include background-size(cover);
-}
-
 .panel--contact-ds {
   background-attachment: fixed;
   background-image: url(../img/panel--contact-ds.jpg);
@@ -545,6 +537,22 @@ a:hover > .ico--close {
 .panel--contact-mobile {
   background-attachment: fixed;
   background-image: url(../img/panel--contact-mobile.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--cxn {
+  background-attachment: fixed;
+  background-image: url(../img/hero-connections.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--ds {
+  background-attachment: fixed;
+  background-image: url(../img/panel--contact-ds.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);
