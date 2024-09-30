@@ -566,6 +566,14 @@ a:hover > .ico--close {
   @include background-size(cover);
 }
 
+.panel--md {
+  background-attachment: fixed;
+  background-image: url(../img/hero-md.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
 .panel--mobile {
   background-attachment: fixed;
   background-image: url(../img/hero-mobile.jpg);
