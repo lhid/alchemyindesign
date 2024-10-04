@@ -48,7 +48,7 @@
     bottom: 0;
     display: table;
     left: 0;
-    position: fixed;
+    position: relative;
     text-align: center;
     z-index: 1;
     & > li {
@@ -58,7 +58,7 @@
         padding-right: 1em;
       }
       & > a {
-        padding: 1.5em 1em;
+        padding: 2.2em 1em;
       }
     }
   }
