@@ -1,0 +1,26 @@
+.card {
+	border: 2px solid #202020;
+	border-radius: 2em;
+	display: block;
+	margin-bottom: 1.4rem;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+a.card {
+	color: #202020;
+	&:hover {
+		color: #f95197;
+		border: 2px solid #9A9A9A;
+		@include box-shadow(0px 0px 8px 2px rgba(102, 102, 102, 0.5));
+	}
+}
+
+.card__bd {
+	padding: 1.4rem;
+}
+
+.card__img {
+	width: 100%;
+}
