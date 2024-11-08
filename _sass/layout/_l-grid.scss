@@ -18,21 +18,6 @@
   }
 }
 
-// @media only screen and (max-width: 48em) {
-//   .l-row {
-//     margin-left: -.5rem;
-//     margin-right: -.5rem;
-//   }
-// }
-
-// @media only screen and (max-width: 30em) {
-//   .l-row {
-//     margin-left: 0rem;
-//     margin-right: 0rem;
-//   }
-// }
-
-
 
 
 .l-col,
@@ -42,12 +27,6 @@
 }
 .l-col {
   float: left;
-  // &:first-child {
-  //   padding-left: 0;
-  // }
-  // &:last-child {
-  //   padding-right: 0;
-  // }
 }
 
 
@@ -55,14 +34,9 @@
 .l-col-r {
   float: right;
   &:first-child {
-    // padding-right: 0;
     & + .l-col {
-      // padding-left: 0;
       padding-right: 1.5rem;
     }
-  }
-  &:last-child {
-    // padding-left: 0;
   }
 }
 
@@ -115,18 +89,9 @@
 
 @media only screen and (max-width: 47.75em) {
 
-  // .l-col,
-  // .l-col-r {
-  //   padding: 0;
-  // }
 
   .l-col-r {
     float: left;
-    // &:first-child {
-    //   & + .l-col {
-    //     padding-right: 0;
-    //   }
-    // }
   }
 
   [class*='l-col--'] {
