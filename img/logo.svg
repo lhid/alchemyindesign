@@ -15,14 +15,15 @@
         fill: #000;
       }
     </style>
-    <linearGradient id="linear-gradient" x1="219.7" y1="631" x2="98.8" y2="298.9" gradientTransform="translate(90 -354.9)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#66f1fa"/>
-      <stop offset="0" stop-color="#60dee6"/>
-      <stop offset=".2" stop-color="#499ba0"/>
-      <stop offset=".4" stop-color="#376669"/>
-      <stop offset=".5" stop-color="#2b4041"/>
-      <stop offset=".7" stop-color="#232929"/>
-      <stop offset=".7" stop-color="#202020"/>
+    <linearGradient id="linear-gradient" x1="100%" y1="100%">
+      <stop offset="0" stop-color="#66f1fa">
+        <animate attributeName="stop-color" values="#66f1fa;#60dee6;#499ba0;#376669;#2b4041;#232929;#202020;#232929;#2b4041;#376669;#499ba0;#60dee6;#66f1fa" dur="14s" repeatCount="indefinite" />
+        <animate attributeName="offset" values="0;.1;.3;.5;.7;.5;.3;.1;0" dur="14s" repeatCount="indefinite" />
+      </stop>
+      <stop offset=".7" stop-color="#202020">
+        <animate attributeName="stop-color" values="#202020;#232929;#2b4041;#376669;#499ba0;#60dee6;#66f1fa;#60dee6;#499ba0;#376669;#2b4041;#232929;#202020" dur="14s" repeatCount="indefinite" />
+        <animate attributeName="offset" values=".7;.8;.9;1;.9;.8;.7" dur="14s" repeatCount="indefinite" />
+      </stop>
     </linearGradient>
   </defs>
   <path class="cls-2" d="M502.3,7.3l-9.5-8.8L10.1,11.1v199.4l11,11.2,481.1-12.6V7.3h0ZM19.7,20.8l9.2,9.3.3-.3v171.4l-9.4.2s0-180.7,0-180.7ZM501.3,208.1l-479.7,12.6-9.3-9.4,479.5-12.6V17.3h0s0,0,0,0l-9.6.2h0S29.6,29.4,29.6,29.4l-9.2-9.3L501.3,7.4v200.7ZM30.2,201.2V30.3l452-11.8v170.8l-452,11.8Z"/>
