@@ -622,6 +622,14 @@ a:hover > .ico--close {
   @include background-size(cover);
 }
 
+.panel--rideshare {
+  background-attachment: fixed;
+  background-image: url(../img/hero-rideshare.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
 .panel--visual-design {
   background-attachment: fixed;
   background-image: url(../img/hero-visual-design.jpg);
