@@ -175,7 +175,7 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
 
 
           
-          <h3>Current State: Task FLows</h3>
+          <h3>Current State: Task Flows</h3>
 
           <p>
             For both apps, <i>Scheduling</i> and <i>Engage</i>, the <strong>primary use cases</strong> were the same, as stated in the problem definition above…
@@ -210,6 +210,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
 
           <h3>Current State: Service Blueprint</h3>
 
+          <p>
+            As is the case with most integrations, it’s equally important to understand the service layer in order to be aware of all the moving parts…
+          </p>
+
           <figure class="txt-c">
             <img class="is-scalable-max" src="/img/case-studies/rideshare-service-blueprint-current.png" alt="Default screen, From Dealership | Rideshare + Scheduling" />
 
@@ -218,6 +222,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
             </figcaption>
           </figure>
 
+          <p>
+            In the diagram above, we can see how the interaction at the UI layer triggers events to happen on the service layer, kicking off additional interactions between the API and the notification service as well as receiving Ride Status updates back to the UI.
+          </p>
+
 
 
           <br />
@@ -225,6 +233,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
 
 
           <h3>Current State: Rideshare - Dealer Side</h3>
+
+          <p>
+            Zooming in on the details, we started taking inventory of the UI layer itself as it currently existed in production…
+          </p>
 
           <figure class="txt-c">
             <img class="is-scalable-max" src="/img/case-studies/rideshare-scheduling-1-default.png" alt="Default screen, From Dealership | Rideshare + Scheduling" />
@@ -242,6 +254,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
             </figcaption>
           </figure>
 
+          <p>
+            We can see how the dealership user begins the ride hailing journey on desktop, the form fields that require input, and then, further down the path, what a <i>Request Accepted</i> status looks like.
+          </p>
+
 
 
           <br />
@@ -250,6 +266,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
 
           <h3>Current State: Rideshare - Consumer Side</h3>
 
+          <p>
+            On the consumer side of the equation, we can see the text alert that they recieve once the ride has been accepted as well as an overview of their rideshare journey…
+          </p>
+
           <figure class="txt-c">
             <img class="is-scalable-max" src="/img/case-studies/rideshare-lyft-taskflow-current.png" alt="Default screen, From Dealership | Rideshare + Scheduling" />
 
@@ -257,6 +277,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
               Default screen, From Dealership. Rideshare, Scheduling app.
             </figcaption>
           </figure>
+
+          <p>
+            If you compare this to previous Service Blueprint, you start to get a picture of how everything comes together from the dealership user to the rideshare service to the consumer user
+          </p>
 
 
 
@@ -384,6 +408,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
 
           <h3>Future State: Service Blueprint</h3>
 
+          <p>
+            The Service Blueprint for the desktop experience has now been updated to be more specific to the tablet experience, with a focus on the Check-In workflow.
+          </p>
+
           <figure class="txt-c">            
             <img class="is-scalable-max" src="/img/case-studies/rideshare-service-blueprint-checkin.png" alt="Service blueprint illustrating work flow and supporting services during Appointment Check-In phase" />
 
@@ -400,6 +428,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
             </figcaption>
           </figure>
 
+          <p>
+            In the two diagrams above, we can see special considerations for the <i>After Check-In</i> and <i>Service Complete</i> portions of the overall service visit.
+          </p>
+
 
 
           <br />
@@ -407,6 +439,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
 
 
           <h3>Future State: Task Flows</h3>
+
+          <p>
+            Those same phases of the service visit mentioned above are illustrated further in the updated task flows…
+          </p>
 
           <figure class="txt-c">            
             <img class="is-scalable-max" src="/img/case-studies/rideshare-engage-taskflow-future.png" alt="Boxes and arrows illustrating task flows at various stages in the Service Visit experience" />
@@ -416,6 +452,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
             </figcaption>
           </figure>
 
+          <p>
+            Note the addition of a <i>Review Request Status</i> path, something that was present — but not illustrated — for the desktop experience. We found that, during peak hours and subsequent rideshare delays, consumers would inquire about the status of their ride.
+          </p>
+
 
 
           <br />
@@ -423,6 +463,15 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
           
 
           <h3>Future State: Mockups</h3>
+
+          <p>
+            The final mockups for the experience aimed to achieve two simultaneous goals:
+          </p>
+
+          <ol>
+            <li>Provide an experience consistent with desktop</li>
+            <li>Provide an experience appropriate for mobile/tablet</li>
+          </ol>
 
           <figure class="txt-c">            
             <img class="is-scalable-max" src="/img/case-studies/rideshare-engage-mockups-future-1.png" alt="Mockups of From Dealership screen, default state and with virtual keyboard exposed." />
@@ -439,6 +488,10 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
               Request Sent to Ride Completed. Rideshare, Engage app.
             </figcaption>
           </figure>
+
+          <p>
+            As called out in the previous task flow, the designs for tablet included considerations for <i>Review Request Status</i>.
+          </p>
 
 
 
@@ -473,7 +526,7 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
           <h3>Interactive Prototype</h3>
 
           <figure class="txt-c">
-            <a href="/prototype-engage-rideshare/">
+            <a href="/prototype-rideshare/">
               <img class="is-scalable-max" src="/img/case-studies/rideshare-engage-prototype.png" alt="Screenshot of interactive prototype | Rideshare Service" />
             </a>
 
@@ -487,11 +540,19 @@ excerpt:          "How a rideshare service was integrated into the check-in expe
         <section class="section-minor">
           <h2>Outcome</h2>
 
+          <p>
+            The integrated rideshare service enhanced the check-in experience by providing additional customer amenities and boosting the brand awareness of the dealership. It also improved workflow efficiencies by allowing the dealership user to stay in the tablet experience and not force them to switch to desktop to hail a ride.
+          </p>
+
+          <p>
+            In addition, the following KPIs were impacted:
+          </p>
+
 
           <div class="l-row">
             <div class="l-col l-col--4-12">
               <p class="txt-c">
-                <strong class="txt-2">1,462</strong><br /> 
+                <strong class="txt-2">1,500</strong><br /> 
                 dealers subscribed
               </p>
             </div>
