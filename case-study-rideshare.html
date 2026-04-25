@@ -1,0 +1,645 @@
+---
+layout:           default
+title_meta:       "Case Study: Rideshare on Engage | Alchemy by Leban Hyde"
+featured_image:   /img/hero-engage-rideshare.jpg
+description:      "How a rideshare service was integrated into the check-in experience on tablet."
+excerpt:          "How a rideshare service was integrated into the check-in experience on tablet."
+---
+
+<article>
+  <div class="panel panel--int panel--rideshare" role="banner">
+    <div class="l-constrain panel__bd panel__bd--bnr">
+      <h1 class="txt-c">
+        Rideshare Service
+      </h1>
+    </div>
+  </div>
+
+  <div class="l-constrain section-minor" id="content">
+    <div class="l-row">
+      <div class="l-col l-col--4-12 section-minor">
+        <h4 class="txt-tight-b">Role:</h4>
+
+        <p class="txt-4 txt-tight-t">Lead UX Architect</p>
+
+        <h4 class="txt-tight-b">Duties:</h4>
+
+        <ul class="list txt-4 txt-tight-t">
+          <li class="txt-tight">Subject Matter Expert, Mobile</li>
+          <li class="txt-tight">Information Architecture</li>
+          <li class="txt-tight">Interaction Design</li>
+          <li class="txt-tight">Visual Design</li>
+        </ul>
+
+        <h4 class="txt-tight-b">Company:</h4>
+
+        <p class="txt-4 txt-tight-t">Xtime, Cox Automotive</p>
+
+        <h4 class="txt-tight-b">Duration:</h4>
+
+        <p class="txt-4 txt-tight-t">2020–2021</p>
+
+        <h4 class="txt-tight-b">Platform:</h4>
+
+        <p class="txt-4 txt-tight-t">Hybrid (React Native, Tablet)</p>
+      </div>
+
+
+
+      <div class="l-col l-col--8-12 section-minor">
+        <p>
+          <b>
+            How a rideshare service was integrated into the check-in experience on tablet, providing additional customer amenities, improving workflow efficiencies, and boosting revenue.
+          </b>
+        </p>
+
+        <section class="section-minor">
+          <h2>Overview</h2>
+
+          <p>
+            <i>Rideshare</i> is an add-on feature for the Xtime platform, designed to Service Department users to hail rides for their customers while the vehicle is being serviced. This feature already existed on service appointment scheduling app for desktop. The ask was to port the same feature over to <i>Engage</i>, a tablet-based app for expediting the check-in process for service appointments.
+          </p>
+        </section>
+
+
+
+        <section class="section-minor">
+          <h2>Kick-Off</h2>
+
+          <p>
+            This was a more tactical project, since the third-party integration already existed on the desktop experience. All the initial problem discovery and market validation had already been handled by the previous project leads.
+          </p>
+
+          <p>
+            My role was to primarily drive solution discovery, make recommendations for mobile/tablet, and design the experience accordingly. Subsequent meetings with Lyft were necessary along the way to ensure a seamless experience across products as well as account for edge cases.
+          </p>
+
+          <br />
+
+          <h3>Challenges</h3>
+
+          <ul>
+            <li>Third-party team collaboration</li>
+            <li>Cross-product integration</li>
+            <li>Cross-platform experience</li>
+          </ul>
+        </section>
+
+
+
+        <section class="section-minor">
+          <h2>Problem Definition</h2>
+
+          <h3>Who</h3>
+
+          <ul>
+            <li>Service Advisor (<i>Dealership user</i>)</li>
+            <li>Consumer (<i>Dealership customer</i>)</li>
+          </ul>
+
+          <h3>What</h3>
+
+          <ul>
+            <li>Allow the Consumer to not have to wait at the dealership</li>
+            <li>Pick the Consumer up from the dealership</li>
+            <li>Bring the Consumer back to the dealership</li>
+          </ul>
+
+          <h3>Where</h3>
+
+          <ul>
+            <li>At the dealership, service department</li>
+            <li>Location of choice within certain constraints set by the dealership</li>
+          </ul>
+
+          <h3>When</h3>
+
+          <ul>
+            <li>During a service visit, after check-in</li>
+            <li>After service is complete</li>
+          </ul>
+
+          <h3>Why</h3>
+
+          <ul>
+            <li>So that Consumer is not <em>“held hostage”</em> at the dealership during a service visit</li>
+            <li>To improve the overall service experience for the consumer, positively impacting the brand</li>
+            <li>Improved workflow efficiency by integrating with tablet app</li>
+            <li>Revenue share potential, increase in profit</li>
+          </ul>
+
+          <br />
+
+          <p>
+            In addition, since this was a tactical exercise, we also needed to answer the following questions specific to the current experience in <i>Engage</i>:
+          </p>
+
+          <ul>
+            <li>
+              How to present the Rideshare UI?
+            </li>
+            <li>
+              How to access the Rideshare UI?
+            </li>
+            <li>
+              Should Transportation Options be moved in the workflow?
+            </li>
+          </ul>
+        </section>
+
+        
+
+        <section class="section-minor">
+          <h2>Solution Discovery</h2>
+
+          <p>
+            For implementation to be successful, we had to address these initial questions:
+          </p>
+
+          <ul>
+            <li>
+              Where in the existing workflow do we surface the rideshare experience?
+            </li>
+            <li>
+              How will we apply mobile standards to the rideshare experience with considerations for tablet?
+            </li>
+          </ul>
+
+          <p>
+            But first, to know where we’re headed, we needed to know where we’ve been…
+          </p>
+
+
+
+          <br />
+
+
+          
+          <h3>Current State: Task Flows</h3>
+
+          <p>
+            For both apps, <i>Scheduling</i> and <i>Engage</i>, the <strong>primary use cases</strong> were the same, as stated in the problem definition above…
+          </p>
+
+          <ol>
+            <li>During a service visit, after check-in</li>
+            <li>After service complete</li>
+          </ol>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-scheduling-taskflow.png" alt="Current task flow for Check-In and Service Complete | Rideshare + Scheduling" />
+
+            <figcaption class="txt-5">
+              Current task flow for Check-In and Service Complete, Scheduling app.
+            </figcaption>
+          </figure>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-engage-taskflow-current.png" alt="Current task flow for Check-In and Service Complete | Rideshare + Engage" />
+
+            <figcaption class="txt-5">
+              Current task flow for Check-In and Service Complete, Engage app.
+            </figcaption>
+          </figure>
+
+
+
+          <br />
+
+
+
+          <h3>Current State: Service Blueprint</h3>
+
+          <p>
+            As is the case with most integrations, it’s equally important to understand the service layer in order to be aware of all the moving parts…
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-service-blueprint-current.png" alt="Default screen, From Dealership | Rideshare + Scheduling" />
+
+            <figcaption class="txt-5">
+              Default screen, From Dealership. Rideshare, Scheduling app.
+            </figcaption>
+          </figure>
+
+          <p>
+            In the diagram above, we can see how the interaction at the UI layer triggers events to happen on the service layer, kicking off additional interactions between the API and the notification service as well as receiving Ride Status updates back to the UI.
+          </p>
+
+
+
+          <br />
+
+
+
+          <h3>Current State: Rideshare - Dealer Side</h3>
+
+          <p>
+            Zooming in on the details, we started taking inventory of the UI layer itself as it currently existed in production…
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-scheduling-1-default.png" alt="Default screen, From Dealership | Rideshare + Scheduling" />
+
+            <figcaption class="txt-5">
+              Default screen, From Dealership. Rideshare, Scheduling app.
+            </figcaption>
+          </figure>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-scheduling-2-accepted.png" alt="Request Accepted | Rideshare + Scheduling" />
+
+            <figcaption class="txt-5">
+              Request Accepted. Rideshare, Scheduling app.
+            </figcaption>
+          </figure>
+
+          <p>
+            We can see how the dealership user begins the ride hailing journey on desktop, the form fields that require input, and then, further down the path, what a <i>Request Accepted</i> status looks like.
+          </p>
+
+
+
+          <br />
+
+
+
+          <h3>Current State: Rideshare - Consumer Side</h3>
+
+          <p>
+            On the consumer side of the equation, we can see the text alert that they recieve once the ride has been accepted as well as an overview of their rideshare journey…
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-lyft-taskflow-current.png" alt="Default screen, From Dealership | Rideshare + Scheduling" />
+
+            <figcaption class="txt-5">
+              Default screen, From Dealership. Rideshare, Scheduling app.
+            </figcaption>
+          </figure>
+
+          <p>
+            If you compare this to previous Service Blueprint, you start to get a picture of how everything comes together from the dealership user to the rideshare service to the consumer user
+          </p>
+
+
+
+          <br />
+
+
+
+          <h3>Comparative Analysis</h3>
+
+          <p>
+            Similar to the desktop experience in the Scheduling app, it was clear that a similar experience would be need for the <i>Engage</i> app. But brought into alignment with mobile standards — specific to tablet for iPadOS and Android.
+          </p>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-research-modals-ipados.png" alt="Comparative research for modals on tablet, iPadOS" />
+
+            <figcaption class="txt-5">
+              Comparative research for modals on tablet, iPadOS
+            </figcaption>
+          </figure>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-research-modals-android.png" alt="Comparative research for modals on tablet, Android" />
+
+            <figcaption class="txt-5">
+              Comparative research for modals on tablet, Android
+            </figcaption>
+          </figure>
+
+
+          <br />
+
+
+          <h3>Feasibility Analysis</h3>
+
+          <p>
+            In addition, the UI for the original integration was built for the web, whereas <i>Engage</i> was a tablet app. However, <i>Engage</i> being built on a hybrid platform — React Native, which leverages web technologies — meant that we might explore potential code reuse. As such, we were faced with the follow questions.
+          </p>
+
+          <ol>
+            <li>
+              Port over the existing web UI, reusing the side drawer pattern?
+            </li>
+            <li>
+              Rebuild the modal as native UI, using a tablet-specific pattern?
+            </li>
+          </ol>
+
+          <p>
+            A major concern for the reusability of the side drawer in conjunction with the virtual keyboard. As form inputs were a necessary part of the ride hailing experience, the virtual keyboard would be active during most of the task. 
+          </p>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-research-modals-keyboard.png" alt="Wireframe illustrating keyboard-to-screen ratio, iPadOS & Android" />
+
+            <figcaption class="txt-5">
+              Keyboard-to-screen ratio, iPadOS & Android
+            </figcaption>
+          </figure>
+
+          <p>
+            The virtual keyboard was the dealbreaker (see below), so we opted for number two:
+            <br />
+            <br />
+            <em>
+              Rebuild the modal as native UI, using a tablet-specific pattern.
+            </em>
+          </p>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-ideation-wireframes-1.png" alt="Wireframes examining the interaction design between the side drawer UI and the virtual keyboard" />
+
+            <figcaption class="txt-5">
+              Side Drawer vs Virtual Keyboard
+            </figcaption>
+          </figure>
+
+
+          <br />
+
+
+
+          <h3>Initial Wireframes</h3>
+
+          <p>
+            Building off of what we learned from the previous investigation (above) and addressing issues with the virtual keyboard, the following wireframes were explored…
+          </p>
+
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-ideation-wireframes-2.png" alt="Wireframes exploring possible solutions for the ride summoning form and virtual keyboard" />
+
+            <figcaption class="txt-5">
+              Gang-Up Modal (Dialog), Gang-Up Full-Screen, Gang-Up Stepper
+            </figcaption>
+          </figure>
+
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-ideation-wireframes-3.png" alt="Wireframes exploring possible solutions for the ride summoning form and virtual keyboard" />
+
+            <figcaption class="txt-5">
+              In-View Modal w/ Sticky Button, 3-Step Modal (Wizard)
+            </figcaption>
+          </figure>
+
+
+
+        </section>
+
+
+
+        <section class="section-minor">
+          <h2>Delivery</h2>
+
+          <p>
+            After several rounds of conversations with product and engineering — and the project be paused and resumed multiple times — the following experience was delivered in close collaboration with the team.
+          </p>
+
+
+
+          <br />
+
+
+
+          <h3>Future State: Service Blueprint</h3>
+
+          <p>
+            The Service Blueprint for the desktop experience has now been updated to be more specific to the tablet experience, with a focus on the Check-In workflow.
+          </p>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-service-blueprint-checkin.png" alt="Service blueprint illustrating work flow and supporting services during Appointment Check-In phase" />
+
+            <figcaption class="txt-5">
+              Service Blueprint, Appointment Check-In
+            </figcaption>
+          </figure>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-service-blueprint-complete.png" alt="Service blueprint illustrating work flow and supporting services during Service Complete phase" />
+
+            <figcaption class="txt-5">
+              Service Blueprint, Service Complete
+            </figcaption>
+          </figure>
+
+          <p>
+            In the two diagrams above, we can see special considerations for the <i>After Check-In</i> and <i>Service Complete</i> portions of the overall service visit.
+          </p>
+
+
+
+          <br />
+
+
+
+          <h3>Future State: Task Flows</h3>
+
+          <p>
+            Those same phases of the service visit mentioned above are illustrated further in the updated task flows…
+          </p>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-engage-taskflow-future.png" alt="Boxes and arrows illustrating task flows at various stages in the Service Visit experience" />
+
+            <figcaption class="txt-5">
+              Future task flow for Check-In, Service Complete, and Review Request in Engage app.
+            </figcaption>
+          </figure>
+
+          <p>
+            Note the addition of a <i>Review Request Status</i> path, something that was present — but not illustrated — for the desktop experience. We found that, during peak hours and subsequent rideshare delays, consumers would inquire about the status of their ride.
+          </p>
+
+
+
+          <br />
+
+          
+
+          <h3>Future State: Mockups</h3>
+
+          <p>
+            The final mockups for the experience aimed to achieve two simultaneous goals:
+          </p>
+
+          <ol>
+            <li>Provide an experience consistent with desktop</li>
+            <li>Provide an experience appropriate for mobile/tablet</li>
+          </ol>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-engage-mockups-future-1.png" alt="Mockups of From Dealership screen, default state and with virtual keyboard exposed." />
+
+            <figcaption class="txt-5">
+              From Dealership, default + virtual keyboard. Rideshare, Engage app.
+            </figcaption>
+          </figure>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-engage-mockups-future-2.png" alt="Mockups of Ride Status screens illustrating Ride Sent to Ride Completed." />
+
+            <figcaption class="txt-5">
+              Request Sent to Ride Completed. Rideshare, Engage app.
+            </figcaption>
+          </figure>
+
+          <p>
+            As called out in the previous task flow, the designs for tablet included considerations for <i>Review Request Status</i>.
+          </p>
+
+
+
+          <br />
+
+
+
+          <h3>UI Specs: Desktop vs Tablet</h3>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-ui-specs-future-1.png" alt="Side by side comparison of From Dealership screens for desktop vs tablet" />
+
+            <figcaption class="txt-5">
+              From Dealership screens. Scheduling (desktop, left) and Engage (tablet, right)
+            </figcaption>
+          </figure>
+
+          <figure class="txt-c">            
+            <img class="is-scalable-max" src="/img/case-studies/rideshare-ui-specs-future-2.png" alt="Side by side comparison of Ride Requested screens for desktop vs tablet" />
+
+            <figcaption class="txt-5">
+              Request Accepted screens. Scheduling (desktop, left) and Engage (tablet, right)
+            </figcaption>
+          </figure>
+
+
+
+          <br />
+
+
+
+          <h3>Interactive Prototype</h3>
+
+          <figure class="txt-c">
+            <a href="/prototype-rideshare/">
+              <img class="is-scalable-max" src="/img/case-studies/rideshare-engage-prototype.png" alt="Screenshot of interactive prototype | Rideshare Service" />
+            </a>
+
+            <figcaption class="txt-5">
+              Interactive prototype illustrating primary uses cases & workflows
+            </figcaption>
+          </figure>
+        </section>
+
+
+        <section class="section-minor">
+          <h2>Outcome</h2>
+
+          <p>
+            The integrated rideshare service enhanced the check-in experience by providing additional customer amenities and boosting the brand awareness of the dealership. It also improved workflow efficiencies by allowing the dealership user to stay in the tablet experience and not force them to switch to desktop to hail a ride.
+          </p>
+
+          <p>
+            In addition, the following KPIs were impacted:
+          </p>
+
+
+          <div class="l-row">
+            <div class="l-col l-col--4-12">
+              <p class="txt-c">
+                <strong class="txt-2">1,500</strong><br /> 
+                <strong>subscribed</strong>
+              </p>
+            </div>
+
+            <div class="l-col l-col--4-12">
+              <p class="txt-c">
+                <strong class="txt-2">$1.1M</strong><br /> 
+                <strong>revenue</strong>
+              </p>
+            </div>
+
+            <div class="l-col l-col--4-12">
+              <p class="txt-c">
+                <strong class="txt-2">15%</strong><br /> 
+                <strong>growth YoY</strong>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="panel panel--rideshare" id="contact">
+  <div class="l-constrain panel__bd">
+    <div class="l-row">
+      <div class="l-col l-col--6-12">
+        <h2>Get In Touch</h2>
+
+        <p>
+          If you would like to learn more about the projects in this collection or hear about what I can do for your organization, please get in touch!
+        </p>
+
+        <ul class="list">
+          <li>
+            <script language="javascript">
+              function m_sfcon (u) {
+                pre = "mail";
+                url = pre + "to:" + u;
+                document.location.href = url + "@alchemyindesign.com";
+              }
+            </script>
+
+            <a href="javascript:m_sfcon('leban')">
+              <i class="ico ico--21 ico--mail"></i> Email
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="l-col l-col--6-12">
+        <br />
+        <br />
+
+        <form
+          class="form-stacked"
+          id="contact-form"
+          method="post"
+          name="contact">
+
+          <label for="email">Your Email</label>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            tabindex="1"
+            reqired />
+
+          <label for="comments">Your Message</label>
+
+          <textarea
+            name="comments"
+            id="comments"
+            tabindex="2"
+            required></textarea>
+
+          <input
+            type="submit"
+            class="btn btn--callout btn--wide"
+            name="send"
+            id="send"
+            value="Get in touch"
+            tabindex="3" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

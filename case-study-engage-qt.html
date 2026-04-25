@@ -1,0 +1,527 @@
+---
+layout:           default
+title_meta:       "Case Study: Service Quoting on Engage | Alchemy by Leban Hyde"
+featured_image:   /img/hero-engage-qt.jpg
+description:      "How a standalone quoting tool was integrated into the check-in experience on tablet."
+excerpt:          "How a standalone quoting tool was integrated into the check-in experience on tablet."
+---
+
+<article>
+  <div class="panel panel--int panel--engage-qt" role="banner">
+    <div class="l-constrain panel__bd panel__bd--bnr">
+      <h1 class="txt-c">
+        Service Quoting
+      </h1>
+    </div>
+  </div>
+
+  <div class="l-constrain section-minor" id="content">
+    <div class="l-row">
+      <div class="l-col l-col--4-12 section-minor">
+        <h4 class="txt-tight-b">Role:</h4>
+
+        <p class="txt-4 txt-tight-t">Lead UX Architect</p>
+
+        <h4 class="txt-tight-b">Duties:</h4>
+
+        <ul class="list txt-4 txt-tight-t">
+          <li class="txt-tight">UX Research</li>
+          <li class="txt-tight">Product Stategy</li>
+          <li class="txt-tight">Information Architecture</li>
+          <li class="txt-tight">Interaction Design</li>
+          <li class="txt-tight">Visual Design</li>
+        </ul>
+
+        <h4 class="txt-tight-b">Company:</h4>
+
+        <p class="txt-4 txt-tight-t">Xtime, Cox Automotive</p>
+
+        <h4 class="txt-tight-b">Duration:</h4>
+
+        <p class="txt-4 txt-tight-t">Jan 2023–Jun 2023</p>
+
+        <h4 class="txt-tight-b">Platform:</h4>
+
+        <p class="txt-4 txt-tight-t">Hybrid (React Native, Tablet)</p>
+      </div>
+
+
+
+      <div class="l-col l-col--8-12 section-minor">
+        <p>
+          <b>
+            How a standalone quoting tool was integrated into the check-in experience on tablet as part of a greater cross-platform effort. 
+          </b>
+        </p>
+
+        <section class="section-minor">
+          <h2>Overview</h2>
+
+          <p>
+            <i>Service Quoting</i> is a dealer-facing tool built as part of the Xtime platform, designed to enable Service Department users to create detailed estimates. The ask was to integrate the tool with <i>Engage</i>, a tablet-based app for expediting the check-in process for service appointments.
+          </p>
+
+          <br />
+
+          <h3>Challenges</h3>
+
+          <ul>
+            <li>Cross-product integration</li>
+            <li>Cross-team collaboration</li>
+            <li>Cross-platform experience</li>
+          </ul>
+        </section>
+
+
+
+        <section class="section-minor">
+          <h2>Kick-Off</h2>
+
+          <p>
+            Given that this was a cross-team effort, the kick-off looked a little different than most. We started with a demo by the Service Quoting team to better understand the tool, the use cases driving it, and their intended users.
+          </p>
+
+          <p>
+            From there, we begin gathering a list of stakeholders, overlapping products and the teams involved, and loose timelines. You know, the usual stuff!
+          </p>
+
+          <p>
+            It's worth noting that our particular brand of product development embraces <a href="https://www.designcouncil.org.uk/our-resources/the-double-diamond/">the Double Diamond</a>, <a href="https://www.luma-institute.com/">LUMA Human-Centered Design</a>, and <a href="https://www.leanfoundry.com/tools/lean-canvas">the Lean Canvas</a>.
+          </p>
+        </section>
+
+
+
+        <section class="section-minor">
+          <h2>Problem Discovery</h2>
+
+          <p>
+            Before jumping headlong into implementation, we had to address some key questions:
+          </p>
+
+          <ul>
+            <li>
+              Is there a current need to create a service quote during check-in?
+            </li>
+            <li>
+              If so, where in the existing check-in workflow do we surface the quoting experience?
+            </li>
+          </ul>
+
+          <br />
+
+          <h3>Lean Canvas - Problem</h3>
+
+          <p>
+            Most projects start with our flavor of the <i>Lean Canvas</i>. It serves as a framework for identifying what we think we know and, more importantly, highlighting what we <em>don’t</em> know. 
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-lean-canvas-problem.png" alt="Lean Canvas, problem discovery | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              The problem discovery sections of the Lean Canvas
+            </figcaption>
+          </figure>
+
+          <p>
+            From surfacing the knowledge gaps and questions we have around the problem space, we begin to create a discovery plan of HCD activities to find the answers and close up the gaps.
+          </p>
+
+          <br />
+
+
+          <h3>Research</h3>
+
+          <p>
+            After identifying additional knowledge gaps, we needed to validate the problem at hand as well as gather additional information around the context of use. In collaboration with my product partner, we decided to start with a survey to, then, be followed by a quick round of user interviews.
+          </p>
+
+          <div class="l-row">
+            <div class="l-col l-col--6-12">
+              <figure class="txt-c">
+                <img class="is-scalable-max" src="/img/case-studies/engage-qt-survey-questions.png" alt="Survey questions | Engage + Quoting" />
+
+                <figcaption class="txt-5">
+                  Survey questions
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="l-col l-col--6-12">
+              <figure class="txt-c">
+                <img class="is-scalable-max" src="/img/case-studies/engage-qt-interview-script.png" alt="Interview script | Engage + Quoting" />
+
+                <figcaption class="txt-5">
+                  Interview script with high level notes
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        
+
+        <section class="section-minor">
+          <h2>Solution Discovery</h2>
+
+          <p>
+            For implementation to be successful, we had to address these additional questions:
+          </p>
+
+          <ul>
+            <li>
+              Where in the existing workflow do we surface the quoting experience?
+            </li>
+            <li>
+              Will the integrated tool work on tablet with considerations for a smaller viewport and touch interface?
+            </li>
+          </ul>
+
+          <br />
+
+          <h3>Lean Canvas - Solution</h3>
+
+          <p>
+            Returning to the Lean Canvas, we continue the process by trying to define the solution space and creating a plan for gathering information and addressing any outstanding questions we have. 
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-lean-canvas-solution.png" alt="Lean Canvas, solution discovery | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              The solution discovery sections of the Lean Canvas
+            </figcaption>
+          </figure>
+
+          <p>
+            More than an academic exercise, we begin trying to answer some of the practical questions around <i>project scope</i> and <i>context</i>.
+          </p>
+
+          <br />
+
+          <p>
+            <em>What can be adopted from Service Quoting?</em>
+          </p>
+
+          <ol>
+            <li>Dashboard</li>
+            <li>Create Quote</li>
+            <li>Edit Quotes</li>
+            <li>Sending Quotes</li>
+            <li>Collaborating Quote</li>
+            <li>Collaboration Tracking</li>
+            <li>Service Search</li>
+            <li>Reporting</li>
+          </ol>
+
+          <br />
+
+          <p>
+            <em>What’s the context?</em>
+          </p>
+
+          <ol>
+            <li>Walk-in, create quote on the fly.</li>
+            <li>Helping others (dealership employees) with a quote</li>
+            <li>Bringing in quote services from a quote into an establish appointment (merging)</li>
+            <li>Displaying un-actioned quotes within the awareness of declined services or prior visits</li>
+          </ol>
+
+          <br />
+
+          <h3>Task Flow Analysis</h3>
+
+          <p>
+            With a more defined general context, we needed to better understand the task flows for two products at a high level and explore how they might mesh for the integration.
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-taskflow-1.png" alt="Potential task flow for Engage tablet app | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              Potential task flow for Engage, future integration with Quoting
+            </figcaption>
+          </figure>
+
+          <p>
+            And since this was the second phase of an ongoing cross-product effort, we also needed to understand the current integration to provide a consistent experience across solutions as well as learn from any key takeaways.
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-taskflow-2.png" alt="Current task flow for Scheduler desktop app | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              Current task flow for Scheduler app, prior integration with Quoting
+            </figcaption>
+          </figure>
+
+          <p>
+            From the analysis, we were able to to start zeroing in on the primary app-specific workflows and edge cases.
+          </p>
+
+          <br />
+
+          <p>
+            <em>Primary Workflows (Happy Path)</em>
+          </p>
+
+          <ol>
+            <li>View Existing Quote</li>
+            <li>Convert Existing Quote to Appt (Walk-In)</li>
+            <li>Attach Existing Quote to Existing Appt (During Check-In)</li>
+            <li>Create New Quote</li>
+          </ol>
+
+          <br />
+
+          <p>
+            <em>Edge Cases</em>
+          </p>
+
+          <ol>
+            <li>Merging a quote services into an established apppointment.</li>
+            <li>??</li>
+            <li>???</li>
+          </ol>
+
+          <br />
+
+          <h3>Workflow Mapping</h3>
+
+          <p>
+            With our primary workflows and potential edge cases defined, we needed to map out the screens that aligned to these workflows in order to start ideating on changes to the information architecture, interaction design, and UI.
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-screenflow-current.png" alt="Current screen flow for Engage tablet app | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              Current screen flow for Engage app addressing primary workflows for users
+            </figcaption>
+          </figure>
+
+
+          <p>
+            <em>
+              <b>Note:</b> Even for known or mature products, it's standard to conduct these mapping sessions as somewhat of a sanity check and to dispel any false assumptions about how the apps work.
+            </em>
+          </p>
+
+          <br />
+
+
+          <h3>Feasibility Analysis</h3>
+
+          <p>
+            In addition to all the above, this integration also had the additional complexity of living on a different technology stack: Service Quoting was built for the web, Engage was built for native mobile (tablet). This not only raised platform concerns, but also usabilty concerns as the form factor had changed.
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-ui-audit-1.png" alt="UI Audit, Part 1 | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              Preliminary UI audit to assess compatibility with tablets
+            </figcaption>
+          </figure>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-ui-audit-2.png" alt="UI Audit, Part 2 | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              Deeper UI audit of tool to assess compatibility with tablets
+            </figcaption>
+          </figure>
+
+          <p>
+            The above screens are from the two phases of UI audit that I performed while accessing the standalone quoting tool from my iPad Mini. In it, I was looking specifically for not only layout issues due to the smaller viewport, but also issues with touch targets, gestures, and conflicts with the virtual keyboard and form inputs.
+          </p>
+
+          <p>
+            In parallel, the Engineering team ran a spike to investigate options for how to complete the integration at the implemenation layer. There basically two options for a path forward:
+          </p>
+
+          <ol>
+            <li>(Re-)Build everything in native UI</li>
+            <li>Pull the existing UI in via WebView</li>
+          </ol>
+
+        </section>
+
+
+
+        <section class="section-minor">
+          <h2>Delivery</h2>
+
+          <p>
+            After several rounds of conversations with stakeholders, users, and the teams involved, the following was what was delivered for MVP.
+          </p>
+
+          <br />
+
+          <h3>MVP Definition</h3>
+
+          <ol>
+            <li>View existing service quote</li>
+            <li>Convert existing service quote to appointment</li>
+            <li>Create new quote</li>
+          </ol>
+
+          <br />
+
+          <h3>Future Workflows</h3>
+
+          <p>
+            Future state workflows illustrating Service Quoting use cases meshed with the primary use case for Engage were created and discussed with the two teams. The below expample includes some of the notes captured from our conversations to address questions and concerns that were voiced as well as some technical detail.
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-screenflow-future.png" alt="Current screen flow for Engage tablet app | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              Future screen flow and wireframes highlighting touch points for Quoting Tool
+            </figcaption>
+          </figure>
+
+          <h3>Mockups</h3>
+
+          <p>
+            The part that most people associate UX Design with, the mockups are probably the most tangible aspect of the recommended solution aside from an interactive prototype (<i>below</i>) and working software (of course!).
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-checkin.png" alt="Check-In screen with available service quotes | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              Check-In screen with available service quotes, before & after adding
+            </figcaption>
+          </figure>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-view-quote.png" alt="Quote History and Quote Detail | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              View Quote worflow from Quote History to Quote Detail
+            </figcaption>
+          </figure>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-modify-parts.png" alt="Modify Parts with and without virtual keyboard open | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              Modify Parts workflow with focused input field and open virtual keyboard
+            </figcaption>
+          </figure>
+
+          <p>
+            The mockups above illustrate the main touch points for the integration and call out some of the technical challenges of the overall effort.
+          </p>
+
+          <br />
+      
+          <h3>Interactive Prototype</h3>
+
+          <p>
+            For complex problem spaces, interactive prototypes are essential. They help to highlight potential gaps in the workflow or interaction design that cannot be easily seen in static mockups.
+          </p>
+
+          <figure class="txt-c">
+            <img class="is-scalable-max" src="/img/case-studies/engage-qt-prototype.png" alt="Screenshot of interactive prototype | Engage + Quoting" />
+
+            <figcaption class="txt-5">
+              Interactive prototype illustrating primary uses cases & workflows
+            </figcaption>
+          </figure>
+
+          <p>
+            In this particular case, it helped to highlight what might happen when an existing quote was added to an existing appointment or the challenges with creating a seamless experiences as the apps cross over from native to web then back again.
+          </p>
+        </section>
+
+
+        <section class="section-minor">
+          <h2>Outcome</h2>
+
+          <p>
+            In a plot twist, the decision was made to pivot and invest in other priorities. The initial questions we asked around product-market fit and problem validation inpired leadership to reconsider the effort.
+          </p>
+
+          <p>
+            From a product discovery perspective, I would consider this a success. Even though time had already been invested in solution discovery, techinical feasibility, and initial concepts, the company saved resources by redirecting to other efforts.
+          </p>
+
+          <p>
+            <strong>Morale of the story:</strong> Having a proper discovery process works!
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="panel panel--engage-qt" id="contact">
+  <div class="l-constrain panel__bd">
+    <div class="l-row">
+      <div class="l-col l-col--6-12">
+        <h2>Get In Touch</h2>
+
+        <p>
+          If you would like to learn more about the projects in this collection or hear about what I can do for your organization, please get in touch!
+        </p>
+
+        <ul class="list">
+          <li>
+            <script language="javascript">
+              function m_sfcon (u) {
+                pre = "mail";
+                url = pre + "to:" + u;
+                document.location.href = url + "@alchemyindesign.com";
+              }
+            </script>
+
+            <a href="javascript:m_sfcon('leban')">
+              <i class="ico ico--21 ico--mail"></i> Email
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="l-col l-col--6-12">
+        <br />
+        <br />
+
+        <form
+          class="form-stacked"
+          id="contact-form"
+          method="post"
+          name="contact">
+
+          <label for="email">Your Email</label>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            tabindex="1"
+            reqired />
+
+          <label for="comments">Your Message</label>
+
+          <textarea
+            name="comments"
+            id="comments"
+            tabindex="2"
+            required></textarea>
+
+          <input
+            type="submit"
+            class="btn btn--callout btn--wide"
+            name="send"
+            id="send"
+            value="Get in touch"
+            tabindex="3" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

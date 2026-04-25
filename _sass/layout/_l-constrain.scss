@@ -4,20 +4,7 @@
   position: relative;
 }
 
-@media only screen and (max-width: 70em) {
-  .l-constrain {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-@media only screen and (max-width: 48em) {
-  .l-constrain {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 74.5em) {
   .l-constrain {
     padding-left: 1rem;
     padding-right: 1rem;

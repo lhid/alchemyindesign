@@ -7,7 +7,18 @@
 
 .l-row {
   @extend .cf;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
 }
+
+@media only screen and (max-width: 74.5em) {
+  .l-row {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+
 
 .l-col,
 .l-col-r {
@@ -16,12 +27,6 @@
 }
 .l-col {
   float: left;
-  &:first-child {
-    padding-left: 0;
-  }
-  &:last-child {
-    padding-right: 0;
-  }
 }
 
 
@@ -29,14 +34,9 @@
 .l-col-r {
   float: right;
   &:first-child {
-    padding-right: 0;
     & + .l-col {
-      padding-left: 0;
       padding-right: 1.5rem;
     }
-  }
-  &:last-child {
-    padding-left: 0;
   }
 }
 
@@ -87,33 +87,25 @@
 /* Media Queries
    ========================================================================== */
 
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 47.75em) {
 
-  .l-col,
-  .l-col-r {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 
   .l-col-r {
-    &:first-child {
-      & + .l-col {
-        padding-right: 1rem;
-      }
-    }
-  }
-
-}
-
-@media only screen and (max-width: 30em) {
-
-  .l-col,
-  .l-col-r {
-    padding: 0;
+    float: left;
   }
 
   [class*='l-col--'] {
     width: 100%;
   }
 
+}
+
+
+
+@media only screen and (max-width: 30em) {
+  .l-col,
+  .l-col-r {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

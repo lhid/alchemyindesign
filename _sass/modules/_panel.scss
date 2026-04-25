@@ -20,11 +20,20 @@
 .panel--about {}
 .panel--approach {}
 .panel--contact {}
+.panel--contact-ds {}
+.panel--contact-mobile {}
+.panel--cxn {}
+.panel--ds {}
+.panel--engage-qt {}
 .panel--intro {}
+.panel--md {}
+.panel--mobile {}
+.panel--netflix {}
 .panel--notes {}
 .panel--notes-sect {}
 .panel--nst {}
 .panel--process {}
+.panel--rideshare {}
 .panel--work {}
 
 
@@ -49,7 +58,7 @@
 
 
 
-@media only screen and (max-width: 70em) {
+@media only screen and (max-width: 74.5em) {
   .panel__bd {
     left: 0;
     margin-left: 0;

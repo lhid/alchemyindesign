@@ -526,9 +526,41 @@ a:hover > .ico--close {
   @include background-size(cover);
 }
 
+.panel--contact-ds {
+  background-attachment: fixed;
+  background-image: url(../img/panel--contact-ds.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
 .panel--contact-mobile {
   background-attachment: fixed;
   background-image: url(../img/panel--contact-mobile.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--cxn {
+  background-attachment: fixed;
+  background-image: url(../img/hero-connections.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--ds {
+  background-attachment: fixed;
+  background-image: url(../img/panel--contact-ds.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--engage-qt {
+  background-attachment: fixed;
+  background-image: url(../img/hero-engage-qt.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);
@@ -542,9 +574,25 @@ a:hover > .ico--close {
   @include background-size(cover);
 }
 
+.panel--md {
+  background-attachment: fixed;
+  background-image: url(../img/hero-md.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
 .panel--mobile {
   background-attachment: fixed;
   background-image: url(../img/hero-mobile.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--netflix {
+  background-attachment: fixed;
+  background-image: url(../img/hero-netflix.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);
@@ -574,9 +622,25 @@ a:hover > .ico--close {
   @include background-size(cover);
 }
 
+.panel--rideshare {
+  background-attachment: fixed;
+  background-image: url(../img/hero-rideshare.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
 .panel--visual-design {
   background-attachment: fixed;
   background-image: url(../img/hero-visual-design.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+}
+
+.panel--work {
+  background-attachment: fixed;
+  background-image: url(../img/panel--work.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   @include background-size(cover);

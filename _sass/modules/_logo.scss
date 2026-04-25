@@ -21,8 +21,9 @@
 
   .logo {
     float: none;
-    text-align: center;
+    // text-align: center;
     max-width: 100%;
+    width: 20rem;
     & > a {
       display: inline-block;
       max-width: 25rem;

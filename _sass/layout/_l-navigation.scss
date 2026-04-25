@@ -9,12 +9,14 @@
 @media only screen and (max-width: 41em) {
 
   .l-navigation {
-    bottom: 0;
+    border-radius: 2em;
+    bottom: .5rem;
     float: none;
-    height: 3.5rem;
-    left: 0;
+    height: 4rem;
+    left: 2%;
     position: fixed;
-    width: 100%;
+    right: 2%;
+    width: 96%;
     z-index: 1;
   }
 
